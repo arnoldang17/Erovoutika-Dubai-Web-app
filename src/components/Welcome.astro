@@ -2,6 +2,7 @@
 import background from '../assets/about_bg.png';
 import logo from '../assets/logo.png';
 import card from '../assets/Rectangle.png';
+import about from '../assets/about_logo.png';
 ---
 
 <!-- for navbar -->
@@ -46,14 +47,28 @@ import card from '../assets/Rectangle.png';
 	  </div>
 	</div>
   </header>
-<!-- end navbar -->
 
-<article class="relative top-[140px] left-[100px] overflow-hidden h-[420px] w-[500px] rounded-[35px] transition hover:shadow-lg">
-	<img id = "card" src={card.src} alt="" fetchpriority="high"
-	  class="absolute inset-0 h-[584px] w-[639px]"
-	/>
+<div class="relative mx-auto max-w-screen-xl xl:max-w-[1385px] px-4 py-10 sm:px-6 lg:flex lg:items-center lg:space-x-5">
+	<!-- Image Section -->
+	<img id="about-logo" src={about.src} class="w-[50px] h-[50px]" />
   
-	<div class="relative  pt-30 sm:pt-30 lg:pt-10">
+	<!-- Text Section -->
+	<div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+		<h1 id="about1"class="text-2xl sm:text-4xl  drop-shadow-lg">
+			ABOUT US
+		  </h1>
+		  
+	</div>
+  </div>
+  
+
+<article class="relative left-[100px] overflow-hidden h-[420px] w-[500px] rounded-[35px] transition hover:shadow-lg">
+	<div class="px-10">
+	<img id = "card" src={card.src} alt="" fetchpriority="high"
+	  class="absolute inset-0 h-full w-full object-cover"
+	/></div>
+  
+	<div class="relative pt-[150px] sm:pt-[120px] lg:pt-10">
 	  <div class="p-4 sm:p-6">
 		<a href="#">
 		  <h3 class="mt-0.5 text-xl text-white font-[Ramabhadra]">Our aim is to assist our clients in getting their nees and requirement in the quickest possible time frame, in the most professional manner. We pride ourselves on providing the </h3>
@@ -79,5 +94,10 @@ import card from '../assets/Rectangle.png';
 		width: 100%;
 		height: 100%;
 		z-index: -1;
+	}
+	#about1{
+		font-family: 'Poppins';
+		font-weight: 700;
+		color: #1C1E53;
 	}
 </style>
