@@ -12,13 +12,4 @@ export default defineConfig({
   },
 });
 
-module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-      },
-    },
-  },
-  plugins: [],
-};
+
