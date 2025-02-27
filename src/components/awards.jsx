@@ -56,7 +56,7 @@ function awards() {
 	<div class="grid grid-cols-3 place-items-center">
 
 	  <a  class="group relative block h-1/2 w-[400px] sm:h-80 lg:h-96 mx-10 place">
-		<span class="absolute inset-0 border-2 border-dashed border-white rounded-2xl"></span>
+		<span class="absolute inset-0 border-2 border-dashed border-black rounded-2xl"></span>
 	  
 		<div
 		  class="relative flex h-full transform items-center rounded-2xl border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
@@ -88,7 +88,7 @@ function awards() {
 	  </a>
 
 	  <a href="#" class="group relative block h-1/2 w-[400px] sm:h-80 lg:h-96  mx-10">
-		<span class="absolute inset-0 border-2 border-dashed border-white rounded-2xl"></span>
+		<span class="absolute inset-0 border-2 border-dashed border-black rounded-2xl"></span>
 	  
 		<div
 		  class="relative flex h-full transform items-center border-2 rounded-2xl border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
@@ -121,7 +121,7 @@ function awards() {
 	  </a>
 
 	  <a href="#" class="group relative block h-1/2 w-[400px] sm:h-80 lg:h-96  mx-10">
-		<span class="absolute inset-0 border-2 border-dashed border-white rounded-2xl"></span>
+		<span class="absolute inset-0 border-2 border-dashed border-black rounded-2xl"></span>
 	  
 		<div
 		  class="relative flex h-full transform items-center rounded-2xl border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
@@ -157,8 +157,8 @@ function awards() {
  {/* second row of the rewards*/}
 		<div class="grid grid-cols-2 gap-2 place-items-center">
 
-		<a href="#" class="group relative block h-1/2 w-[400px] sm:h-80 lg:h-96 mt-[60px] ml-60">
-		<span class="absolute inset-0 border-2 border-dashed border-white rounded-2xl"></span>
+		<a href="#" class="group relative block h-1/2 w-[400px] sm:h-80 lg:h-96 mt-[60px] ">
+		<span class="absolute inset-0 border-2 border-dashed border-black rounded-2xl"></span>
 	  
 		<div
 		  class="relative flex h-full transform items-center border-2 rounded-2xl border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
@@ -189,8 +189,8 @@ function awards() {
 		  </div>
 		</div>
 	  </a>
-	  <a href="#" class="group relative block h-1/2 w-[400px] sm:h-80 lg:h-96 mt-[60px] mr-72">
-		<span class="absolute inset-0 border-2 border-dashed border-white rounded-2xl"></span>
+	  <a href="#" class="group relative block h-1/2 w-[400px] sm:h-80 lg:h-96 mt-[60px] ">
+		<span class="absolute inset-0 border-2 border-dashed border-black rounded-2xl"></span>
 	  
 		<div
 		  class="relative flex h-full transform items-center border-2 rounded-2xl border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
