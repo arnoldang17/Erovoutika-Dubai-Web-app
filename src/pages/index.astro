@@ -1,5 +1,5 @@
 ---
-import Awards from '../components/awards';
+import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,17 +7,5 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<div id="background">
-	<Awards/>
-	</div>
+	<Welcome />
 </Layout>
-
-<style>
-	#background {
-		background-Image: url('./cover.png');
-  		background-Repeat: no-repeat;
- 		background-Size: cover;
-		background-position: center;
-		height: 100%;
-}
-</style>
