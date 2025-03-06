@@ -1,19 +1,17 @@
-
 //importing react
-import React from 'react';
+import React from "react";
 
 //Tailwind css
 import "../styles/global.css";
 
 
 function awards() {
-	const headerStyle = {
-		position: "fixed",
-		top: "0",
-		left: "0",
-		zIndex: "-1",
-	  };
-
+  const headerStyle = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    zIndex: "-1",
+  };
 
   return (
 	<div class="max-h-full max-w-full ">
@@ -296,5 +294,3 @@ function awards() {
 }
 
 export default awards;
-
-
