@@ -12,9 +12,10 @@ import ci_qr from '../assets/ci_qr.png';
 ---
 <footer id="contactinfo_footer">
 	<div id="container_all">
+
 		<div id="contactinfo_container">
-			<img id="background" src={background.src} />
-			<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8"  >
+			
+			<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8" >
 				<div class="h-auto rounded-lg"
 				style="padding: 2% 2% 2% 2%;">
 					<h1 id="contact_info_title">Contact Information</h1>
@@ -96,22 +97,17 @@ import ci_qr from '../assets/ci_qr.png';
 
 
 <style>
-	#background {
-		/* Layout */
-		width: 100%;
-		height: auto;
-		top: 0;
-		left: 0;
-		position: absolute;
-		z-index: -1;
-	}
 	#container_all {
 		/* Layout */
+		background: url('/images/bg_contactinfo.png');
 		display: flex;
 		width: 100%;
+		min-height: 40%;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin: 0 auto;
+  		padding: 16px;
 	}
 	#contactinfo_container {
 		/* Layout */
@@ -135,7 +131,7 @@ import ci_qr from '../assets/ci_qr.png';
 		/* Style */
 		color: #FFF;
 		font-family: Poppins;
-		font-size: 42px;
+		font-size: 2rem;
 		font-style: normal;
 		font-weight: 800;
 		line-height: 140%; /* 67.2px */
@@ -194,7 +190,7 @@ import ci_qr from '../assets/ci_qr.png';
 		color: #FFF;
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		font-family: Poppins;
-		font-size: 24px;
+		font-size: 1.2rem;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 200%; /* 64px */
@@ -232,7 +228,7 @@ import ci_qr from '../assets/ci_qr.png';
 		color: #FFF;
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		font-family: Poppins;
-		font-size: 24px;
+		font-size: 1.2rem;
 		font-style: normal;
 		font-weight: 400;
 		letter-spacing: 0.16px;
@@ -251,12 +247,12 @@ import ci_qr from '../assets/ci_qr.png';
 			/* Layout */
 			background: none;
 			border: none;
-			padding: 5px 15px;
+			margin: 1rem;
 			cursor: pointer;
 			/* Style */
 			color: #FFF;
 			font-family: Poppins;
-			font-size: 18px;
+			font-size: 1rem;
 			font-weight: 600;
 			text-decoration: none;
 			border-radius: 5px;
@@ -281,7 +277,7 @@ import ci_qr from '../assets/ci_qr.png';
 	#follow_title {
 		color: #FFF;
 		font-family: Poppins;
-		font-size: 24px;
+		font-size: 1.5rem;
 		font-style: normal;
 		font-weight: 800;
 		line-height: 140%; /* 3.15rem */
@@ -311,7 +307,7 @@ import ci_qr from '../assets/ci_qr.png';
 		/* Style */
 		color: #FFF;
 		font-family: Poppins;
-		font-size: 42px;
+		font-size: 2rem;
 		font-style: normal;
 		font-weight: 800;
 		line-height: 140%; /* 67.2px */
@@ -424,7 +420,6 @@ import ci_qr from '../assets/ci_qr.png';
 	#final_footer_container {
 		/* Layout */
 		display: flex;
-		margin-top: 1%;
 		width: 100%;
 		height: auto;
 		flex-direction: row;
