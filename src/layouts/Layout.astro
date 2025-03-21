@@ -1,9 +1,10 @@
 ---
 import Nav from "../components/Nav.astro";
+import "./src/styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,7 +17,7 @@ import Nav from "../components/Nav.astro";
     />
   </head>
   <body>
-    <Nav />
+    <!-- <Nav /> -->
     <slot />
   </body>
   <script
