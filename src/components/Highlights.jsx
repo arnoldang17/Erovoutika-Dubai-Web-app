@@ -1,0 +1,90 @@
+//importing react
+import React from "react";
+
+//import shadcn
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+//react-icons
+import { SlTrophy } from "react-icons/sl";
+import { FaRegHandshake,FaGears } from "react-icons/fa6";
+import { PiCubeFocusLight,PiShareNetworkFill } from "react-icons/pi";
+
+
+function Highlights() {
+ 
+ 
+
+  return (
+    <div >
+      <h2 className="font-semibold text-center  mb-44 text-7xl text-black">KEY HIGHLIGHTS</h2>
+      
+
+      <div className="grid grid-cols-5 gap-4">
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <SlTrophy className="h-14 w-auto text-indigo-800"/>
+
+            </CardHeader>
+            <CardContent>
+            <h2 className="font-semibold text-lg text-center mb-2 text-black">International Awards</h2>
+            <h4 className="text-center text-base text-zinc-800">Recognizing outstanding educators and Erovoutika partners in academia and industry.</h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <FaRegHandshake className="h-14 w-auto text-indigo-800"/>
+
+            </CardHeader>
+            <CardContent>
+            <h2 className="font-semibold text-lg text-center mb-2 text-black">Tournament</h2>
+            <h4 className="text-center text-base text-zinc-800">After expert-led training on robotics, research and development, and cybersecurity.</h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <FaGears className="h-14 w-auto text-indigo-800"/>
+
+            </CardHeader>
+            <CardContent>
+            <h2 className="font-semibold text-lg text-center mb-2 text-black">Hands-on Workshops</h2>
+            <h4 className="text-center text-base text-zinc-800">To enhance technical and research skills in  journal publication and patenting guidance.</h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <PiCubeFocusLight className="h-14 w-auto text-indigo-800"/>
+
+            </CardHeader>
+            <CardContent>
+            <h2 className="font-semibold text-lg text-center mb-2 text-black">Showcase</h2>
+            <h4 className="text-center text-base text-zinc-800">the research and innovation projects.</h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center ">
+              <PiShareNetworkFill className="h-14 w-auto text-indigo-800"/>
+
+            </CardHeader>
+            <CardContent>
+            <h2 className="font-semibold text-lg text-center mb-2 text-black">Global Networking</h2>
+            <h4 className="text-center text-base text-zinc-800">with professionals, educators, and industry leaders.</h4>
+            </CardContent>
+        </Card>
+      </div>
+      
+      </div> 
+  );
+}
+
+export default Highlights;

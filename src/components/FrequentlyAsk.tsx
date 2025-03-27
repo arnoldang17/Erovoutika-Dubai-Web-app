@@ -1,0 +1,90 @@
+function FAQ() {
+
+    const bg = {
+        backgroundColor: '#0B0221',
+
+      };
+    return (
+<div className="p-10"  style={bg}>
+            <div className="text-center mb-16">
+                <h3 className="mb-8 text-6xl">FREQUENTLY ASKED QUESTIONS</h3>
+                <h5 className="text-gray-200">Need Help? Check Out Our Most Common Queries</h5>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+    <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+      <h2 class="font-medium">WHAT WILL BE THE OUTLINE OF THE EVENT?</h2>
+
+      <svg
+        class="size-5 shrink-0  transition duration-300 group-open:-rotate-180"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+
+    <p class="mt-4 px-4 leading-relaxed text-gray-100">
+      Most of the outlines of the event of Erovoutika will be posted weeks prior to the said event, so stay tuned! Additional info shall also be given to your respective email
+      once successfully registered.
+    </p>
+  </details>
+
+  <details class="group [&_summary::-webkit-details-marker]:hidden">
+    <summary
+      class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
+    >
+      <h2 class="font-medium">WHO CAN PARTICIPATE?</h2>
+
+      <svg
+        class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+
+    <p class="mt-4 px-4 leading-relaxed text-gray-100">
+      Anyone. If you have interest in one of our events no need to hesitate to join us!
+    </p>
+  </details>
+
+
+  <details class="group [&_summary::-webkit-details-marker]:hidden">
+    <summary
+      class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
+    >
+      <h2 class="font-medium">WHAT TO EXPECT?</h2>
+
+      <svg
+        class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+
+    <p class="mt-4 px-4 leading-relaxed text-gray-100">
+       Enhance your knowledge, experience and connect with people who have the same interest as you! Join us in our ROBOLUTION!
+    </p>
+  </details>
+</div>
+
+
+</div>
+
+
+        
+    );
+}
+
+export default FAQ;
