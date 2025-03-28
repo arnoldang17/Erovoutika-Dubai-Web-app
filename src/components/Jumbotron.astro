@@ -1,5 +1,5 @@
 ---
-const Main = "../assets/images/backgrounds/Main.jpg";
+const image = "/src/assets/images/backgrounds/Main.jpg";
 import Nav from "../components/Nav.astro";
 
 let Templates = {
@@ -13,8 +13,10 @@ let Templates = {
           imageDirectory: "../assets/images/backgrounds/Main.jpg",
         },
         heading: {
-            
-        }
+          mainText: "What is ROBOLUTION DUBAI 2025?",
+          subText:
+            "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
+        },
       },
     },
     readonly: true,
@@ -26,18 +28,19 @@ console.log(copyTheme.Contents.Home.hero.mainText);
 
 // localStorage.setItem("Templates", JSON.stringify(Templates));
 // console.log(localStorage.getItem("Templates"));
-
 const subText =
   "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!";
 const mainText = `Welcome to Erovoutika Dubai`;
+//bg-[url('${image}')]`
 ---
 
 <section
-  class={`h-[866px] w-full bg-cover bg-no-repeat bg-center bg-[url(${Main})]`}
+  style={`background-image: url('${image}')`}
+  class={`h-[866px] w-full bg-cover bg-no-repeat bg-center`}
 >
   <Nav />
   <div class="px-4 mx-auto max-w-screen-xl text-left py-24 lg:py-56">
-    <div class="md:w-fit lg:w-xl h-[824px]">
+    <div class="md:w-fit lg:w-xl h-auto">
       <h1
         id="mainText"
         class="mb-4 text-4xl font-extrabold leading-none text-[#212529] md:text-5xl lg:text-6xl"
