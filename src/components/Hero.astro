@@ -1,0 +1,55 @@
+---
+import Navbar from "..//components/Navbar.jsx";
+import background from "..//assets/images/backgrounds/Hero Stack.png";
+import "../styles/style.css";
+---
+
+<Navbar/>
+
+<!-- title -->
+            <div
+            class={
+            "w-full flex flex-col items-center gap-y-16 h-fit my-[120px] "
+            }
+            >
+            <div
+              class={
+                "text-[120px] bebas-neue-regular text-white text-center leading-[120px] w-[750px] tracking-[0.1em]"
+              }
+            >
+              BE PART OF THE    <span class="underline  decoration-[#C084FC]">FUTURE!</span> 
+            </div>
+            <div
+            class={
+              "text-2xl poppins-regular text-white text-center  w-[769px]"
+            }
+          >
+            Join us For an International Training & Tournament Camp!
+          </div>
+          <a
+            class={
+              "w-[157px] h-14 rounded-[60px] poppins-regular flex items-center justify-center gap-x-1 bg-white shadow-amber-50  text-blue-900 hover:text-white hover:bg-[#C084FC]  "
+            }
+             href="#"
+          >
+              Learn More
+        </a>
+
+
+
+<!-- background -->
+<div id="container">
+	<img id="background" src={background.src} alt="" fetchpriority="high" />
+</div>
+
+<style>
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+</style>
+
