@@ -3,15 +3,20 @@ import Highlights from "../components/Highlights.astro";
 import Robolution from "../components/Robolution.astro";
 import FreAsk from "../components/FrequentlyAsk.astro";
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro/virtual-modules/transitions.js";
+
 ---
 
-<Layout>
+<Layout transition:animate={fade({ duration: '0.4s' })}> 
+        <Robolution/>
+      <div id="background">
+        <Highlights/>
+      </div>
+
+        <div id="bgFreAsk">
+        <FreAsk />
+      </div>
     
-      <Robolution/>
-    <div id="background">
-      <Highlights/>
-      <FreAsk />
-    </div>
 </Layout>
 
 <style>
@@ -22,5 +27,11 @@ import Layout from "../layouts/Layout.astro";
       background-position: center center;
       background-color: transparent;
     }
+
+    #bgFreAsk {
+      background-color: '#0B0221';
+      width: 100%;
+      height: 80px;
+      }
   </style>
 
