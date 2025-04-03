@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import backgrounds from "/backgrounds/Trainings.png";
+import logo from "../assets/images/Erovoutika Dubai logo.png";
 ---
-
-<section class="hero-background" background-image="backgrounds">
-
-</section>
-
+<Layout>
+    <section class="hero-background" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
+        <div class="form-container">
+            <img class="erovoutika-logo" src={logo.src}/>
+        </div>
+    </section>    
+</Layout>
 
 <style>
     .hero-background {
@@ -16,8 +18,21 @@ import backgrounds from "/backgrounds/Trainings.png";
         align-items: center;
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
         height: 100vh;
-        padding: 20px;
+        width: 100vw;
         text-align: center;
+    }
+    .form-container {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 600px;
+    }
+    .erovoutika-logo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
     }
 </style>
