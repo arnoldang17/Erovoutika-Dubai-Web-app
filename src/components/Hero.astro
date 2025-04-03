@@ -1,7 +1,8 @@
 ---
-import Navbar from "..//components/Navbar.jsx";
+import Navbar from "..//components/Navbar.astro";
 import background from "..//assets/images/backgrounds/Hero Stack.png";
 import "../styles/style.css";
+import tournament from "../components/TournaOverview.astro";
 ---
 
 <Navbar/>
@@ -27,13 +28,13 @@ import "../styles/style.css";
             Join us For an International Training & Tournament Camp!
           </div>
           <a
-            class={
-              "w-[157px] h-14 rounded-[60px] poppins-regular flex items-center justify-center gap-x-1 bg-white shadow-amber-50  text-blue-900 hover:text-white hover:bg-[#C084FC]  "
-            }
-             href="#"
-          >
-              Learn More
-        </a>
+  href= "#" 
+  class="w-[157px] h-14 rounded-[60px] poppins-regular flex items-center justify-center gap-x-1 bg-white shadow-amber-50 text-blue-900 hover:text-white hover:bg-[#C084FC]"
+  
+>
+  Learn More
+ 
+</a>
 
 
 
