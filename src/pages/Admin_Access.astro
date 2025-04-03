@@ -1,11 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import logo from "../assets/images/Erovoutika Dubai logo.png";
+import password_icon from "../assets/show-hide-password.png";
 ---
 <Layout>
     <section class="hero-background" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
+        <img class="erovoutika-logo" src={logo.src}/>
         <div class="form-container">
-            <img class="erovoutika-logo" src={logo.src}/>
+            <div class="form-content">
+                <h1 class="admin-login">Admin Login</h1>
+                <form class="admin-form">
+                    <div class="email">
+                        <input type="email" placeholder="Email Address" required />
+                    </div>
+                    <div class="password">
+                        <input type="password" placeholder="Password" required />
+                        <i class="pass-eye">
+                            <img src={password_icon.src} class="fa-eye" alt="eye" />
+                        </i>
+                        <div class="forgot-password">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                </form>
+                <button class="login-button">
+                    <span>Log In</span>
+                </button>
+            </div>
         </div>
     </section>    
 </Layout>
@@ -14,7 +35,7 @@ import logo from "../assets/images/Erovoutika Dubai logo.png";
     .hero-background {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         background-size: cover;
         background-position: center;
@@ -24,15 +45,99 @@ import logo from "../assets/images/Erovoutika Dubai logo.png";
         text-align: center;
     }
     .form-container {
+        display: flex;
+        flex-direction: column;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        align-items: center;
         width: 80%;
         max-width: 600px;
+        gap: 30px;
     }
-    .erovoutika-logo {
+    .erovoutika-logo{
+        width: 180px;
+        height: 68px;
+        margin-top:11rem;
+    }
+    .form-content {
+        display: flex;
+        width: 430px;
+        height: 425px;
+        padding: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        border-radius: 10px;
+        background: #F3F3FB;
+    }
+    .admin-login {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 44px;
+    }
+    .admin-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .form-content input {
         width: 100%;
-        height: auto;
-        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        font-family: Inter;
+    }
+    .email {
+        position: relative;
+        width: 330px;
+    }
+    .password {
+        position: relative;
+        width: 330px;
+    }
+    .fa-eye {
+        position: absolute;
+        right: 10px;
+        top: calc(20%);
+        cursor: pointer;
+    }
+    .forgot-password{   
+        margin-bottom: 10px;
+        margin-top: 10px;
+        text-align: right;
+        width: 330px;
+        color: rgba(0, 0, 0, 0.50);
+        text-align: right;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px; /* 100% */
+        letter-spacing: -0.28px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+    }
+    .login-button {
+        width: 50%;
+        padding: 10px;
+        background-color: #233876;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: Inter;
     }
 </style>
