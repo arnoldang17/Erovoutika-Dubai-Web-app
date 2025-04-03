@@ -20,7 +20,7 @@ function Robolution() {
 
                 <div className="place-items-center">
                 <img 
-                    src='./bot1.jpg'
+                    src='./bot1.png'
 			        className='h-[300px] w-auto rounded-sm opacity-80'
                     /> 
                    
@@ -38,10 +38,9 @@ function Robolution() {
                     </span>
 
 
-
                 <div className="mt-24 place-items-center">
                 <img 
-                src='./joinUs.jpg'
+                src='./joinus.png'
 			    className='h-[300px] w-auto rounded-sm opacity-90'
                 /> 
                </div>
