@@ -35,7 +35,7 @@ import password_icon from "../assets/show-hide-password.png";
     .hero-background {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         background-size: cover;
         background-position: center;
@@ -57,12 +57,11 @@ import password_icon from "../assets/show-hide-password.png";
     .erovoutika-logo{
         width: 180px;
         height: 68px;
-        margin-top:11rem;
     }
     .form-content {
         display: flex;
         width: 430px;
-        height: 425px;
+        height: fit-content;
         padding: 30px;
         flex-direction: column;
         justify-content: center;
@@ -139,5 +138,14 @@ import password_icon from "../assets/show-hide-password.png";
         font-size: 16px;
         cursor: pointer;
         font-family: Inter;
+    }
+    
+    .login-button:hover {
+        background-color: #ccc;
+        color: #233876;
+        transform: scale(1.05)
+    }
+    @media .hero-background{
+        
     }
 </style>
