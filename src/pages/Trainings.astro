@@ -4,26 +4,31 @@ import Layout from "../layouts/Layout.astro";
 
 async function fetchAdminContent() {
   return {
-    title: "BE PART OF THE<br><span class='underline'>FUTURE!</span>",
-    subtitle: "Join us for an International Training & Tournament Camp!",
-    image: "/backgrounds/Trainings.png", 
-    buttonText: "Learn More",
+    hero_title: "BE PART OF THE<br><span class='underline'>FUTURE!</span>",
+    hero_subtitle: "Join us for an International Training & Tournament Camp!",
+    hero_background: "/backgrounds/Trainings.png", 
+    hero_buttonText: "Learn More",
+    
     introductionTitle: "Get Better Everyday In",
     introductionSubtitle: "Robolution Dubai 2025 challenges you to grow in robotics, automation, and cybersecurity. By competing, learning, and networking with experts worldwide, you'll enhance your technical skills, problem-solving abilities, and innovation mindset—preparing you for future success!",
-    featureRoboAutoTitle: "Robotics & Automation",
-    featureRoboAutoSubtitle: "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
-    featureRoboImg: "/backgrounds/erobot.png",
-    featureCyberTitle: "Cybersecurity",
-    featureCyberSubtitle: "Erovoutika promotes cybersecurity education and training by integrating network security, ethical hacking, and data protection into its programs. Through hands-on workshops, certifications, and competitions, participants gain expertise in threat detection, encryption, and cybersecurity best practices.",
-    featureCyberImg: "/backgrounds/cybersecurity.png",
-    featureRNDTitle: "Research & Development",
-    featureRNDSubtitle: "Erovoutika is dedicated to advancing innovation through Research & Development (R&D), with a strong emphasis on robotics, automation, cybersecurity, and AI-powered solutions. Additionally, it explores technical writing for journal publications and patenting, fostering knowledge sharing and technological advancements.",
-    featureRNDImg: "/backgrounds/rnd.png",
-    content4Title: "Join Us",
-    content4miniTitle: "START BUILDING IDEAS",
-    content4subtitle: "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
-    content4buttonText: "Register Now"
-  };
+    
+    content_1_Title: "Robotics & Automation",
+    content_1_Subtitle: "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
+    content_1_Img: "/backgrounds/erobot.png",
+
+    content_2_Title: "Cybersecurity",
+    content_2_Subtitle: "Erovoutika promotes cybersecurity education and training by integrating network security, ethical hacking, and data protection into its programs. Through hands-on workshops, certifications, and competitions, participants gain expertise in threat detection, encryption, and cybersecurity best practices.",
+    content_2_Img: "/backgrounds/cybersecurity.png",
+    
+    content_3_Title: "Research & Development",
+    content_3_Subtitle: "Erovoutika is dedicated to advancing innovation through Research & Development (R&D), with a strong emphasis on robotics, automation, cybersecurity, and AI-powered solutions. Additionally, it explores technical writing for journal publications and patenting, fostering knowledge sharing and technological advancements.",
+    content_3_Img: "/backgrounds/rnd.png",
+    
+    content_4_Title: "Join Us",
+    content_4_miniTitle: "START BUILDING IDEAS",
+    content_4_subtitle: "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
+    content_4_buttonText: "Register Now"
+  };  
 }
 
 
@@ -32,11 +37,11 @@ const content = await fetchAdminContent();
 
 <Layout>
 
-  <section class="hero" style={`background-image: url(${content.image});`}>
+  <section class="hero" style={`background-image: url(${content.hero_background});`}>
     <div class="hero-content">
-      <h1 class="hero-title" set:html={content.title}></h1>
-      <p class="hero-subtitle">{content.subtitle}</p>
-      <button class="hero-button" onclick="scrollToIntroduction()">{content.buttonText}</button>
+      <h1 class="hero-title" set:html={content.hero_title}></h1>
+      <p class="hero-subtitle">{content.hero_subtitle}</p>
+      <button class="hero-button" onclick="scrollToIntroduction()">{content.hero_buttonText}</button>
     </div>
   </section>
 
@@ -47,48 +52,48 @@ const content = await fetchAdminContent();
     </div>
   </section>
 
-  <section class="feature-robo-auto">
-    <div class="feature-container">
-      <div class="feature-text">
-        <div class="feature-robo-title">{content.featureRoboAutoTitle}</div>
-        <p class="feature-robo-subtitle">{content.featureRoboAutoSubtitle}</p>
+  <section class="content-1">
+    <div class="content-1-container">
+      <div class="content-1-text">
+        <div class="content-1-title">{content.content_1_Title}</div>
+        <p class="content-1-subtitle">{content.content_1_Subtitle}</p>
       </div>
-      <div class="feature-image">
-        <img src={content.featureRoboImg} alt="Robotics & Automation" />
-      </div>
-    </div>
-  </section>
-
-  <section class="feature-cyber">
-    <div class="feature-cyber-container">
-      <div class="feature-cyber-image">
-        <img src={content.featureCyberImg} alt="Cybersecurity" />
-      </div>
-      <div class="feature-cyber-text">
-        <div class="feature-cyber-title">{content.featureCyberTitle}</div>
-        <p class="feature-cyber-subtitle">{content.featureCyberSubtitle}</p>
+      <div class="content-1-image">
+        <img src={content.content_1_Img} alt="Robotics & Automation" />
       </div>
     </div>
   </section>
 
-  <section class="feature-rnd">
-    <div class="feature-rnd-container">
-      <div class="feature-rnd-text">
-        <div class="feature-rnd-title">{content.featureRNDTitle}</div>
-        <p class="feature-rnd-subtitle">{content.featureRNDSubtitle}</p>
+  <section class="content-2">
+    <div class="content-2-container">
+      <div class="content-2-image">
+        <img src={content.content_2_Img} alt="Cybersecurity" />
       </div>
-      <div class="feature-rnd-image">
-        <img src={content.featureRNDImg} alt="Research & Development" />
+      <div class="content-2-text">
+        <div class="content-2-title">{content.content_2_Title}</div>
+        <p class="content-2-subtitle">{content.content_2_Subtitle}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-3">
+    <div class="content-3-container">
+      <div class="content-3-text">
+        <div class="content-3-title">{content.content_3_Title}</div>
+        <p class="content-3-subtitle">{content.content_3_Subtitle}</p>
+      </div>
+      <div class="content-3-image">
+        <img src={content.content_3_Img} alt="Research & Development" />
       </div>
     </div>
   </section>
 
   <section class = "content-4">
     <div class="content-4-container">
-      <h5 class ="content-4-minititle" set:html={content.content4miniTitle}></h5>
-      <h1 class ="content-4-title" set:html={content.content4Title}></h1>
-      <p class = "content-4-subtitle">{content.content4subtitle}</p>
-      <button class="content-4-button">{content.content4buttonText}</button>
+      <h5 class ="content-4-minititle" set:html={content.content_4_miniTitle}></h5>
+      <h1 class ="content-4-title" set:html={content.content_4_Title}></h1>
+      <p class = "content-4-subtitle">{content.content_4_subtitle}</p>
+      <button class="content-4-button">{content.content_4_buttonText}</button>
     </div>
   </section>
 
@@ -115,7 +120,7 @@ const content = await fetchAdminContent();
   /* Hero Title */
   .hero-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 1.2;
     margin-bottom: 1.2rem;
   }
@@ -129,7 +134,7 @@ const content = await fetchAdminContent();
   /* Hero Subtitle */
   .hero-subtitle {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     opacity: 0.9;
   }
@@ -138,7 +143,7 @@ const content = await fetchAdminContent();
     background-color: #ffffff;
     color: black;
     padding: 15px 30px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
@@ -154,7 +159,7 @@ const content = await fetchAdminContent();
   /* Introduction */
   .introduction {
     background: white;
-    height: 40vh;
+    height: fit-content;
     padding: 40px 20px;
     text-align: center;
     align-items: center;
@@ -164,20 +169,19 @@ const content = await fetchAdminContent();
   }
   .intro-title {
     font-family: Roboto, sans-serif;
-    font-size: 2rem; 
+    font-size: 2.5rem; 
     font-weight: 700; 
     color: #212529;
     margin-bottom: 16px; 
   }
   .intro-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #475569;
     line-height: 1.6; 
     margin: 0;
   }
 
-
-.feature-robo-auto {
+.content-1 {
   background-color: #0B0221; 
   padding: 30px;
   height: 65vh; 
@@ -187,24 +191,24 @@ const content = await fetchAdminContent();
   box-sizing: border-box;
 }
 
-.feature-container {
+.content-1-container {
   display: flex;
   flex-direction: row; 
   align-items: center; 
   justify-content: space-evenly;
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
   height: 70%;
   gap: 50px;
 }
 
-.feature-text {
+.content-1-text {
   flex: 1;
   color: white;
   padding: auto 20px;
 }
 
-.feature-robo-title {
+.content-1-title {
   font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -213,16 +217,16 @@ const content = await fetchAdminContent();
   padding: 10px 15px; 
   border-radius: 5px;
   display: inline-block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.feature-robo-subtitle {
-  font-size: 1.2rem;
+.content-1-subtitle {
+  font-size: 1.5rem;
   margin-top: 10px;
   line-height: 1.5;
 }
 
-.feature-image{
+.content-1-image{
   flex: 1;
   display: flex;
   justify-content: center;
@@ -231,13 +235,76 @@ const content = await fetchAdminContent();
   border-radius: 10px;
 }
 
-.feature-image img {
+.content-1-image img {
   margin: 15px;
   max-width: 90%;
   border-radius: 10px;
   }
 
-  .feature-cyber {
+@media (max-width: 1024px) {
+  .content-1-container {
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+  }
+
+  .content-1 {
+    padding: 20px;
+    min-height: fit-content;
+  }
+
+  .content-1-text {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .content-1-title {
+    font-size: 2rem;
+  }
+
+  .content-1-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .content-1-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content-1-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .content-1-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: fit-content;
+
+  }
+
+  .content-1 {
+    padding: 20px;
+    min-height: fit-content;
+  }
+
+  .content-1-title {
+    font-size: 1.8rem;
+  }
+
+  .content-1-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .content-1-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+  .content-2 {
   background-color: #F1F5F9; 
   padding: 30px;
   height: 65vh; 
@@ -247,24 +314,24 @@ const content = await fetchAdminContent();
   box-sizing: border-box;
 }
 
-.feature-cyber-container {
+.content-2-container {
   display: flex;
   flex-direction: row; 
   align-items: center; 
   justify-content: space-evenly;
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
-  height: 70%;
+  height: auto;
   gap: 50px;
 }
 
-.feature-cyber-text {
+.content-2-text {
   flex: 1;
   color: #212529;
   padding: auto 20px;
 }
 
-.feature-cyber-title {
+.content-2-title {
   font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -273,16 +340,16 @@ const content = await fetchAdminContent();
   padding: 10px 15px; 
   border-radius: 5px;
   display: inline-block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.feature-cyber-subtitle {
+.content-2-subtitle {
   font-size: 1.2rem;
   margin-top: 10px;
   line-height: 1.5;
 }
 
-.feature-cyber-image{
+.content-2-image{
   flex: 1;
   display: flex;
   justify-content: center;
@@ -291,14 +358,75 @@ const content = await fetchAdminContent();
   border-radius: 10px;
 }
 
-.feature-cyber-image img {
+.content-2-image img {
   margin: 15px;
   max-width: 90%;
   border-radius: 10px;
   }
 
+  @media (max-width: 1024px) {
+  .content-2-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: fit-content;
+  }
 
-.feature-rnd{
+  .content-2 {
+    padding: 20px;
+    min-height: fit-content;
+  }
+
+  .content-2-text {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .content-2-title {
+    font-size: 2rem;
+  }
+
+  .content-2-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .content-2-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content-2-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+  @media (max-width: 768px) {
+  .content-2-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: fit-content;
+  }
+
+  .content-2 {
+    padding: 20px;
+    min-height: fit-content;
+  }
+
+  .content-2-image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .content-2-text {
+    width: 100%;
+  }
+
+  .content-2-title {
+    margin-bottom: 3rem;
+  }
+}
+
+
+.content-3{
   background-color: #0B0221; 
   padding: 30px;
   height: 65vh; 
@@ -308,7 +436,7 @@ const content = await fetchAdminContent();
   box-sizing: border-box;
 }
 
-.feature-rnd-container {
+.content-3-container {
   display: flex;
   flex-direction: row; 
   align-items: center; 
@@ -319,13 +447,13 @@ const content = await fetchAdminContent();
   gap: 60px;
 }
 
-.feature-rnd-text {
+.content-3-text {
   flex: 1;
   color: white;
   padding: auto 20px;
 }
 
-.feature-rnd-title {
+.content-3-title {
   font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -334,16 +462,16 @@ const content = await fetchAdminContent();
   padding: 10px 15px; 
   border-radius: 5px;
   display: inline-block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.feature-rnd-subtitle {
+.content-3-subtitle {
   font-size: 1.2rem;
   margin-top: 10px;
   line-height: 1.5;
 }
 
-.feature-rnd-image{
+.content-3-image{
   flex: 1;
   display: flex;
   justify-content: center;
@@ -352,11 +480,75 @@ const content = await fetchAdminContent();
   border-radius: 10px;
 }
 
-.feature-rnd-image img {
+.content-3-image img {
   margin: 15px;
   max-width: 90%;
   border-radius: 10px;
   }
+
+  @media (max-width: 1024px) {
+  .content-3-container {
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+  }
+
+  .content-3 {
+    padding: 20px;
+    min-height: fit-content;
+  }
+
+  .content-3-text {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .content-3-title {
+    font-size: 2rem;
+  }
+
+  .content-3-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .content-3-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content-3-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .content-3-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: fit-content;
+
+  }
+
+  .content-3 {
+    padding: 20px;
+    min-height: fit-content;
+  }
+
+  .content-3-title {
+    font-size: 1.8rem;
+  }
+
+  .content-3-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .content-3-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
 
   .content-4 {
     background: white;
@@ -379,13 +571,13 @@ const content = await fetchAdminContent();
 
   .content-4-title {
     font-family: Roboto, sans-serif;
-    font-size: 2rem; 
+    font-size: 2.5rem; 
     font-weight: 700; 
     color: #212529;
     margin-bottom: 16px; 
   }
   .content-4-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #475569;
     line-height: 1.6;
     margin-bottom: 2rem;
@@ -396,7 +588,7 @@ const content = await fetchAdminContent();
     background-color: #2562FF;
     color: white;
     padding: 15px 30px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
@@ -410,6 +602,8 @@ const content = await fetchAdminContent();
     color: black;
     transform: scale(1.05);
   }
+
+
 
 </style>
 
