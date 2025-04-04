@@ -36,7 +36,6 @@ const content = await fetchAdminContent();
 ---
 
 <Layout>
-
   <section class="hero" style={`background-image: url(${content.hero_background});`}>
     <div class="hero-content">
       <h1 class="hero-title" set:html={content.hero_title}></h1>
