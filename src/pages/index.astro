@@ -3,14 +3,17 @@ import Highlights from "../components/Highlights.astro";
 import Robolution from "../components/Robolution.astro";
 import FreAsk from "../components/FrequentlyAsk.astro";
 import Layout from "../layouts/Layout.astro";
-import { fade } from "astro/virtual-modules/transitions.js";
 
 ---
 
-<Layout transition:animate={fade({ duration: '0.4s' })}> 
+<Layout > 
         <Robolution/>
       <div id="background">
         <Highlights/>
+
+        {/* add other web page section here */}
+
+        
       </div>
 
         <div id="bgFreAsk">
