@@ -1,0 +1,61 @@
+[
+    {
+        "null": {
+            "color": "white",
+            "size": ["S", "M", "L", "XL"]
+        }
+    },
+    {
+        "null": {
+            "color": "black",
+            "size": ["S", "M", "L", "XL"]
+        }
+    },
+    {
+        "Default": {
+            "Contents": {
+                "Home": {
+                    "hero": {
+                        "mainText": "Welcome to Erovoutika Dubai",
+                        "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                        "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
+                    }
+                },
+                "Training": {
+                    "hero": {
+                        "title": "BE PART OF THE<br><span class='underline'>FUTURE!</span>",
+                        "subtitle": "Join us for an International Training & Tournament Camp!",
+                        "background": "/backgrounds/Trainings.png",
+                        "buttonText": "Learn More"
+                    } 
+                }
+            }
+        }
+    },
+    {
+        "Default2": {
+            "Contents": {
+                "Home2": {
+                    "hero": {
+                        "mainText": "Welcome to Erovoutika Dubai",
+                        "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                        "imageDirectory": "../assets/images/backgrounds/Main.jpg"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "Default3": {
+            "Contents": {
+                "Home3": {
+                    "hero": {
+                        "mainText": "Welcome to Erovoutika Dubai",
+                        "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                        "imageDirectory": "../assets/images/backgrounds/Main.jpg"
+                    }
+                }
+            }
+        }
+    }
+]
