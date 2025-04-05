@@ -289,9 +289,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loginButton) {
         loginButton.addEventListener('click', () => {
 
-            // Redirect to the Admin Dashboard
-            window.location.href = '/Trainings';
-
             // Validate if fields are filled
             const username = (document.querySelector('.username input') as HTMLInputElement).value;
             const password = (document.querySelector('.password input') as HTMLInputElement).value;
@@ -299,6 +296,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (username && password) {
                 // Perform login action here
                 console.log('Logging in with:', { username, password });
+                // Redirect to the Admin Dashboard
+                window.location.href = '/Trainings';
             } else {
                 alert('Please fill in both fields.');
             }

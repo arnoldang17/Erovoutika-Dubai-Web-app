@@ -1,0 +1,67 @@
+---
+import background from '/backgrounds/Trainings.png';
+---
+<body class="container" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
+    <h1 class="title">Nominations</h1>
+    
+    <table class="nominations-list">
+        <thead>
+            <tr>
+                <th>Nomination ID</th>
+                <th>Nominee Name</th>
+                <th>Nominator Name</th>
+                <th>Category</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example data, replace with actual data -->
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>Jane Smith</td>
+                <td>Best Employee</td>
+                <td>Approved</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Alice Johnson</td>
+                <td>Bob Brown</td>
+                <td>Best Team Player</td>
+                <td>Pending</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: start;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 20px;
+        height: 100vh;
+    }
+    .title {
+        font-size: 42px;
+        margin: 5px 0px 5px 0px;
+        font-family: Inter;
+        color: #F3F3FB;
+    }
+    .nominations-list {
+        width: 100%;
+        margin-top: 20px;
+        font-family: Inter;
+        color: #F3F3FB;
+        text-align: left;
+        vertical-align: middle;
+        align-items: left;
+        border-collapse: collapse  ;
+        padding:5px;
+    }
+</style>
