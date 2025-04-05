@@ -1,0 +1,42 @@
+---
+async function fetchAdminContent() {
+  return {
+
+    Competition:{
+        Students:{
+            image:"./ParticipateImages/students.png",
+
+            Header: "Students",
+            subText1:"High school or college teams up to ",
+            highlightText: "2 to 5 members",
+            subText2:"present their projects in a five-minute pitch, showcasing an innovative, functional prototype. They must also prepare a roll-up poster detailing the title, objectives, methodology, key features, and real-world applications.",
+        
+        }
+    }
+   
+  };  
+}
+
+
+const content = await fetchAdminContent();
+---
+<div>
+    <div class="p-8 " >
+        <div class="grid md:grid-cols-2 grid-cols-1 place-items-center">
+           
+
+            <div>
+                <h1 class="text-4xl mb-4 text-white text-left bg-BabyBlue w-fit rounded-md p-2 font-semibold font-roboto" set:html={content.Competition.Students.Header}> </h1>
+                <p class="text-white text-justify">{content.Competition.Students.subText1} <span class="text-amber-200">{content.Competition.Students.highlightText} </span> {content.Competition.Students.subText2} </p>
+            </div>
+
+            <img
+            class="h-2/3 w-auto shadow-sm rounded-md"
+            src={content.Competition.Students.image}           
+            />
+
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,45 @@
+---
+async function fetchAdminContent() {
+
+    return {
+
+    Competition:{
+        Teachers:{
+            title: "Who can Participate?",
+
+            image:"./ParticipateImages/teachers.png",
+
+            Header: "Teachers",
+            subText1:"Teachers and industry practitioners can form teams of ",
+            highlightText: "2 to 5 members",
+            subText2:"to represent their school or company. Using Erobot kits, teams will compete in Robotics & Automation, R&D, and Cybersecurity. The tournament showcases skills gained from a two-day training camp.",
+        }
+    }
+   
+  };  
+}
+
+
+const content = await fetchAdminContent();
+---
+<div>
+    <div class="h-[150px] bg-darkPurple place-content-center" >
+        <h1 class="font-semibold text-center text-5xl " set:html={content.Competition.Teachers.title}></h1>
+    </div>
+
+    <div class="p-8 " >
+        <div class="grid md:grid-cols-2 grid-cols-1 place-items-center">
+            <img
+            class="h-2/3 w-auto shadow-sm"
+            src={content.Competition.Teachers.image}         
+            />
+
+            <div>
+                <h1 class="text-4xl mb-4 text-black text-left bg-amber-200 w-fit rounded-md p-2 font-semibold font-roboto" set:html={content.Competition.Teachers.Header}></h1>
+                <p class="text-black text-justify">{content.Competition.Teachers.subText1}  <span class="text-highlightPurple"> {content.Competition.Teachers.highlightText} </span>  {content.Competition.Teachers.subText2}</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
