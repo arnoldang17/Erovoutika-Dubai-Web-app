@@ -255,3 +255,40 @@ const {erobot, eromath, freestyle, cybersecurity} = copyTheme.Tournament.Picture
     });
   </script>
   
+import Hero from "../components/Hero.astro";
+import TournaOverview from "../components/TournaOverview.astro";
+import CanParticipateTeachers from "../components/Teachers.astro";
+import CanParticipateStudents from "../components/Students.astro";
+import ReadyToCompete from "../components/ReadyToCompete.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <Hero /> 
+    <div id="Teachers">
+    <CanParticipateTeachers/>
+    </div>
+
+    <div id="Students">
+    <CanParticipateStudents/>
+    </div>
+
+    <ReadyToCompete/>
+
+</Layout>
+
+<style>
+ #Teachers{
+        background-image: url("./ParticipateImages/teachersBg.PNG");
+        background-size: cover;
+        background-position:center;
+      
+      }
+
+#Students{
+        background-image: url("./ParticipateImages/studentsBg.PNG");
+        background-size: cover;
+        background-position:center;
+      
+      }
+</style>
