@@ -251,6 +251,10 @@
   --color-highlightPurple: #8B5CF6;
 
   --color-BabyBlue: #2562FF;
+
+  --color-BlueStart: #2600FC;
+
+  --color-PinkEnd: #FF00EA;
 }
 
 @layer base {
