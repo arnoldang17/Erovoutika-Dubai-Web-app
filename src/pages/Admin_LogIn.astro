@@ -1,34 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import logo from "../assets/images/Erovoutika Dubai logo.png";
-import password_icon from "../assets/show-hide-password.png";
+import show_password_icon from "../assets/images/utility-icons/show-password.png";
+import hide_password_icon from "../assets/images/utility-icons/hide-password.png";
 ---
 <Layout>
     <section class="hero-background" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
-        
         <div class="form-container">
             <img class="erovoutika-logo" src={logo.src}/>
             <div class="form-content">
                 <h1 class="admin-login">Admin Login</h1>
                 <form class="admin-form">
-                    <div class="email">
-                        <input type="email" placeholder="Email Address" required />
+                    <div class="username">
+                        <input type="text" placeholder="Username" required />
                     </div>
                     <div class="password">
-                        <input type="password" placeholder="Password" required />
-                        <i class="pass-eye">
-                            <img src={password_icon.src} class="fa-eye" alt="eye" />
-                        </i>
+                        <input type="password" placeholder="Password" id="password" required  />
+                        <img src={show_password_icon.src} id="show-pass" alt="show eye icon"/>
+                        <img src={hide_password_icon.src} id="hide-pass" alt="hide eye icon" style="display: none;"/>
                         <div class="forgot-password">
                             <a href="#">Forgot Password?</a>
                         </div>
-
-                        <div class="have_account">
+                        <!--<div class="have_account">
                             <p>Didn't have an account? <a href ="/Admin_SignUp"><u>Sign Up</u></a></p>
-                        </div>
+                        </div>-->
                     </div>
                 </form>
-                <button class="login-button">
+                <button class="login-button" id="login_button">
                     <span>Log In</span>
                 </button>
             </div>
@@ -63,7 +61,7 @@ import password_icon from "../assets/show-hide-password.png";
         height: 68px;
         margin: 20px;
     }
-    .form-content {
+    .form-content{
         display: flex;
         width: fit-content;
         height: fit-content;
@@ -72,7 +70,7 @@ import password_icon from "../assets/show-hide-password.png";
         justify-content: center;
         align-items: center;
         gap: 30px;
-        border-radius: 10px;
+        border-radius: 20px;
         background: #F3F3FB;
     }
     .admin-login {
@@ -81,6 +79,7 @@ import password_icon from "../assets/show-hide-password.png";
         font-family: Inter;
         font-size: 32px;
         font-style: normal;
+        font-weight: 600;
         line-height: 44px;
     }
     .admin-form {
@@ -88,17 +87,24 @@ import password_icon from "../assets/show-hide-password.png";
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
     }
-    .form-content input {
+    .form-content input{
+        position: relative;
         width: 100%;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 10px 15px 10px 15px;
+        border-radius: 40px;
         border: 1px solid #ccc;
         font-size: 16px;
         font-family: Inter;
     }
-    .email {
+    .form-content img{
+        position: absolute;
+        right: 15px;
+        top: calc(20%);
+        cursor: pointer;
+    }
+    .username {
         position: relative;
         width: 330px;
     }
@@ -106,12 +112,7 @@ import password_icon from "../assets/show-hide-password.png";
         position: relative;
         width: 330px;
     }
-    .pass-eye {
-        position: absolute;
-        right: 10px;
-        top: calc(15%);
-        cursor: pointer;
-    }
+    
     .forgot-password{   
         margin-bottom: 10px;
         margin-top: 10px;
@@ -122,7 +123,6 @@ import password_icon from "../assets/show-hide-password.png";
         font-family: Inter;
         font-size: 14px;
         font-style: normal;
-        font-weight: 400;
         line-height: 14px; /* 100% */
         letter-spacing: -0.28px;
         text-decoration-line: underline;
@@ -138,7 +138,7 @@ import password_icon from "../assets/show-hide-password.png";
         background-color: #233876;
         color: #fff;
         border: none;
-        border-radius: 5px;
+        border-radius: 40px;
         font-size: 16px;
         cursor: pointer;
         font-family: Inter;
@@ -168,10 +168,59 @@ import password_icon from "../assets/show-hide-password.png";
         .form-container {
             min-height: fit-content;
             width:auto;
-
             margin: 10px;
         }
 
+    }
+    @media (max-width: 425px) {
+        .hero-background{
+            background-size: cover;
+            background-position: center;
+            width: max-content;
+            height: 140vh;
+        }
+        .form-container {
+            min-height: fit-content;
+            justify-content: center;
+            width:auto;
+            margin: 10px;
+        }
+        .username {
+            position: relative;
+            width: 300px;
+        }
+        .password {
+            position: relative;
+            width: 300px;
+        }
+        .forgot-password{
+            position: relative;
+            right: 30px;
+        }
+    }
+    @media (max-width: 375px){
+        .hero-background{
+            background-size: cover;
+            background-position: center;
+            width: max-content;
+            height: 140vh;
+        }
+        .form-container {
+            width: min(90%, fit-content);
+            margin: 10px;
+        }
+        .username {
+            position: relative;
+            width: 300px;
+        }
+        .password {
+            position: relative;
+            width: 300px;
+        }
+        .forgot-password{
+            position: relative;
+            right: 30px;
+        }
     }
 
     @media (max-width: 320px) {
@@ -187,14 +236,74 @@ import password_icon from "../assets/show-hide-password.png";
 
             margin: 10px;
         }
-        .email {
-        position: relative;
-        width: 300px;
-    }
-    .password {
-        position: relative;
-        width: 300px;
-    }
-
+        .username {
+            position: relative;
+            width: 300px;
+        }
+        .password {
+            position: relative;
+            width: 300px;
+        }
+        .forgot-password{
+            position: relative;
+            right: 30px;
+        }
     }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Tentative: Validation if username and password are correct
+    // code here --
+
+    // Event Listener for the show/hide password icons
+    const showIcon = document.getElementById('show-pass') as HTMLImageElement | null;
+    const hideIcon = document.getElementById('hide-pass') as HTMLImageElement | null;
+    const passwordInput = document.getElementById('password') as HTMLInputElement | null;
+
+    if (showIcon && hideIcon && passwordInput) {
+        showIcon.addEventListener('click', () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showIcon.style.display = "none";
+                hideIcon.style.display = "inline";
+            }
+        });
+
+        hideIcon.addEventListener('click', () => {
+            if (passwordInput.type === 'text') {
+                passwordInput.type = 'password';
+                hideIcon.style.display = "none";
+                showIcon.style.display = "inline";
+            }
+        });
+    }
+
+    // Tentative: Add a click event listener to the "Forgot Password?" link
+    // code here --
+
+    // Event Liestener for the login button
+    const loginButton = document.getElementById('login_button') as HTMLButtonElement | null;
+
+    if (loginButton) {
+        loginButton.addEventListener('click', () => {
+
+            // Redirect to the Admin Dashboard
+            window.location.href = '/Trainings';
+
+            // Validate if fields are filled
+            const username = (document.querySelector('.username input') as HTMLInputElement).value;
+            const password = (document.querySelector('.password input') as HTMLInputElement).value;
+
+            if (username && password) {
+                // Perform login action here
+                console.log('Logging in with:', { username, password });
+            } else {
+                alert('Please fill in both fields.');
+            }
+        });
+    }
+
+});
+</script>
