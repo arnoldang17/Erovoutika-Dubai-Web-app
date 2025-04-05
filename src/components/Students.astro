@@ -21,17 +21,16 @@ async function fetchAdminContent() {
 const content = await fetchAdminContent();
 ---
 <div>
-    <div class="p-8 " >
-        <div class="grid md:grid-cols-2 grid-cols-1 place-items-center">
+    <div class="md:p-44 p-10" >
+        <div class="grid md:grid-cols-2 grid-cols-1 place-items-center md:gap-20 gap-10">
            
-
             <div>
                 <h1 class="text-4xl mb-4 text-white text-left bg-BabyBlue w-fit rounded-md p-2 font-semibold font-roboto" set:html={content.Competition.Students.Header}> </h1>
                 <p class="text-white text-justify">{content.Competition.Students.subText1} <span class="text-amber-200">{content.Competition.Students.highlightText} </span> {content.Competition.Students.subText2} </p>
             </div>
 
             <img
-            class="h-2/3 w-auto shadow-sm rounded-md"
+            class="h-auto w-full shadow-sm rounded-md"
             src={content.Competition.Students.image}           
             />
 
