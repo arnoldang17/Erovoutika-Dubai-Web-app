@@ -1,51 +1,60 @@
 ---
 import background from '/backgrounds/Trainings.png';
 ---
-<body class="container" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
-    <h1 class="title">Nominations</h1>
-    
-    <table class="nominations-list">
-        <thead>
-            <tr>
-                <th>Nomination ID</th>
-                <th>Nominee Name</th>
-                <th>Nominator Name</th>
-                <th>Category</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Example data, replace with actual data -->
-            <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>Jane Smith</td>
-                <td>Best Employee</td>
-                <td>Approved</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Alice Johnson</td>
-                <td>Bob Brown</td>
-                <td>Best Team Player</td>
-                <td>Pending</td>
-            </tr>
-        </tbody>
-    </table>
+<body class="hero" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
+    <div class="table-container">
+        <h1 class="title">Nominations</h1>
+        <div class="table-wrapper">
+            <table class="nominations-list">
+                <thead>
+                    <tr>
+                        <th>Count</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Designation</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example data, replace with actual data -->
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>Jane Smith</td>
+                        <td>Best Employee</td>
+                        <td>Approved</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Alice Johnson</td>
+                        <td>Bob Brown</td>
+                        <td>Best Team Player</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 
 <style>
-    .container {
+    .hero {
         display: flex;
-        flex-direction: column;
-        justify-content: top;
-        align-items: start;
-        text-align: center;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        margin: 20px;
+        margin: 20px 20px 20px 20px;
         height: 100vh;
+    }
+    .table-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        gap: 10px;
+        background-color: #b8c3e62f;
+        backdrop-filter: blur(50px);
     }
     .title {
         font-size: 42px;
@@ -53,15 +62,45 @@ import background from '/backgrounds/Trainings.png';
         font-family: Inter;
         color: #F3F3FB;
     }
-    .nominations-list {
-        width: 100%;
-        margin-top: 20px;
-        font-family: Inter;
-        color: #F3F3FB;
-        text-align: left;
-        vertical-align: middle;
-        align-items: left;
-        border-collapse: collapse  ;
-        padding:5px;
+    .table-wrapper {
+        border-radius: 
+        overflow: hidden;
     }
+    .nominations-list {    
+        font-family: Inter;
+        font-size: 14px;
+        text-align: left;
+        vertical-align: middle;        
+        width: 100%;
+        border-collapse: separate;
+        border-radius: 10px;
+        border-spacing: 0;
+        padding:2px;
+        overflow: hidden;
+    }
+    .nominations-list th {
+        background-color: #233876;
+        color: white;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+    .nominations-list th:first-child {
+        border-top-left-radius: 10px;
+    }
+    .nominations-list th:last-child {
+        border-top-right-radius: 10px;
+    }
+    .nominations-list td {
+        padding: 10px;
+        background-color: #F3F3FB;
+        border: 1px solid #ddd;
+        color: #233876;
+    }
+    .nominations-list tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+    .nominations-list tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
+    }
+
 </style>
