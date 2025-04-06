@@ -3,7 +3,7 @@ import fs from "fs";
 import pg from "pg";
 
 const connectionInfo = {
-    db: new pg.Pool({
+    db: new pg.Client({
         // user: import.meta.env.DB_USER,
         // password: import.meta.env.DB_PASSWORD,
         // host: import.meta.env.DB_HOST,
@@ -17,8 +17,6 @@ const connectionInfo = {
     }),
     status: false,
 };
-
-let index = 2;
 
 const connectDB = async (db) => {
     if (!connectionInfo.status) {
@@ -39,12 +37,13 @@ const disconnectDB = async () => {
     if (connectionInfo.status) {
         await connectionInfo.db.end();
         connectionInfo.status = false;
+        console.log("disconnected");
     }
 };
 
 async function getDbData() {
     await connectDB();
-    const data = [];
+    const data = readFile();
 
     const res = await connectionInfo.db.query(
         "Select config, name from template ORDER BY id ASC"
@@ -53,15 +52,22 @@ async function getDbData() {
     const dbData = mapDbRowsToObjects(res.rows);
     console.log("test: ", dbData);
 
-    dbData.forEach((item) => {
-        data.push(item);
-    });
+    //if data is array
+    // dbData.forEach((item) => {
+    //     data.push(item);
+    // });
+
+    data.templates = dbData;
+
+    //if data is object
+    // dbData.forEach(element => {
+    //     data.templates[Object.keys(element)] = Object.values(element)[0];
+    // });
     console.log(data);
 
     writeFile(path, data);
     await disconnectDB();
-    console.log("disconnected");
-}
+};
 
 function mapDbRowsToObjects(rows) {
     return rows.map(({ config, name }) => {
@@ -87,7 +93,6 @@ async function insertDbData() {
     }
 
     await disconnectDB();
-    console.log("disconnected");
 }
 
 function readFile(dbName = path) {
@@ -112,12 +117,21 @@ function deleteFileContents(dbName = path) {
     console.log("deleted");
 }
 
-function fetchPageContent(pageName) {
+async function fetchPageContent(pageName) {
     const fileData = readFile();
-    return Object.values(fileData[index])[0].Contents[pageName];
+    const selectedIndex = fileData.selectedIndex;
+    console.log(selectedIndex);
+
+    console.log("filedata: ", fileData.templates);
+
+    try {
+        return Object.values(fileData.templates[selectedIndex])[0].Contents[pageName];
+    } catch (error) {
+        console.log("no value in JSON file");
+    }
 }
 
-console.log(fetchPageContent("Training"));
+console.log(await fetchPageContent("Home"));
 
 // deleteFileContents();
 export default getDbData;
