@@ -2,6 +2,9 @@ const path = "./default.json";
 import fs from "fs";
 import pg from "pg";
 
+//TODO:
+// seperate functions to a new file
+
 const connectionInfo = {
     db: new pg.Client({
         // user: import.meta.env.DB_USER,
@@ -67,7 +70,7 @@ async function getDbData() {
 
     writeFile(path, data);
     await disconnectDB();
-};
+}
 
 function mapDbRowsToObjects(rows) {
     return rows.map(({ config, name }) => {
@@ -75,6 +78,7 @@ function mapDbRowsToObjects(rows) {
     });
 }
 
+//FIXME:
 async function insertDbData() {
     await connectDB();
     const data = readFile();
@@ -89,7 +93,7 @@ async function insertDbData() {
         ];
 
         const res = await connectionInfo.db.query(query, values);
-        console.log("insert complete for: ", Object.keys(JSONData[item])[0]);
+        console.log("insert complete for: ", Object.keys(data[item])[0]);
     }
 
     await disconnectDB();
@@ -125,7 +129,9 @@ async function fetchPageContent(pageName) {
     console.log("filedata: ", fileData.templates);
 
     try {
-        return Object.values(fileData.templates[selectedIndex])[0].Contents[pageName];
+        return Object.values(fileData.templates[selectedIndex])[0].Contents[
+            pageName
+        ];
     } catch (error) {
         console.log("no value in JSON file");
     }
