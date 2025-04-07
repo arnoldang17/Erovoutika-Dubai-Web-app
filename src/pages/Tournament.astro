@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/style.css";
+import CanParticipateTeachers from "../components/Teachers.astro";
+import CanParticipateStudents from "../components/Students.astro";
+import ReadyToCompete from "../components/ReadyToCompete.astro";
 
 let Templates = {
     Default: {
@@ -103,6 +106,7 @@ const {erobot, eromath, freestyle, cybersecurity} = copyTheme.Tournament.Picture
 </div>
 
     <!-- overview section -->
+     <div class="bg-white">
     <div class ="overview" id="OverView">
         <div>
             <h1 class="subhead" set:html= {copyTheme.Tournament.Overview.subheadings}></h3>
@@ -110,9 +114,6 @@ const {erobot, eromath, freestyle, cybersecurity} = copyTheme.Tournament.Picture
                 <p class="info md:w-190" set:html={copyTheme.Tournament.Overview.info}></p>
         </div>
     </div>
-
-          
-
 <!-- picture section -->
 <div class="grid grid-cols-1 sm:grid-cols-1 place-items-center md:grid-cols-2 ">
     <div class=""><img src={erobot}/></div>
@@ -120,7 +121,16 @@ const {erobot, eromath, freestyle, cybersecurity} = copyTheme.Tournament.Picture
     <div class=""><img src={eromath}/></div>
     <div class=""><img src={cybersecurity}/></div>
   </div>
-  
+</div>
+  <div id="Teachers">
+    <CanParticipateTeachers/>
+    </div>
+
+    <div id="Students">
+    <CanParticipateStudents/>
+    </div>
+
+    <ReadyToCompete/>
 
 </Layout>
 <style>
@@ -214,6 +224,8 @@ const {erobot, eromath, freestyle, cybersecurity} = copyTheme.Tournament.Picture
     font-size: 58px;
     line-height: 1.2;
     margin-bottom: 1.2rem;
+    color: black;
+    
 }
 .info{
     font-family: 'Inter';
@@ -255,27 +267,6 @@ const {erobot, eromath, freestyle, cybersecurity} = copyTheme.Tournament.Picture
     });
   </script>
   
-import Hero from "../components/Hero.astro";
-import TournaOverview from "../components/TournaOverview.astro";
-import CanParticipateTeachers from "../components/Teachers.astro";
-import CanParticipateStudents from "../components/Students.astro";
-import ReadyToCompete from "../components/ReadyToCompete.astro";
-import Layout from "../layouts/Layout.astro";
----
-
-<Layout>
-    <Hero /> 
-    <div id="Teachers">
-    <CanParticipateTeachers/>
-    </div>
-
-    <div id="Students">
-    <CanParticipateStudents/>
-    </div>
-
-    <ReadyToCompete/>
-
-</Layout>
 
 <style>
  #Teachers{
