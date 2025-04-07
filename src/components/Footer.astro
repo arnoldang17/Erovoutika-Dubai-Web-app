@@ -1,0 +1,65 @@
+---
+const footerLinks = [
+  { name: "Home", href: "#" },
+  { name: "News", href: "#" },
+  { name: "Tournaments", href: "#" },
+  { name: "Trainings", href: "#" },
+];
+---
+
+<footer
+  class="relative bg-[url(/src/assets/images/backgrounds/Foots.png)] h-auto w-full bg-cover bg-no-repeat bg-center text-white bottom-0"
+>
+<div class="container mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-4 md:gap-6">
+        <!-- Left Section: Contact Information -->
+        <div class="w-full md:w-auto flex-1 max-w-md text-center md:text-left">
+            <h2 class="text-xl font-bold pb-4 pl-16">Contact Information</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <div class="bg-[url(/src/assets/images/backgrounds/telephone-qr-code.png)] w-32 h-32 bg-cover bg-center"></div>
+                <div>
+                    <p class="flex items-center justify-center md:justify-start gap-2 text-sm">
+                        <img src="/src/assets/images/socials/email.png" alt="Email" class="w-4 h-4" />
+                        <span>erovoutika@gmail.com</span>
+                    </p>
+                    <a href="mailto:erovoutika@gmail.com" class="mt-4 inline-block px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded hover:bg-blue-700 transition">
+                        Contact Us!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Section: Navigation -->
+        <div class="w-full md:w-auto flex-1 max-w-md">
+            <ul class="flex flex-wrap justify-center gap-4 md:gap-6 text-sm font-medium">
+                {footerLinks.map((link) => (
+                    <li key={link.name}>
+                        <a href={link.href} class="hover:text-gray-300 transition">
+                            {link.name}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+        <!-- Right Section: Social Links -->
+        <div class="w-full md:w-auto flex-1 max-w-md text-center">
+            <h2 class="text-xl font-bold pb-4 text-[30px]">Follow Us!</h2>
+            <div class="flex justify-center items-center gap-4">
+                <a href="https://ph.linkedin.com/company/erovoutika" class="hover:opacity-80 transition">
+                    <img src="/src/assets/images/socials/Linkedin.png" alt="LinkedIn" class="w-5 h-5"/>
+                </a>
+                <a href="https://www.facebook.com/erovoutika" class="hover:opacity-80 transition">
+                    <img src="/src/assets/images/socials/Facebook.png" alt="Facebook" class="w-6 h-6"/>
+                </a>
+                <a href="https://www.instagram.com/erovoutikainternational/" class="hover:opacity-80 transition">
+                    <img src="/src/assets/images/socials/Instagram.png" alt="Instagram" class="w-6 h-6"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+      
+    </div>
+  </div>
+</footer>
