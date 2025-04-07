@@ -1,0 +1,66 @@
+{
+    "templates": [
+        {
+            "null": {
+                "color": "white",
+                "size": [
+                    "S",
+                    "M",
+                    "L",
+                    "XL"
+                ]
+            }
+        },
+        {
+            "test": {
+                "color": "black",
+                "size": [
+                    "S",
+                    "M",
+                    "L",
+                    "XL"
+                ]
+            }
+        },
+        {
+            "Default": {
+                "Contents": {
+                    "Home": {
+                        "hero": {
+                            "mainText": "Welcome to Erovoutika Dubai",
+                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "Default2": {
+                "Contents": {
+                    "Home2": {
+                        "hero": {
+                            "mainText": "Welcome to Erovoutika Dubai",
+                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                            "imageDirectory": "../assets/images/backgrounds/Main.jpg"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "Default3": {
+                "Contents": {
+                    "Home3": {
+                        "hero": {
+                            "mainText": "Welcome to Erovoutika Dubai",
+                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                            "imageDirectory": "../assets/images/backgrounds/Main.jpg"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "selectedIndex": 2
+}
