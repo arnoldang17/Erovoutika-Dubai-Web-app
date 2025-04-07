@@ -1,64 +1,87 @@
 ---
-import Layout from "../layouts/Layout.astro";
+type Content = {
+  hero?: {
+    background?: string;
+    title?: string;
+    subtitle?: string;
+    buttonText?: string;
+  };
+  introduction?: {
+    title?: string;
+    subtitle?: string;
+  };
+  content_1?: {
+    title?: string;
+    subtitle?: string;
+    ImageDirectory?: string;
+  };
+  content_2?: {
+    title?: string;
+    subtitle?: string;
+    ImageDirectory?: string;
+  };
+  content_3?: {
+    title?: string;
+    subtitle?: string;
+    ImageDirectory?: string;
+  };
+  content_4?: {
+    minititle?: string;
+    title?: string;
+    subtitle?: string;
+    buttonText?: string;
+  };
+};
+
+import { createClient } from '@supabase/supabase-js';
+import Layout from '../layouts/Layout.astro';
+
+const supabase = createClient (
+  import.meta.env.SUPABASE_URL,
+  import.meta.env.SUPABASE_ANON_KEY
+);
+
+const { data: row, error } = await supabase
+  .from('Trainings')
+  .select('hero, introduction, content_1, content_2, content_3, content_4')
+  .limit(1)
+  .single();
 
 
-async function fetchAdminContent() {
-  return {
-    hero_title: "BE PART OF THE<br><span class='underline'>FUTURE!</span>",
-    hero_subtitle: "Join us for an International Training & Tournament Camp!",
-    hero_background: "/backgrounds/Trainings.png", 
-    hero_buttonText: "Learn More",
-    
-    introductionTitle: "Get Better Everyday In",
-    introductionSubtitle: "Robolution Dubai 2025 challenges you to grow in robotics, automation, and cybersecurity. By competing, learning, and networking with experts worldwide, you'll enhance your technical skills, problem-solving abilities, and innovation mindset—preparing you for future success!",
-    
-    content_1_Title: "Robotics & Automation",
-    content_1_Subtitle: "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
-    content_1_Img: "/backgrounds/erobot.png",
+  const content: Content = row || {};
 
-    content_2_Title: "Cybersecurity",
-    content_2_Subtitle: "Erovoutika promotes cybersecurity education and training by integrating network security, ethical hacking, and data protection into its programs. Through hands-on workshops, certifications, and competitions, participants gain expertise in threat detection, encryption, and cybersecurity best practices.",
-    content_2_Img: "/backgrounds/cybersecurity.png",
-    
-    content_3_Title: "Research & Development",
-    content_3_Subtitle: "Erovoutika is dedicated to advancing innovation through Research & Development (R&D), with a strong emphasis on robotics, automation, cybersecurity, and AI-powered solutions. Additionally, it explores technical writing for journal publications and patenting, fostering knowledge sharing and technological advancements.",
-    content_3_Img: "/backgrounds/rnd.png",
-    
-    content_4_Title: "Join Us",
-    content_4_miniTitle: "START BUILDING IDEAS",
-    content_4_subtitle: "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
-    content_4_buttonText: "Register Now"
-  };  
+if (error) {
+  console.error("Error fetching training data:", error);
+} else {
+  console.log('Fetched row data from Supabase:', row);
 }
 
-
-const content = await fetchAdminContent();
 ---
 
 <Layout>
-  <section class="hero" style={`background-image: url(${content.hero_background});`}>
+  <section class="hero" style={`background-image: url(${content.hero?.background});`}>
     <div class="hero-content">
-      <h1 class="hero-title" set:html={content.hero_title}></h1>
-      <p class="hero-subtitle">{content.hero_subtitle}</p>
-      <button class="hero-button" onclick="scrollToIntroduction()">{content.hero_buttonText}</button>
+      <h1 class="hero-title" set:html={content.hero?.title}></h1>
+      <p class="hero-subtitle">{content.hero?.subtitle}</p>
+      <button class="hero-button" onclick="scrollToIntroduction()">{content.hero?.buttonText}</button>
     </div>
   </section>
 
   <section class = "introduction" id="introduction">
     <div class="introduction-content">
-      <h1 class ="intro-title" set:html={content.introductionTitle}></h1>
-      <p class = "intro-subtitle">{content.introductionSubtitle}</p>
+      <h1 class ="intro-title" set:html={content.introduction?.title}></h1>
+      <p class = "intro-subtitle">{content.introduction?.subtitle}</p>
     </div>
   </section>
 
   <section class="content-1">
     <div class="content-1-container">
       <div class="content-1-text">
-        <div class="content-1-title">{content.content_1_Title}</div>
-        <p class="content-1-subtitle">{content.content_1_Subtitle}</p>
+        <div class="content-1-title">{content.content_1?.title}</div>
+        <p class="content-1-subtitle">{content.content_1?.subtitle}</p>
       </div>
       <div class="content-1-image">
-        <img src={content.content_1_Img} alt="Robotics & Automation" />
+        <img src={content.content_1?.ImageDirectory} alt="Robotics & Automation" />
       </div>
     </div>
   </section>
@@ -66,11 +89,11 @@ const content = await fetchAdminContent();
   <section class="content-2">
     <div class="content-2-container">
       <div class="content-2-image">
-        <img src={content.content_2_Img} alt="Cybersecurity" />
+        <img src={content.content_2?.ImageDirectory} alt="Cybersecurity" />
       </div>
       <div class="content-2-text">
-        <div class="content-2-title">{content.content_2_Title}</div>
-        <p class="content-2-subtitle">{content.content_2_Subtitle}</p>
+        <div class="content-2-title">{content.content_2?.title}</div>
+        <p class="content-2-subtitle">{content.content_2?.subtitle}</p>
       </div>
     </div>
   </section>
@@ -78,25 +101,25 @@ const content = await fetchAdminContent();
   <section class="content-3">
     <div class="content-3-container">
       <div class="content-3-text">
-        <div class="content-3-title">{content.content_3_Title}</div>
-        <p class="content-3-subtitle">{content.content_3_Subtitle}</p>
+        <div class="content-3-title">{content.content_3?.title}</div>
+        <p class="content-3-subtitle">{content.content_3?.subtitle}</p>
       </div>
       <div class="content-3-image">
-        <img src={content.content_3_Img} alt="Research & Development" />
+        <img src={content.content_3?.ImageDirectory} alt="Research & Development" />
       </div>
     </div>
   </section>
 
   <section class = "content-4">
     <div class="content-4-container">
-      <h5 class ="content-4-minititle" set:html={content.content_4_miniTitle}></h5>
-      <h1 class ="content-4-title" set:html={content.content_4_Title}></h1>
-      <p class = "content-4-subtitle">{content.content_4_subtitle}</p>
-      <button class="content-4-button">{content.content_4_buttonText}</button>
+      <h5 class ="content-4-minititle" set:html={content.content_4?.minititle}></h5>
+      <h1 class ="content-4-title" set:html={content.content_4?.title}></h1>
+      <p class = "content-4-subtitle">{content.content_4?.subtitle}</p>
+      <button class="content-4-button">{content.content_4?.buttonText}</button>
     </div>
   </section>
-
 </Layout>
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -174,6 +197,7 @@ const content = await fetchAdminContent();
     margin-bottom: 16px; 
   }
   .intro-subtitle {
+    font-family: Roboto, sans-serif;
     font-size: 1.2rem;
     color: #475569;
     line-height: 1.6; 
@@ -202,6 +226,7 @@ const content = await fetchAdminContent();
 }
 
 .content-1-text {
+  font-family: Roboto, sans-serif;
   flex: 1;
   color: white;
   padding: auto 20px;
@@ -220,7 +245,8 @@ const content = await fetchAdminContent();
 }
 
 .content-1-subtitle {
-  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
   margin-top: 10px;
   line-height: 1.5;
 }
@@ -343,6 +369,7 @@ const content = await fetchAdminContent();
 }
 
 .content-2-subtitle {
+  font-family: Roboto, sans-serif;
   font-size: 1.2rem;
   margin-top: 10px;
   line-height: 1.5;
@@ -447,6 +474,7 @@ const content = await fetchAdminContent();
 }
 
 .content-3-text {
+  font-family: Roboto, sans-serif;
   flex: 1;
   color: white;
   padding: auto 20px;
@@ -576,6 +604,7 @@ const content = await fetchAdminContent();
     margin-bottom: 16px; 
   }
   .content-4-subtitle {
+    font-family: Roboto, sans-serif;
     font-size: 1.2rem;
     color: #475569;
     line-height: 1.6;
@@ -608,6 +637,8 @@ const content = await fetchAdminContent();
 
 <script>
   const learnMoreButton = document.querySelector(".hero-button");
+
+if (learnMoreButton) {
   learnMoreButton.addEventListener("click", () => {
     const introSection = document.getElementById("introduction");
     if (introSection) {
@@ -616,4 +647,7 @@ const content = await fetchAdminContent();
       console.error("Introduction section not found.");
     }
   });
-</script>
+} else {
+  console.error("Hero button not found.");
+}
+</script> 
