@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
 import "./src/styles/global.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -19,7 +20,9 @@ import "./src/styles/global.css";
   <body>
     <Nav />
     <slot />
+    <Footer/>
   </body>
+
   <script
     is:inline
     src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"
