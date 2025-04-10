@@ -234,7 +234,7 @@ if (error) {
 }
 
 .content-1-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: white;
@@ -359,7 +359,7 @@ if (error) {
 }
 
 .content-2-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #212529;
@@ -483,7 +483,7 @@ if (error) {
 }
 
 .content-3-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: white;
@@ -588,6 +588,7 @@ if (error) {
     border-radius: 8px;
     margin: 20px auto; 
     max-width: 750px;
+    height: fit-content;
   }
 
   .content-4-minititle {
@@ -632,7 +633,11 @@ if (error) {
     color: black;
     transform: scale(1.05);
   }
-
+  @media (max-width: 786px) {
+    .content-4 {
+      height: fit-content;
+    }
+  }
 
 
 </style>
