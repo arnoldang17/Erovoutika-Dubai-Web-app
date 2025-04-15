@@ -1,4 +1,4 @@
-/*const path = "./default.json";
+const path = "./default.json";
 import fs from "fs";
 import pg from "pg";
 
@@ -121,4 +121,4 @@ console.log(fetchPageContent("Training"));
 
 // deleteFileContents();
 export default getDbData;
-export { fetchPageContent };*/
+export { fetchPageContent };

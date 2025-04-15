@@ -1,0 +1,46 @@
+---
+import NominationForm from '../components/Nominations_Form.astro';
+
+async function NominationContent() {
+    return {
+        hero_title: "RECOGNIZE EXCELLENCE IN INNOVATION",
+        hero_subtitle: "Nominate outstanding individuals and teams who are shaping the future of technology with Erovoutika.",
+        hero_background: "/backgrounds/Nomination-Banner.jpg",
+        hero_buttonText: "Nominate Now"
+    }
+}
+
+const content = await NominationContent();
+---
+
+<section class="nomination-hero" style={`background-image: url(${content.hero_background});`}>
+    <div class="hero-content">
+        <h1>{content.hero_title}</h1>
+        <p>{content.hero_subtitle}</p>
+        <button>{content.hero_buttonText}</button>
+    </div>
+</section>
+<section class="nomination-form">
+    <NominationForm/>
+</section>
+
+
+
+<style>
+    .nomination-hero {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: `no-repeat`;
+        width: 100%;
+        height: 100vh;
+    }
+    .nomination-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+</style>
