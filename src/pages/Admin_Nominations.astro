@@ -1,5 +1,7 @@
 ---
 import background from '/backgrounds/Trainings.png';
+
+
 ---
 <body class="hero" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
     <div class="table-container">
@@ -15,22 +17,8 @@ import background from '/backgrounds/Trainings.png';
                         <th>Contact</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Example data, replace with actual data -->
-                    <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>Jane Smith</td>
-                        <td>Best Employee</td>
-                        <td>Approved</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Alice Johnson</td>
-                        <td>Bob Brown</td>
-                        <td>Best Team Player</td>
-                        <td>Pending</td>
-                    </tr>
+                <tbody id="nomination-table-body">
+                    
                 </tbody>
             </table>
         </div>
@@ -104,3 +92,35 @@ import background from '/backgrounds/Trainings.png';
     }
 
 </style>
+
+<script>
+    interface NominationValueType {
+    firstName: string;
+    lastName: string;
+    designation: string;
+    contact: string;
+    }
+
+    const table_body = document.getElementById('nomination-table-body') as HTMLTableSectionElement;
+
+    function renderTable() {
+        const data: NominationValueType[] = JSON.parse(localStorage.getItem('nominations') || '[]')
+        
+        table_body.innerHTML = '';
+
+        data.forEach((entry, index) => {
+            const { firstName, lastName, designation, contact } = entry;
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${firstName}</td>
+                <td>${lastName}</td>
+                <td>${designation}</td>
+                <td>${contact}</td>
+            `;
+            table_body.appendChild(row);
+        });
+    }
+    renderTable();
+    window.addEventListener('nominations-updated', renderTable)
+</script>
