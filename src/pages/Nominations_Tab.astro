@@ -1,5 +1,6 @@
 ---
 import NominationForm from '../components/Nominations_Form.astro';
+import Nav from '../components/Navbar.jsx'
 
 async function NominationContent() {
     return {
@@ -14,6 +15,7 @@ const content = await NominationContent();
 ---
 <body>
     <section class="nomination-hero" style={`background-image: url(${content.hero_background});`}>
+        <Nav/>
         <div class="hero-content">
             <h1 class="hero-title">{content.hero_title}</h1>
             <p class="hero-subtitle">{content.hero_subtitle}</p>
@@ -39,7 +41,6 @@ const content = await NominationContent();
         background-repeat: no-repeat;
         justify-content: center;
         height: 100vh;
-        
     }
     .hero-content {
         display: flex;
