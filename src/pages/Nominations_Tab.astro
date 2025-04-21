@@ -15,7 +15,6 @@ const content = await NominationContent();
 ---
 <body>
     <section class="nomination-hero" style={`background-image: url(${content.hero_background});`}>
-        <Nav client:load />
         <div class="hero-content">
             <h1 class="hero-title">{content.hero_title}</h1>
             <p class="hero-subtitle">{content.hero_subtitle}</p>
@@ -26,8 +25,6 @@ const content = await NominationContent();
         <NominationForm/>
     </section>
 </body>
-
-
 
 
 <style>
@@ -45,7 +42,6 @@ const content = await NominationContent();
     .hero-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: start;
         color: white;
         padding-left: 60px;
