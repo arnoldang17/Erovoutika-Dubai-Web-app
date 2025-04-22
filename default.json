@@ -30,32 +30,6 @@
                             "mainText": "Welcome to Erovoutika Dubai",
                             "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
                             "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
-                        },
-                        "package": {
-                            "mainText": "Welcome to Erovoutika Dubai package",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
-                        }
-                    },
-                    "News": {
-                        "hero": {
-                            "mainText": "Welcome to Erovoutika Dubai2222",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
-                        }
-                    },
-                    "Trainings": {
-                        "hero": {
-                            "mainText": "Welcome to Erovoutika Dubai3333",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
-                        }
-                    },
-                    "Tournaments": {
-                        "hero": {
-                            "mainText": "Welcome to Erovoutika Dubai4444",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
                         }
                     }
                 }
