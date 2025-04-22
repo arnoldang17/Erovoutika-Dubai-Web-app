@@ -1,0 +1,55 @@
+function Accordion1() {
+    const fileData = readFile() as {
+        selectedIndex: number;
+        templates: Array<{
+            [key: string]: {
+                Contents: { [key: string]: any };
+            };
+        }>;
+    };
+    const selectedIndex = fileData.selectedIndex;
+    const pages = Object.keys(
+        Object.values(fileData.templates[selectedIndex])[0].Contents
+    );
+
+    const sections = pages.map((item) => {
+        return Object.entries(
+            Object.values(fileData.templates[selectedIndex])[0].Contents[item]
+        );
+    });
+
+
+
+    return (
+      <BaseAccordion type="single" collapsible className="w-full">
+        {getPageDetails().map((item, i) => {
+          return (
+            <AccordionItem value={`item-${i.toFixed()}`}>
+              <AccordionTrigger>{item.pageName}</AccordionTrigger>
+              {item.sections.map((section, j) => (
+              <AccordionItem value={`section-${i}-${j}`} key={`section-${i}-${j}`}>
+                <AccordionTrigger>{section}</AccordionTrigger>
+                <AccordionContent>
+                  {item.contentKeys.map((item2, index2) => (
+                    <BaseAccordion type="single" collapsible className="w-full" key={`accordion-${index2}`}>
+                      {item2.map((item3, index3) => (
+                        <AccordionItem value={`item-${index2}-${index3}`} key={`item-${index2}-${index3}`}>
+                          <AccordionTrigger>{item3}</AccordionTrigger>
+                          <AccordionContent>{item.contentValues[index2][index3]}</AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </BaseAccordion>
+                  ))}
+                </AccordionContent>
+                
+              </AccordionItem>
+            ))}
+            </AccordionItem>
+          );
+        })}
+      </BaseAccordion>
+    )
+  }
+
+
+  
