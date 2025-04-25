@@ -1,56 +1,97 @@
+---
+let packageDetails = [
+    {
+        package1: {
+            name: "Conference",
+            description:
+                "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
+            buttonText: "test",
+        },
+    },
+    {
+        package2: {
+            name: "Conference",
+            description:
+                "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
+            buttonText: "test",
+        },
+    },
+    {   
+        package3: {
+            name: "Conference",
+            description:
+                "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
+            buttonText: "test",
+        },
+    },
+    {
+        package4: {
+            name: "Conference",
+            description:
+                "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
+            buttonText: "test",
+        },
+    },
+    
+];
+---
+
 <div
     class="flex flex-col justify-center items-center m-[100px] p-5 gap-y-[20px] w-[50%] min-w-fit sm:mx-auto bg-amber-200"
 >
     <div
         class="flex lg:flex-row sm:flex-col justify-center p-10 gap-y-10 lg:gap-20 h-fit w-fit bg-purple-600"
     >
-        <div class="rounded-[45px] min-w-[600px] h-[312px] bg-[#F3F3F3]">
+        <!--item 1 -->
+        <div class="rounded-[45px] w-[600px] h-[312px] bg-[#F3F3F3]">
             <div
-                class="grid grid-cols-3 w-full h-full justify-center items-center p-7 gap-5"
+                class="grid grid-cols-2 w-full h-full justify-center items-center p-7 gap-30"
             >
-                <div class="bg-orange-300 col-span-2 w-full h-full">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </div>
                 <!-- <div class="bg-green-300 w-fill h-full"></div> -->
+
                 <div
-                    class="bg-blue-300 row-span-2 w-full h-full rounded-[45px]"
+                    class="flex flex-col items-start p-4 gap-4 bg-red-300 w-[306px] h-fit"
                 >
-                </div>
-                <div
-                    class="flex flex-col items-start p-4 gap-4 bg-red-300 col-span-2 w-full h-full"
-                >
+                    <div class="bg-orange-300 px-[7px] w-fit h-full rounded-lg">
+                        <h1 class="font-bold text-3xl leading-10">
+                            Conference
+                        </h1>
+                    </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Duis posuere nulla nulla, id maximus eros suscipit sed.
-                        Maecenas mollis ex at tortor luctus ultricies. Sed vitae
-                        scelerisque turpis.
+                        Join experts and innovators for discussions, panels, and
+                        networking on robotics, automation, cybersecurity, and
+                        R&D, shaping the future of technology.
                     </p>
-                    <button class="w-10 h-10 bg-white rounded-4xl">test</button>
+                    <button class="w-20 h-10 bg-white rounded-xl">test</button>
+                </div>
+
+                <div class="bg-blue-300 w-[210px] h-[264px] rounded-[45px]">
                 </div>
             </div>
         </div>
-        <div class="rounded-[45px] min-w-[600px] h-[312px] bg-[#FDE68A]">
+
+        <!--item 2 -->
+        <div class="rounded-[45px] max-w-[600px] h-[312px] bg-[#FDE68A]">
             <div
-                class="grid grid-cols-3 w-full h-full justify-center items-center p-7 gap-5"
+                class="grid grid-cols-2 w-full h-full justify-center items-center p-7 gap-30"
             >
-                <div class="bg-orange-300 col-span-2 w-full h-full">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </div>
-                <!-- <div class="bg-green-300 w-fill h-full"></div> -->
                 <div
-                    class="bg-blue-300 row-span-2 w-full h-full rounded-[45px]"
+                    class="flex flex-col items-start p-4 gap-4 bg-red-300 w-[306px] h-fit"
                 >
-                </div>
-                <div
-                    class="flex flex-col items-start p-4 gap-4 bg-red-300 col-span-2 w-full h-full"
-                >
+                    <div class="bg-orange-300 px-[7px] w-fit h-full rounded-lg">
+                        <h1 class="font-bold text-3xl leading-10">
+                            Conference
+                        </h1>
+                    </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Duis posuere nulla nulla, id maximus eros suscipit sed.
-                        Maecenas mollis ex at tortor luctus ultricies. Sed vitae
-                        scelerisque turpis.
+                        Join experts and innovators for discussions, panels, and
+                        networking on robotics, automation, cybersecurity, and
+                        R&D, shaping the future of technology.
                     </p>
-                    <button class="w-10 h-10 bg-white rounded-4xl">test</button>
+                    <button class="w-20 h-10 bg-white rounded-xl">test</button>
+                </div>
+
+                <div class="bg-blue-300 w-[210px] h-[264px] rounded-[45px]">
                 </div>
             </div>
         </div>
@@ -59,58 +100,61 @@
     <div
         class="flex lg:flex-row sm:flex-col justify-center p-10 gap-y-10 lg:gap-20 h-fit w-fit bg-emerald-300"
     >
-        <div class="rounded-[45px] min-w-[600px] h-[312px] bg-[#6AAAFF]">
+        <!--item 3 -->
+        <div class="rounded-[45px] max-w-[600px] h-[312px] bg-[#6AAAFF]">
             <div
-                class="grid grid-cols-3 w-full h-full justify-center items-center p-7 gap-5"
+                class="grid grid-cols-2 w-full h-full justify-center items-center p-7 gap-30"
             >
-                <div class="bg-orange-300 col-span-2 w-full h-full">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </div>
-                <!-- <div class="bg-green-300 w-fill h-full"></div> -->
                 <div
-                    class="bg-blue-300 row-span-2 w-full h-full rounded-[45px]"
+                    class="flex flex-col items-start p-4 gap-4 bg-red-300 w-[306px] h-fit"
                 >
-                </div>
-                <div
-                    class="flex flex-col items-start p-4 gap-4 bg-red-300 col-span-2 w-full h-full"
-                >
+                    <div class="bg-orange-300 px-[7px] w-fit h-full rounded-lg">
+                        <h1 class="font-bold text-3xl leading-10">
+                            Conference
+                        </h1>
+                    </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Duis posuere nulla nulla, id maximus eros suscipit sed.
-                        Maecenas mollis ex at tortor luctus ultricies. Sed vitae
-                        scelerisque turpis.
+                        Join experts and innovators for discussions, panels, and
+                        networking on robotics, automation, cybersecurity, and
+                        R&D, shaping the future of technology.
                     </p>
-                    <button class="w-10 h-10 bg-white rounded-4xl">test</button>
+                    <button class="w-20 h-10 bg-white rounded-xl">test</button>
+                </div>
+
+                <div class="bg-blue-300 w-[210px] h-[264px] rounded-[45px]">
                 </div>
             </div>
         </div>
-        <div class="rounded-[45px] min-w-[600px] h-[312px] bg-[#F3F3F3]">
+        <!--item 4 -->
+        <div class="rounded-[45px] max-w-[600px] h-[312px] bg-[#F3F3F3]">
             <div
-                class="grid grid-cols-3 w-full h-full justify-center items-center p-7 gap-5"
+                class="grid grid-cols-2 w-full h-full justify-center items-center p-7 gap-30"
             >
-                <div class="bg-orange-300 col-span-2 w-full h-full">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </div>
-                <!-- <div class="bg-green-300 w-fill h-full"></div> -->
                 <div
-                    class="bg-blue-300 row-span-2 w-full h-full rounded-[45px]"
+                    class="flex flex-col items-start p-4 gap-4 bg-red-300 w-[306px] h-fit"
                 >
-                </div>
-                <div
-                    class="flex flex-col items-start p-4 gap-4 bg-red-300 col-span-2 w-full h-full"
-                >
+                    <div class="bg-orange-300 px-[7px] w-fit h-full rounded-lg">
+                        <h1 class="font-bold text-3xl leading-10">
+                            Conference
+                        </h1>
+                    </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Duis posuere nulla nulla, id maximus eros suscipit sed.
-                        Maecenas mollis ex at tortor luctus ultricies. Sed vitae
-                        scelerisque turpis.
+                        Join experts and innovators for discussions, panels, and
+                        networking on robotics, automation, cybersecurity, and
+                        R&D, shaping the future of technology.
                     </p>
-                    <button class="w-10 h-10 bg-white rounded-4xl">test</button>
+                    <button class="w-20 h-10 bg-white rounded-xl">test</button>
+                </div>
+
+                <div class="bg-blue-300 w-[210px] h-[264px] rounded-[45px]">
                 </div>
             </div>
         </div>
     </div>
-    <div class="flex justify-center h-fit w-fit p-10 gap-20 bg-purple-400">
+    <div
+        class="relative flex justify-center items-center h-fit w-fit p-10 gap-20 bg-purple-400"
+    >
+        <h2 class="absolute text-5xl font-bold">test</h2>
         <div
             class="rounded-[45px] lg:w-[1280px] lg:h-[312px] sm:min-w-[600px] sm:h-[312px] align-center bg-[#F3F3F3] overflow-hidden"
         >

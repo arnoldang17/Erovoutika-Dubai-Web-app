@@ -9,6 +9,7 @@ import Banner from "../components/Banner.astro";
 import Join from "../components/Joinrobo.astro";
 import Package from "../components/Package.astro";
 import { Accordion } from "../components/Accordion";
+import Partners from "@/components/Partners";
 
 const accordionData = [
     {
@@ -37,6 +38,7 @@ const accordionData = [
     <Package />
     <Accordion data={accordionData} client:idle />
     <Join />
+    <Partners client:idle/>
     <Footer />
 </Layout>
 
