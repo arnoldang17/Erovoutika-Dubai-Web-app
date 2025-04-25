@@ -1,0 +1,58 @@
+const sections = pages.map((item) => {
+        // console.log(
+        //     "sections111",
+        //     Object.keys(
+        //         Object.values(
+        //             Object.values(fileData.templates[selectedIndex])[0]
+        //                 .Contents[item]
+        //         )
+        //     )
+        // );
+
+        return Object.keys(
+            Object.values(fileData.templates[selectedIndex])[0].Contents[item]
+        );
+    });
+    console.log(sections);
+
+    const contents = pages.map((item) => {
+        console.log("item", item);
+
+        return sections.map((item2) => {
+            console.log("item2", item2);
+            return item2.map((item3) => {
+                console.log("item3", item3);
+
+                return Object.values(fileData.templates[selectedIndex])[0].Contents[
+                    item
+                ][item3];
+            });
+        });
+
+        // return Object.values(
+        //     Object.values(fileData.templates[selectedIndex])[0].Contents[item]
+        // );
+        // console.log("contentsitem", item);
+        // return Object.values(item).map(i => {
+
+        //     const test = pages.map((item) => {
+
+        //         return Object.keys(
+        //             Object.values(fileData.templates[selectedIndex])[0]
+        //                 .Contents[item]
+        //         );
+        //     });
+        //     console.log("www", i);
+        //     ;
+
+        // })
+    });
+
+    console.log("contents", contents);
+
+    const contentKeys = contents.map((item) => {
+        // return Object.keys(
+        //     Object.values(fileData.templates[selectedIndex])[0].Contents[item]
+        // );
+        // console.log("contentskeys", Object.keys(item));
+    });
