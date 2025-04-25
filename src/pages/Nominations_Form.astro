@@ -1,19 +1,19 @@
 ---
-
+import { useEffect } from 'react';
 ---
 <div class="hero">
     <div class="nom-container">
         <h1 class="nom-title">NOMINATION FORM</h1>
-        <form class="nom-form">
+        <form class="nom-form" id="nomination-form">
             <!-- First Name and Last Name -->
             <div class="fname-lname-div">
                 <div class="fname-div">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" required />
+                    <input type="text" id="fname" name="firstName" required />
                 </div>
                 <div class="lname-div">
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" required />
+                    <input type="text" id="lname" name="lastName" required />
                 </div>
             </div>
             <!-- Email and Phone Number -->
@@ -24,7 +24,7 @@
                 </div>
                 <div class="phone-div">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" required />
+                    <input type="tel" id="phone" name="contact" required />
                 </div>
             </div>
             <!-- Email and Designation -->
@@ -35,7 +35,7 @@
                 </div>
                 <div class="designation-div">
                     <label for="designation">Designation</label>
-                    <select id="designation" required>
+                    <select id="designation" name="designation" required>
                         <option value="" selected>Select a designation</option>
                         <option value="Player">Designation 1</option>
                         <option value="Coach">Designation 2</option>
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <!-- Country and School -->
-            <div class="country-school-div">
+            <div class="country-schoolweb-div">
                 <div class="country-div">
                     <label for="country">Country</label>
                     <select id="country" required>
@@ -92,9 +92,9 @@
                         <option value="UK">UK</option>
                     </select>
                 </div>
-                <div class="school-div">
-                    <label for="school">School</label>
-                    <input type="text" id="school" required />
+                <div class="school-website-div">
+                    <label for="school-website">School Website</label>
+                    <input type="url" id="school-website" required />
                 </div>
             </div>
             <!-- Social Media Platform -->
@@ -114,7 +114,7 @@
             </div>
             <!-- Submit Button -->
             <div class="submit-button-div">
-                <button class="submit-button" id="submit_button">
+                <button class="submit-button" id="submit-button">
                     <span>Submit</span>
                 </button>
             </div>
@@ -186,7 +186,7 @@
         color: #233876;
         outline: 1px solid #233876;
     }
-    .fname-lname-div, .school-phone-div, .email-designation-div, .address-region-div, .country-school-div {
+    .fname-lname-div, .school-phone-div, .email-designation-div, .address-region-div, .country-schoolweb-div {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -199,10 +199,10 @@
         .nom-title{
             font: 300 4rem 'Bebas Neue', sans-serif;
         }
-        .fname-div, .lname-div, .school-div, .phone-div, .email-div, .designation-div, .description-di, .international-award-div, .address-div, .region-div, .country-div, .school-div{
+        .fname-div, .lname-div, .school-div, .phone-div, .email-div, .designation-div, .description-di, .international-award-div, .address-div, .region-div, .country-div, .school-website-div{
             width: 100%;
         }
-        .fname-lname-div, .school-phone-div, .email-designation-div, .address-region-div, .country-school-div {
+        .fname-lname-div, .school-phone-div, .email-designation-div, .address-region-div, .country-schoolweb-div {
             flex-direction: column;
             justify-content: center;
             gap: 10px;
@@ -213,22 +213,22 @@
         display: flex;
         flex-direction: column;
     }
-    .award-div select, .award-div select option[selected], .designation-div select, .designation-div select option[selected], .country-school-div select, .country-school-div select option[selected]{
+    .award-div select, .award-div select option[selected], .designation-div select, .designation-div select option[selected], .country-schoolweb-div select, .country-schoolweb-div select option[selected]{
         font: 16px 'Inter', sans-serif;
         color: #23387669;
         outline: none;
     }
-    .award-div select option, .award-div select:valid, .designation-div select option, .designation-div select:valid, .country-school-div select option, .country-school-div select:valid{
+    .award-div select option, .award-div select:valid, .designation-div select option, .designation-div select:valid, .country-school-div select option, .country-schoolweb-div select:valid{
         color: #233876;
         outline: 1px solid #233876;
     }
-    .fname-lname-div label, .school-phone-div label, .award-div label, .email-designation-div label, .description-div label, .international-award-div label, .shortlisted-div label, .address-region-div label, .country-school-div label, .social-media-div label, .past-achievements-div label{ 
+    .fname-lname-div label, .school-phone-div label, .award-div label, .email-designation-div label, .description-div label, .international-award-div label, .shortlisted-div label, .address-region-div label, .country-schoolweb-div label, .social-media-div label, .past-achievements-div label{ 
         font: 16px 'Inter', sans-serif;
         margin-left: 1px;
         margin-bottom: 10px;
         color: #233876;
     }
-    .fname-div, .lname-div, .school-div, .phone-div, .email-div, .designation-div, .description-di, .international-award-div, .address-div, .region-div, .country-div, .school-div{
+    .fname-div, .lname-div, .school-div, .phone-div, .email-div, .designation-div, .description-di, .international-award-div, .address-div, .region-div, .country-div, .school-website-div{
         display: flex;
         flex: 1;
         flex-direction: column;
@@ -260,25 +260,24 @@
 
 </style>
 
-<script>
-    const form = document.getElementById('nomination-form') as HTMLFormElement;
+<script type="module" is:inline>
+    const form = document.getElementById('nomination-form');
 
-    form?.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const formData = new FormData(form);
-        const entry = {
-            firstName: formData.get('firstName'),
-            lastName: formData.get('lastName'),
-            designation:formData.get('designation'),
-            contact:formData.get('contact')
-        };
+        const firstName = document.getElementById('fname').value;
+        const lastName = document.getElementById('lname').value;
+        const designation = document.getElementById('designation').value;
+        const contact = document.getElementById('phone').value;
 
-        const existing = JSON.parse(localStorage.getitem('nominations') || '[]');
-        existing.push(entry);
+        const newEntry = { firstName, lastName, designation, contact };
+
+        const existing = JSON.parse(localStorage.getItem('nominations') || '[]');
+
+        existing.push(newEntry);
+
         localStorage.setItem('nominations', JSON.stringify(existing));
-
-        window.dispatchEvent(new Event('nominations-updated'));
 
         form.reset();
     });

@@ -1,7 +1,6 @@
 ---
 import background from '/backgrounds/Trainings.png';
-
-
+import { useEffect } from 'react';
 ---
 <body class="hero" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
     <div class="table-container">
@@ -18,7 +17,6 @@ import background from '/backgrounds/Trainings.png';
                     </tr>
                 </thead>
                 <tbody id="nomination-table-body">
-                    
                 </tbody>
             </table>
         </div>
@@ -29,7 +27,7 @@ import background from '/backgrounds/Trainings.png';
     .hero {
         display: flex;
         background-size: cover;
-        background-position: center;
+        background-position: top;
         background-repeat: no-repeat;
         margin: 20px 20px 20px 20px;
         height: 100vh;
@@ -66,45 +64,39 @@ import background from '/backgrounds/Trainings.png';
         padding:2px;
         overflow: hidden;
     }
-    .nominations-list th {
+    :global(.nominations-list th) {
         background-color: #233876;
         color: white;
         padding: 10px;
         border: 1px solid #ddd;
     }
-    .nominations-list th:first-child {
+    :global(.nominations-list th:first-child) {
         border-top-left-radius: 10px;
     }
-    .nominations-list th:last-child {
+    :global(.nominations-list th:last-child) {
         border-top-right-radius: 10px;
     }
-    .nominations-list td {
+    :global(.nominations-list td) {
         padding: 10px;
         background-color: #F3F3FB;
         border: 1px solid #ddd;
         color: #233876;
     }
-    .nominations-list tr:last-child td:first-child {
+    :global(.nominations-list tr:last-child td:first-child) {
         border-bottom-left-radius: 10px;
     }
-    .nominations-list tr:last-child td:last-child {
+    :global(.nominations-list tr:last-child td:last-child) {
         border-bottom-right-radius: 10px;
     }
 
 </style>
 
-<script>
-    interface NominationValueType {
-    firstName: string;
-    lastName: string;
-    designation: string;
-    contact: string;
-    }
+<script type="module" is:inline>
 
-    const table_body = document.getElementById('nomination-table-body') as HTMLTableSectionElement;
+    const table_body = document.getElementById('nomination-table-body')
 
     function renderTable() {
-        const data: NominationValueType[] = JSON.parse(localStorage.getItem('nominations') || '[]')
+        const data = JSON.parse(localStorage.getItem('nominations') || '[]')
         
         table_body.innerHTML = '';
 
@@ -122,5 +114,4 @@ import background from '/backgrounds/Trainings.png';
         });
     }
     renderTable();
-    window.addEventListener('nominations-updated', renderTable)
 </script>

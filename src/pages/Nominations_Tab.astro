@@ -1,5 +1,5 @@
 ---
-import NominationForm from '../components/Nominations_Form.astro';
+import NominationForm from './Nominations_Form.astro';
 import Nav from '../components/Navbar.jsx'
 
 async function NominationContent() {
@@ -21,7 +21,7 @@ const content = await NominationContent();
             <button class="nominate-button">{content.hero_buttonText}</button>
         </div>
     </section>
-    <section class="nomination-form">
+    <section class="nomination-form" id="nomination-form">
         <NominationForm/>
     </section>
 </body>
@@ -80,3 +80,15 @@ const content = await NominationContent();
         color: #FFF;
     }
 </style>
+
+<script is:inline>
+    const nominateButton = document.querySelector(".nominate-button");
+    nominateButton.addEventListener("click", () => {
+    const introSection = document.getElementById("nomination-form");
+    if (introSection) {
+      introSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("Introduction section not found.");
+    }
+  });
+</script>
