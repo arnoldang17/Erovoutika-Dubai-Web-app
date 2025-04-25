@@ -108,7 +108,8 @@ function readFile(dbName = path) {
     );
 }
 
-function writeFile(dbName = path, newData) {re
+function writeFile(dbName = path, newData) {
+    re;
     fs.writeFileSync(path, JSON.stringify(newData, null, 4), (err) => {
         if (err) throw err;
 
@@ -163,21 +164,18 @@ function getPageDetails() {
     //             )
     //         );
     //     }
-        
-        
-        
+
     // }
     const contentKeys = pages.map((key, index) => {
-        return sections[index].map(element => {
+        return sections[index].map((element) => {
             console.log(element);
             return Object.keys(
                 Object.values(fileData.templates[selectedIndex])[0].Contents[
                     key
                 ][element]
             );
-            
-       
-    })});
+        });
+    });
 
     const contentValues = pages.map((key, index) => {
         return sections[index].map((element) => {
@@ -187,10 +185,11 @@ function getPageDetails() {
                     key
                 ][element]
             );
-    })});
+        });
+    });
     // console.log("Contentkeys", contentKeys);
     // console.log("Contentvalues", contentValues);
-    
+
     // const all = [];
     // for (let index = 0; index < pages.length; index++) {
     //     const obj = {};
@@ -220,17 +219,19 @@ function getPageDetails() {
 
             item2.map((item3, index2) => {
                 console.log("Content Key: ", item3);
-                console.log("Content Value: ", item.contentValues[index1][index2]);
+                console.log(
+                    "Content Value: ",
+                    item.contentValues[index1][index2]
+                );
             });
             console.log("=====================================");
         });
-        
-    })
+    });
     return all;
-};
+}
 
 console.log(await fetchPageContent("Home"));
 
 // deleteFileContents();
 export default getDbData;
-export { fetchPageContent, getPageDetails, readFile};
+export { fetchPageContent, getPageDetails, readFile };

@@ -4,13 +4,32 @@ import Welcome from "../components/Welcome.astro";
 import Awards from "./deprecated/_awards";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
 import Banner from "../components/Banner.astro";
 import Join from "../components/Joinrobo.astro";
 import Package from "../components/Package.astro";
+<<<<<<< HEAD
 import Admin from "../components/admin.astro";
 import Footer1 from "../components/Footer1.astro";
+=======
+import { Accordion } from "../components/Accordion";
+>>>>>>> c1971ccedd775dc40110039801a91c250643dffd
 
+const accordionData = [
+    {
+        title: "Is it accessible?",
+        description: "Yes. It adheres to the WAI-ARIA design pattern.",
+    },
+    {
+        title: "Is it styled?",
+        description:
+            "Yes. It comes with default styles that matches the other components' aesthetic.",
+    },
+    {
+        title: "Is it animated?",
+        description:
+            "Yes. It's animated by default, but you can disable it if you prefer.",
+    },
+];
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -19,10 +38,17 @@ import Footer1 from "../components/Footer1.astro";
     <!-- <Nav /> -->
     <Banner />
     <Jumbotron />
+<<<<<<< HEAD
     <Join />
     <Package />
     <Admin />
     <Footer1 />
+=======
+    <Package />
+    <Accordion data={accordionData} client:idle />
+    <Join />
+    <Footer />
+>>>>>>> c1971ccedd775dc40110039801a91c250643dffd
 </Layout>
 
 <!-- <style>

@@ -3,23 +3,13 @@
         {
             "null": {
                 "color": "white",
-                "size": [
-                    "S",
-                    "M",
-                    "L",
-                    "XL"
-                ]
+                "size": ["S", "M", "L", "XL"]
             }
         },
         {
             "test": {
                 "color": "black",
-                "size": [
-                    "S",
-                    "M",
-                    "L",
-                    "XL"
-                ]
+                "size": ["S", "M", "L", "XL"]
             }
         },
         {
