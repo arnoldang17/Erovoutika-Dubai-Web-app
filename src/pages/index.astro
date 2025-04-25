@@ -1,7 +1,7 @@
 ---
 import Jumbotron from "../components/Jumbotron.astro";
 import Welcome from "../components/Welcome.astro";
-import Awards from "./deprecated/awards";
+import Awards from "./deprecated/_awards";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
@@ -9,6 +9,7 @@ import Banner from "../components/Banner.astro";
 import Join from "../components/Joinrobo.astro";
 import Package from "../components/Package.astro";
 import Admin from "../components/admin.astro";
+import Footer1 from "../components/Footer1.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -18,10 +19,10 @@ import Admin from "../components/admin.astro";
     <!-- <Nav /> -->
     <Banner />
     <Jumbotron />
-    <!-- <Join /> -->
+    <Join />
     <Package />
     <Admin />
-    <Footer />
+    <Footer1 />
 </Layout>
 
 <!-- <style>
