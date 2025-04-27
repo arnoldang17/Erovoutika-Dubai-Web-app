@@ -1,0 +1,123 @@
+---
+//import shadcn
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/components/ui/card"
+
+async function fetchAdminContent() {
+  return {
+
+    Home:{
+        Highlights:{
+            Title:"KEY HIGHLIGHTS",
+
+            Icon1: "./highlights/trophy.png",
+            Highlight1: "International Awards",
+            description1:   "Recognizing outstanding educators and Erovoutika partners in academia and industry.",
+
+            Icon2: "./highlights/tournament.png",
+            Highlight2: "Tournament",
+            description2:   "After expert-led training on robotics, research and development, and cybersecurity.",
+
+            Icon3: "./highlights/workshop.png",
+            Highlight3: "Hands-on Workshops",
+            description3:   "To enhance technical and research skills in  journal publication and patenting guidance.",
+
+            Icon4: "./highlights/showcase.png",
+            Highlight4: "Showcase",
+            description4:   "the research and innovation projects.",
+
+            Icon5: "./highlights/network.png",
+            Highlight5: "Global Networking",
+            description5:   "with professionals, educators, and industry leaders.",
+            
+
+            
+        }
+    }
+   
+  };  
+}
+
+
+const content = await fetchAdminContent();
+
+---
+    <div>
+      <h2 class="font-bold text-center mb-44 text-7xl text-black font-bebas tracking-wider " set:html={content.Home.Highlights.Title}></h2>
+      
+
+      <div class="grid md:grid-cols-5 grid-cols-1 gap-4">
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <img 
+                    src={content.Home.Highlights.Icon1}
+			        class='h-14 w-auto'
+                    />
+
+            </CardHeader>
+            <CardContent>
+            <h2 class="font-semibold text-lg text-center mb-2 text-black" set:html={content.Home.Highlights.Highlight1}></h2>
+            <h4 class="text-center text-base text-zinc-800" set:html={content.Home.Highlights.description1}></h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <img 
+                    src={content.Home.Highlights.Icon2}
+			        class='h-14 w-auto'
+                    />
+
+            </CardHeader>
+            <CardContent>
+            <h2 class="font-semibold text-lg text-center mb-2 text-black" set:html={content.Home.Highlights.Highlight2}></h2>
+            <h4 class="text-center text-base text-zinc-800" set:html={content.Home.Highlights.description2}></h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <img 
+              src={content.Home.Highlights.Icon3}
+                class='h-14 w-auto'
+              />
+
+            </CardHeader>
+            <CardContent>
+            <h2 class="font-semibold text-lg text-center mb-2 text-black" set:html={content.Home.Highlights.Highlight3}></h2>
+            <h4 class="text-center text-base text-zinc-800" set:html={content.Home.Highlights.description3}></h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center">
+              <img 
+                src={content.Home.Highlights.Icon4}
+                class='h-14 w-auto'
+              />
+            </CardHeader>
+            <CardContent>
+            <h2 class="font-semibold text-lg text-center mb-2 text-black" set:html={content.Home.Highlights.Highlight4}></h2>
+            <h4 class="text-center text-base text-zinc-800" set:html={content.Home.Highlights.description4}></h4>
+            </CardContent>
+        </Card>
+
+        <Card className="border-transparent bg-transparent shadow-none">
+            <CardHeader className="place-items-center ">
+              <img 
+                src={content.Home.Highlights.Icon5}
+                class='h-14 w-auto'
+              />
+
+            </CardHeader>
+            <CardContent>
+            <h2 class="font-semibold text-lg text-center mb-2 text-black" set:html={content.Home.Highlights.Highlight5}></h2>
+            <h4 class="text-center text-base text-zinc-800" set:html={content.Home.Highlights.description5}></h4>
+            </CardContent>
+        </Card>
+      </div>
+</div> 
+
