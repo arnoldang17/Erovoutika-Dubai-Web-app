@@ -1,14 +1,14 @@
 ---
 import Jumbotron from "../components/Jumbotron.astro";
 import Welcome from "../components/Welcome.astro";
-import Awards from "./deprecated/_awards";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Banner from "../components/Banner.astro";
 import Join from "../components/Joinrobo.astro";
 import Package from "../components/Package.astro";
 import Footer1 from "../components/Footer1.astro";
-
+import Robolution from "@/components/Robolution.astro";
+import Highlights from "@/components/Highlights.astro";
 const accordionData = [
     {
         title: "Is it accessible?",
@@ -33,8 +33,11 @@ const accordionData = [
     <!-- <Nav /> -->
     <Banner />
     <Jumbotron />
-    <Join />
+    <Robolution />
+
     <Package />
+    <Highlights />
+    <Join />
     <!-- <Admin /> -->
     <Footer1 />
 </Layout>
