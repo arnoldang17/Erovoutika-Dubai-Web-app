@@ -1,8 +1,9 @@
 ---
-import Nav from "../components/Nav.astro";
+import Nav from "../components/navbar.astro";
+import Banner from "../components/Home/Banner.astro";
+import Footer1 from "../components/Home/Footer1.astro";
+
 import "./src/styles/global.css";
-
-
 ---
 
 <!doctype html>
@@ -19,14 +20,47 @@ import "./src/styles/global.css";
         />
     </head>
     <body>
-        <!-- <Nav /> -->
+        <div id="banner">
+            <Banner />
+        </div>
+        <Nav />
         <slot />
         <!-- <button onclick=`${connectDB}`>button </button> -->
+        <Footer1 />
     </body>
     <script
         is:inline
         src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"
     ></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.getElementById("toggleBannerButton");
+            const banner = document.getElementById("banner");
+            const bannerState = localStorage.getItem("bannerVisibility");
+            if (banner) {
+                // Apply the saved state from localStorage
+                if (bannerState === "hidden") {
+                    banner.style.display = "none";
+                } else {
+                    banner.style.display = "block";
+                }
+            }
+
+            if (toggleButton && banner) {
+                toggleButton.addEventListener("click", () => {
+                    if (banner.style.display === "none") {
+                        banner.style.display = "block";
+                        localStorage.setItem("bannerVisibility", "visible"); // Save state
+                    } else {
+                        banner.style.display = "none";
+                        localStorage.setItem("bannerVisibility", "hidden"); // Save state
+                    }
+                });
+            } else {
+                console.error("Toggle button or banner not found.");
+            }
+        });
+    </script>
 </html>
 
 <style>

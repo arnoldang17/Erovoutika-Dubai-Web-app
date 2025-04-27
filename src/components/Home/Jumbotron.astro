@@ -4,6 +4,7 @@ import Nav from "../Nav.astro";
 import { fetchPageContent } from "../db";
 
 const data = await fetchPageContent("Home");
+
 console.log(data);
 ---
 
@@ -11,8 +12,8 @@ console.log(data);
     style={`background-image: url('${data.hero.imageDirectory}')`}
     class={`100vh w-full bg-cover bg-no-repeat bg-center`}
 >
-    <Nav />
-    <div class="px-4 mx-auto max-w-screen-xl text-left py-24 lg:py-56">
+    <!-- <Nav /> -->
+    <div class="px-4 mx-auto max-w-screen-xl h-screen text-left py-24 lg:py-56">
         <div class="md:w-fit lg:w-xl h-auto">
             <h1
                 id="mainText"

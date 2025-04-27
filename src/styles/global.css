@@ -41,15 +41,6 @@
 } */
 
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 :root {
 
   --radius: 0.625rem;
@@ -195,7 +186,9 @@
   --font-roboto: 'Roboto', sans-serif;
 
   --color-DarkBlue: #0B0221;
+
 }
+
 
 @layer base {
   * {
@@ -203,5 +196,14 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Roboto', sans-serif;
+    }
 }

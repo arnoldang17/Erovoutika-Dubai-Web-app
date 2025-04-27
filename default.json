@@ -140,10 +140,48 @@
                         }
                     },
                     "Tournaments": {
-                        "hero": {
-                            "mainText": "Welcome to Erovoutika Dubai4444",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
+                        "Navbar": {
+                            "links": [
+                                { "name": "Home", "path": "/" },
+                                { "name": "News", "path": "/News" },
+                                { "name": "Trainings", "path": "/Trainings" },
+                                { "name": "Tournaments", "path": "/Tournament" }
+                            ],
+                            "image": "/src/assets/images/Erovoutika Dubai logo.png",
+                            "buttonText": "Register Now"
+                        },
+                        "Hero": {
+                            "title": "BE PART OF THE<br><span class='underline decoration-[#C084FC]'>FUTURE!</span>",
+                            "subtitle": "Join us for an International Training & Tournament Camp!",
+                            "background": "/src/assets/images/backgrounds/Herobg.png",
+                            "buttonText": "Learn More"
+                        },
+                        "Overview": {
+                            "subheadings": "Overview",
+                            "Headings": "Tournament",
+                            "info": "Robolution Dubai 2025 features three dynamic tracks designed to challenge participants in innovation, problem-solving, and technical expertise. Compete against global talents, collaborate with experts, and push the boundaries of technology in the following <span class='text-sky-500'>categories:</span>"
+                        },
+                        "Pictures": {
+                            "erobot": "/src/assets/images/tournament/erobot.png",
+                            "eromath": "/src/assets/images/tournament/eromath.png",
+                            "freestyle": "/src/assets/images/tournament/freestyle.png",
+                            "cybersecurity": "/src/assets/images/tournament/cybersecurity.png"
+                        },
+                        "Teachers": {
+                            "title": "Who can Participate?",
+                            "image": "./ParticipateImages/teachers.png",
+                            "header": "Teachers",
+                            "subtext": "Teachers and industry practitioners can form teams of <span class='text-highlightPurple'> 2 to 5 members </span> to represent their school or company. Using Erobot kits, teams will compete in Robotics & Automation, R&D, and Cybersecurity. The tournament showcases skills gained from a two-day training camp."
+                        },
+                        "Students": {
+                            "image": "./ParticipateImages/students.png",
+                            "header": "Students",
+                            "subtext": "High school or college teams up to <span class='text-amber-200'> 2 to 5 members </span> present their projects in a five-minute pitch, showcasing an innovative, functional prototype. They must also prepare a roll-up poster detailing the title, objectives, methodology, key features, and real-world applications."
+                        },
+                        "Compete": {
+                            "header": "Ready to <span class='text-transparent bg-clip-text bg-gradient-to-r from-BlueStart via-purple-600 to-PinkEnd'> Compete?</span>",
+                            "subtext": "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
+                            "buttonText": "Register Now"
                         }
                     }
                 }

@@ -3,14 +3,13 @@ import Jumbotron from "../components/Home/Jumbotron.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
-import Banner from "../components/Home/Banner.astro";
 import Join from "../components/Home/Joinrobo.astro";
 import Package from "../components/Home/Package.astro";
-import Footer1 from "../components/Home/Footer1.astro";
 import Robolution from "@/components/Home/Robolution.astro";
 import Highlights from "@/components/Home/Highlights.astro";
 import FrequentlyAsk from "@/components/Home/FrequentlyAsk.astro";
 import Partners from "@/components/Home/Partners";
+import Hero from "@/components/Hero.astro";
 const accordionData = [
     {
         title: "Is it accessible?",
@@ -32,17 +31,17 @@ const accordionData = [
 ---
 <Layout>
     
-    <Banner />
-    <Hero/>
+    <!-- <Hero/> -->
+    <Jumbotron />
     <Robolution />
-
+    
     <Package />
     <Highlights />
     <Join />
     <!-- <Admin /> -->
     <FrequentlyAsk />
     <Partners />
-    <Footer1 />
+
   
 
 </Layout>
