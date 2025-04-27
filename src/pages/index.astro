@@ -1,15 +1,16 @@
 ---
-import Jumbotron from "../components/Jumbotron.astro";
+import Jumbotron from "../components/Home/Jumbotron.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
-import Banner from "../components/Banner.astro";
-import Join from "../components/Joinrobo.astro";
-import Package from "../components/Package.astro";
-import Footer1 from "../components/Footer1.astro";
-import Robolution from "@/components/Robolution.astro";
-import Highlights from "@/components/Highlights.astro";
-import FrequentlyAsk from "@/components/FrequentlyAsk.astro";
+import Banner from "../components/Home/Banner.astro";
+import Join from "../components/Home/Joinrobo.astro";
+import Package from "../components/Home/Package.astro";
+import Footer1 from "../components/Home/Footer1.astro";
+import Robolution from "@/components/Home/Robolution.astro";
+import Highlights from "@/components/Home/Highlights.astro";
+import FrequentlyAsk from "@/components/Home/FrequentlyAsk.astro";
+import Partners from "@/components/Home/Partners";
 const accordionData = [
     {
         title: "Is it accessible?",
@@ -40,19 +41,17 @@ const accordionData = [
     <Highlights />
     <Join />
     <!-- <Admin /> -->
-     <FrequentlyAsk />
+    <FrequentlyAsk />
+    <Partners />
     <Footer1 />
 </Layout>
 
 <style>
     #background {
-      background-image: url("./homepage.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      background-color: transparent;
+        background-image: url("./homepage.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-color: transparent;
     }
-
-    
-  </style>
-
+</style>

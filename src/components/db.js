@@ -230,7 +230,7 @@ function getPageDetails() {
     return all;
 }
 
-console.log(await fetchPageContent("Home"));
+// console.log(await fetchPageContent("Home"));
 
 // deleteFileContents();
 export default getDbData;

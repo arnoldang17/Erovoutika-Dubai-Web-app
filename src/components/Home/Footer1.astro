@@ -1,42 +1,8 @@
 ---
-const footerContent = {
-    links: [
-        { name: "Home", href: "/" },
-        { name: "News", href: "/News" },
-        { name: "Tournaments", href: "/Tournament" },
-        { name: "Trainings", href: "/Trainings" },
-    ],
-    contact: {
-        email: "erovoutika@gmail.com",
-        qrCode: "/src/assets/images/footer-images/telephone-qr-code.png",
-    },
-    socials: [
-        {
-            social1: {
-                name: "LinkedIn",
-                href: "https://ph.linkedin.com/company/erovoutika",
-                icon: "/src/assets/images/footer-images/Linkedin.png",
-                size: "w-5 h-5",
-            },
-        },
-        {
-            social2: {
-                name: "Facebook",
-                href: "https://www.facebook.com/erovoutika",
-                icon: "/src/assets/images/footer-images/Facebook.png",
-                size: "w-6 h-6",
-            },
-        },
-        {
-            social3: {
-                name: "Instagram",
-                href: "https://www.instagram.com/erovoutikainternational/",
-                icon: "/src/assets/images/footer-images/Instagram.png",
-                size: "w-6 h-6",
-            },
-        },
-    ],
-};
+import { fetchPageContent } from "@/components/db";
+
+const content = await fetchPageContent("Home");
+const footerContent = content.footerContent;
 ---
 
 <footer
@@ -88,7 +54,7 @@ const footerContent = {
                     class="flex flex-wrap justify-center gap-4 md:gap-6 text-sm font-medium"
                 >
                     {
-                        footerContent.links.map((link) => (
+                        footerContent.links.map((link: { name: unknown; href: string | URL | null | undefined; }) => (
                             <li key={link.name}>
                                 <a
                                     href={link.href}
@@ -107,18 +73,17 @@ const footerContent = {
                 <h2 class="text-xl font-bold pb-4 text-[30px]">Follow Us!</h2>
                 <div class="flex justify-center items-center gap-4">
                     {
-                        footerContent.socials.map((socialObj) => {
-                            const social = Object.values(socialObj)[0]; // Get the first object (social1, social2, etc.)
+                        footerContent.socials.map((socialObj: { name: string; href: string; icon: string; size: string }) => {
                             return (
                                 <a
-                                    href={social.href}
+                                    href={socialObj.href}
                                     class="hover:opacity-80 transition"
-                                    key={social.name}
+                                    key={socialObj.name}
                                 >
                                     <img
-                                        src={social.icon}
-                                        alt={social.name}
-                                        class={social.size}
+                                        src={socialObj.icon}
+                                        alt={socialObj.name}
+                                        class={socialObj.size}
                                     />
                                 </a>
                             );

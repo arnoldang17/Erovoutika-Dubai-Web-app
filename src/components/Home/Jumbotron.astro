@@ -1,7 +1,7 @@
 ---
 const image = "/src/assets/images/backgrounds/Main.jpg";
-import Nav from "../components/Nav.astro";
-import { fetchPageContent } from "../components/db";
+import Nav from "../Nav.astro";
+import { fetchPageContent } from "../db";
 
 const data = await fetchPageContent("Home");
 console.log(data);

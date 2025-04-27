@@ -16,15 +16,113 @@
             "Default": {
                 "Contents": {
                     "Home": {
+                        "bannerContent": {
+                            "backgroundColor": "#FFE492",
+                            "message": "Nominate the Bright Minds of Tomorrow",
+                            "buttonText": "NOMINATE NOW",
+                            "buttonHref": "#",
+                            "buttonBackground": "#0075FF",
+                            "buttonHover": "#0060CC"
+                        },
                         "hero": {
                             "mainText": "Welcome to Erovoutika Dubai",
                             "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
                             "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
                         },
+                        "Robolution": {
+                            "intro1": "What is ROBOLUTION DUBAI 2025?",
+                            "sub1": "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
+                            "image1": "./bot1.png",
+                            "intro2": "Join Our Community!",
+                            "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
+                            "image2": "./joinus.png"
+                        },
                         "package": {
                             "mainText": "Welcome to Erovoutika Dubai package",
                             "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
                             "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
+                        },
+                        "Highlights": {
+                            "Title": "KEY HIGHLIGHTS",
+
+                            "Icon1": "./highlights/trophy.png",
+                            "Highlight1": "International Awards",
+                            "description1": "Recognizing outstanding educators and Erovoutika partners in academia and industry.",
+
+                            "Icon2": "./highlights/tournament.png",
+                            "Highlight2": "Tournament",
+                            "description2": "After expert-led training on robotics, research and development, and cybersecurity.",
+
+                            "Icon3": "./highlights/workshop.png",
+                            "Highlight3": "Hands-on Workshops",
+                            "description3": "To enhance technical and research skills in  journal publication and patenting guidance.",
+
+                            "Icon4": "./highlights/showcase.png",
+                            "Highlight4": "Showcase",
+                            "description4": "the research and innovation projects.",
+
+                            "Icon5": "./highlights/network.png",
+                            "Highlight5": "Global Networking",
+                            "description5": "with professionals, educators, and industry leaders."
+                        },
+                        "joinContent": {
+                            "title": "Join the ROBOLUTION!",
+                            "body": "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
+                            "button": "Register Now"
+                        },
+                        "FrequentlyAsk": {
+                            "Title": "FREQUENTLY ASKED QUESTIONS",
+                            "description1": "Need Help? Check Out Our Most Common Queries",
+
+                            "Question1": "WHAT WILL BE THE OUTLINE OF THE EVENT?",
+                            "Answer1": "Most of the outlines of the event of Erovoutika will be posted weeks prior to the said event, so stay tuned! Additional info shall also be given to your respective email once successfully registered.",
+
+                            "Question2": "WHO CAN PARTICIPATE?",
+                            "Answer2": "Anyone. If you have interest in one of our events no need to hesitate to join us!",
+
+                            "Question3": "WHAT TO EXPECT?",
+                            "Answer3": " Enhance your knowledge, experience and connect with people who have the same interest as you! Join us in our ROBOLUTION!"
+                        },
+                        "footerContent": {
+                            "links": [
+                                { "name": "Home", "href": "/" },
+                                { "name": "News", "href": "/News" },
+                                {
+                                    "name": "Tournaments",
+                                    "href": "/Tournament"
+                                },
+                                { "name": "Trainings", "href": "/Trainings" }
+                            ],
+                            "contact": {
+                                "email": "erovoutika@gmail.com",
+                                "qrCode": "/src/assets/images/footer-images/telephone-qr-code.png"
+                            },
+                            "socials": [
+                                {
+                                    "social1": {
+                                        "name": "LinkedIn",
+                                        "href": "https://ph.linkedin.com/company/erovoutika",
+                                        "icon": "/src/assets/images/footer-images/Linkedin.png",
+                                        "size": "w-5 h-5"
+                                    }
+                                },
+                                {
+                                    "social2": {
+                                        "name": "Facebook",
+                                        "href": "https://www.facebook.com/erovoutika",
+                                        "icon": "/src/assets/images/footer-images/Facebook.png",
+                                        "size": "w-6 h-6"
+                                    }
+                                },
+                                {
+                                    "social3": {
+                                        "name": "Instagram",
+                                        "href": "https://www.instagram.com/erovoutikainternational/",
+                                        "icon": "/src/assets/images/footer-images/Instagram.png",
+                                        "size": "w-6 h-6"
+                                    }
+                                }
+                            ]
                         }
                     },
                     "News": {
