@@ -1,0 +1,192 @@
+---
+import "../styles/style.css";
+import Layout from "../layouts/Layout.astro";
+
+
+let Templates = {
+  Default: {
+    Contents: {
+      Hero:{
+            title: "BE PART OF THE<br><span class='underline decoration-[#C084FC]'>FUTURE!</span>",
+            subtitle: "Join us for an International Training & Tournament Camp!",
+            background: "/src/assets/images/backgrounds/Herobg.png",
+            buttonText: "Learn More"
+        },
+        Navbar: {
+            links: [
+    { name: 'Home', path: '/' },
+    { name: 'News', path: '/News' },
+    { name: 'Trainings', path: '/Trainings' },
+    { name: 'Tournaments', path: '/Tournament' }
+  ],
+            image: "/src/assets/images/Erovoutika Dubai logo.png",
+            buttonText: "Register Now" 
+        },
+    },
+    readonly: true,
+  },
+};
+
+const copyTheme = { ...Templates.Default };
+const { links, image, buttonText } = copyTheme.Contents.Navbar;
+---
+<Layout>
+
+<div class="page" style={`background-image: url(${copyTheme.Contents.Hero.background});`} >
+      <!-- Navbar at the top -->
+      <nav class="navbar">
+        <div class="container mx-auto flex items-center justify-between  py-3 ">
+          
+          <!-- Logo -->
+          <div class="flex items-center md:gap-x-3 ml-5">
+            <img src={image} alt="Logo" class="h-13 w-auto" />
+          </div>
+          
+          <!-- Navigation Links -->
+          <div class=" flex items-center gap-x-6 ">
+            <ul class="hidden md:flex space-x-6 text-white font-medium">
+                {links.map((item) => (
+                    <li><a href={item.path} class=" hover:text-[#C084FC] transition">{item.name}</a></li>
+                  ))}
+            </ul>
+          
+                <!-- CTA Button -->
+           <div class="flex items-center gap-4 ">
+            <div class="flex sm:gap-4">
+          <a href="#" class="bg-white text-blue-900 text-md font-medium rounded-full px-4 py-2 hover:bg-[#C084FC] hover:text-white shadow-2xl transition hover:scale-115">
+            {buttonText}
+          </a>
+        </div>
+        </div>
+         <!-- Hamburger Icon (shown on small screens) -->
+         <button class="md:hidden mr-5 text-white hover:scale-120" id="menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    
+      <!-- Dropdown Menu (hidden by default, shown when menu is toggled) -->
+      <div id="mobile-menu" class="fixed top-14 right-0 p-3  z-50 md:hidden hidden mt-5 text-center shadow-lg bg-[#2F1573]/60 backdrop-blur-md ">
+        <ul class="space-y-2 text-white font-medium">
+          <li><a href="/" class="block hover:text-[#C084FC] hover:scale-120">Home</a></li>
+          <li><a href="/News" class="block hover:text-[#C084FC] hover:scale-120">News</a></li>
+          <li><a href="/Trainings" class="block hover:text-[#C084FC] hover:scale-120">Trainings</a></li>
+          <li><a href="/Tournament" class="block hover:text-[#C084FC] hover:scale-120">Tournaments</a></li>
+        </ul>
+              </div>
+            </div>
+          </nav>
+    
+      <!-- hero title -->
+        <div class="hero" >
+          <div class="hero-content">
+            <h1 class="hero-title" set:html={copyTheme.Contents.Hero.title}></h1>
+            <p class="hero-subtitle" set:html={copyTheme.Contents.Hero.subtitle}></p>
+            <button class="hero-button" onclick="scrollToIntroduction()">{copyTheme.Contents.Hero.buttonText}</button>
+          </div>
+        </div>
+    </div>
+    
+</Layout>
+
+<style>
+
+.page {
+  background-size: cover;   
+  background-position: center;   
+  background-repeat: no-repeat;   
+  min-height: 100vh;             
+  width: 100%;                    
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    backdrop-filter: blur(20px);
+}
+  /* Hero Section */
+ .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  /* Hero Title */
+  .hero-title {
+    font-family: 'Bebas Neue';
+    font-size: 6rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-title .underline {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 2px;
+  }
+  /* Hero Subtitle */
+  .hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  /* Hero Button */
+  .hero-button {
+    background-color: #ffffff;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  .hero-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+</style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const learnMoreButton = document.querySelector("");//name of your 'learn more btn'
+    
+    if (learnMoreButton) {
+      learnMoreButton.addEventListener("click", () => {
+        const introSection = document.getElementById("");//set the id of the next section
+        if (introSection) {
+          introSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+          console.error("Introduction section not found.");
+        }
+      });
+    } else {
+      console.error("Learn More button not found.");
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>

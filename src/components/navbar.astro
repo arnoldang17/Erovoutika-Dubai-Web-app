@@ -1,0 +1,70 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+let Templates = {
+    Default: {
+        Navbar: {
+            links: [
+    { name: 'Home', path: '/' },
+    { name: 'News', path: '/News' },
+    { name: 'Trainings', path: '/Trainings' },
+    { name: 'Tournaments', path: '/Tournament' }
+  ],
+            image: "/src/assets/images/Erovoutika Dubai logo.png",
+            buttonText: "Register Now" 
+        },
+        readonly: true,
+    }
+};
+
+const { links, image, buttonText } = Templates.Default.Navbar;
+  ---
+
+<Layout>
+
+    <nav class="fixed top-0 left-0 w-full bg-[#2F1573]/30 backdrop-blur-md  z-50">
+    <div class="container mx-auto flex items-center justify-between  py-3 ">
+      
+      <!-- Logo -->
+      <div class="flex items-center md:gap-x-3 ml-5">
+        <img src={image} alt="Logo" class="h-13 w-auto" />
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class=" flex items-center gap-x-6 ">
+        <ul class="hidden md:flex space-x-6 text-white font-medium">
+            {links.map((item) => (
+                <li><a href={item.path} class=" hover:text-[#C084FC] transition">{item.name}</a></li>
+              ))}
+        </ul>
+      
+            <!-- CTA Button -->
+       <div class="flex items-center gap-4 ">
+        <div class="flex sm:gap-4">
+      <a href="#" class="bg-white text-blue-900 text-md font-medium rounded-full px-4 py-2 hover:bg-[#C084FC] hover:text-white shadow-2xl transition">
+        {buttonText}
+      </a>
+    </div>
+    </div>
+     <!-- Hamburger Icon (shown on small screens) -->
+     <button class="md:hidden mr-5 text-white  hover:scale-120 " id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Dropdown Menu (hidden by default, shown when menu is toggled) -->
+  <div id="mobile-menu" class="fixed top-14 right-0 p-3  z-50 md:hidden hidden mt-5 text-center shadow-lg bg-[#2F1573]/60 backdrop-blur-md ">
+    <ul class="space-y-2 text-white font-medium">
+      <li><a href="/" class="block hover:text-[#C084FC] hover:scale-120">Home</a></li>
+      <li><a href="/News" class="block hover:text-[#C084FC] hover:scale-120">News</a></li>
+      <li><a href="/Trainings" class="block hover:text-[#C084FC] hover:scale-120">Trainings</a></li>
+      <li><a href="/Tournament" class="block hover:text-[#C084FC] hover:scale-120">Tournaments</a></li>
+    </ul>
+          </div>
+        </div>
+      </nav>
+    
+    
+    </Layout>
