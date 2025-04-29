@@ -37,11 +37,58 @@
                             "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
                             "image2": "./joinus.png"
                         },
-                        "package": {
-                            "mainText": "Welcome to Erovoutika Dubai package",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
-                        },
+                        "package": [
+                            {
+                                "package": {
+                                    "name": "Competition",
+                                    "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
+                                    "buttonText": "learn more",
+                                    "color": "#F3F3F3"
+                                }
+                            },
+                            {
+                                "package": {
+                                    "name": "Trainings",
+                                    "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
+                                    "buttonText": "learn more",
+                                    "color": "#FDE68A"
+                                }
+                            },
+                            {
+                                "package": {
+                                    "name": "Conference",
+                                    "description": "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
+                                    "buttonText": "learn more",
+                                    "color": "#6AAAFF"
+                                }
+                            },
+                            {
+                                "package": {
+                                    "name": "Awards",
+                                    "description": "Erovoutika will recognize excellence with Robotics Coach of the Year, Robotics Club of the Year, Global Young Innovator Award, and Special Awards for outstanding achievements.",
+                                    "buttonText": "learn more",
+                                    "color": "#F3F3F3"
+                                }
+                            },
+                            {
+                                "package": {
+                                    "image1": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D",
+                                    "image2": "https://images.unsplash.com/photo-1528702748617-c64d49f918af?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image3": "https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image4": "https://images.unsplash.com/photo-1634148551170-d37d021e0cc9?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image5": "https://images.unsplash.com/photo-1494675595046-ae42af7dc2ce?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image6": "https://plus.unsplash.com/premium_photo-1697729798591-8b7e1b271515?q=80&w=1968&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image7": "https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?q=80&w=2137&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image8": "https://plus.unsplash.com/premium_photo-1661947673080-a2bb1f4d328a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image9": "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image10": "https://images.unsplash.com/photo-1612409578638-b890d0fa9364?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image11": "https://images.unsplash.com/photo-1562595410-4859d718375e?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image12": "https://images.unsplash.com/photo-1641765606160-a1381c652846?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image13": "https://images.unsplash.com/photo-1641765214243-7946e3e57aad?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image14": "https://plus.unsplash.com/premium_photo-1697730197947-f19e92f0035b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                }
+                            }
+                        ],
                         "Highlights": {
                             "Title": "KEY HIGHLIGHTS",
 
@@ -171,7 +218,7 @@
                             "title": "Who can Participate?",
                             "image": "./ParticipateImages/teachers.png",
                             "header": "Teachers",
-                            "subtext": "Teachers and industry practitioners can form teams of <span class='text-highlightPurple'> 2 to 5 members </span> to represent their school or company. Using Erobot kits, teams will compete in Robotics & Automation, R&D, and Cybersecurity. The tournament showcases skills gained from a two-day training camp."
+                            "subtext": "Teachers and industry practitioners can form teams of <span class='text-[#8B5CF6]'> 2 to 5 members </span> to represent their school or company. Using Erobot kits, teams will compete in Robotics & Automation, R&D, and Cybersecurity. The tournament showcases skills gained from a two-day training camp."
                         },
                         "Students": {
                             "image": "./ParticipateImages/students.png",

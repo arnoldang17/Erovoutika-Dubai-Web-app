@@ -1,67 +1,7 @@
 ---
-import { icons } from "lucide-react";
-
-let packageDetails = [
-    {
-        package: {
-            name: "Competition",
-            description:
-                "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
-            buttonText: "learn more",
-            color: "#F3F3F3",
-        },
-    },
-    {
-        package: {
-            name: "Trainings",
-            description:
-                "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
-            buttonText: "learn more",
-            color: "#FDE68A",
-        },
-    },
-    {
-        package: {
-            name: "Conference",
-            description:
-                "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
-            buttonText: "learn more",
-            color: "#6AAAFF",
-        },
-    },
-    {
-        package: {
-            name: "Awards",
-            description:
-                "Erovoutika will recognize excellence with Robotics Coach of the Year, Robotics Club of the Year, Global Young Innovator Award, and Special Awards for outstanding achievements.",
-            buttonText: "learn more",
-            color: "#F3F3F3",
-        },
-    },
-    {
-        package: {
-            image1: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D",
-            image2: "https://images.unsplash.com/photo-1528702748617-c64d49f918af?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image3: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image4: "https://images.unsplash.com/photo-1634148551170-d37d021e0cc9?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image5: "https://images.unsplash.com/photo-1494675595046-ae42af7dc2ce?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image6: "https://plus.unsplash.com/premium_photo-1697729798591-8b7e1b271515?q=80&w=1968&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image7: "https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?q=80&w=2137&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image8: "https://plus.unsplash.com/premium_photo-1661947673080-a2bb1f4d328a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image9: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image10:
-                "https://images.unsplash.com/photo-1612409578638-b890d0fa9364?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image11:
-                "https://images.unsplash.com/photo-1562595410-4859d718375e?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image12:
-                "https://images.unsplash.com/photo-1641765606160-a1381c652846?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image13:
-                "https://images.unsplash.com/photo-1641765214243-7946e3e57aad?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            image14:
-                "https://plus.unsplash.com/premium_photo-1697730197947-f19e92f0035b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        },
-    },
-];
+import { fetchPageContent } from "../db";
+let data = await fetchPageContent("Home");
+const packageDetails = data.package;
 
 const icon = "/src/assets/images/icons/Icon.png";
 ---
@@ -80,7 +20,7 @@ const icon = "/src/assets/images/icons/Icon.png";
 
             <div
                 class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[0].package?.color}`}
+                style={`background-color: ${packageDetails[0].package.color}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
@@ -90,11 +30,11 @@ const icon = "/src/assets/images/icons/Icon.png";
                             class="bg-[#6AAAFF] px-[7px] w-fit h-full rounded-lg"
                         >
                             <h1 class="font-bold text-3xl leading-10">
-                                {packageDetails[0].package?.name}
+                                {packageDetails[0].package.name}
                             </h1>
                         </div>
                         <p>
-                            {packageDetails[0].package?.description}
+                            {packageDetails[0].package.description}
                         </p>
                         <div
                             class="flex justify-start items-center w-full gap-2"
@@ -102,8 +42,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                             <img class="w-10 h-full" src={icon} alt="Icon" />
                             <button
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
-                                >{packageDetails[0].package?.buttonText}</button
-                            >
+                                >{packageDetails[0].package.buttonText}
                         </div>
                     </div>
                 </div>
@@ -120,7 +59,7 @@ const icon = "/src/assets/images/icons/Icon.png";
             <!--item 2 -->
             <div
                 class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[1].package?.color}`}
+                style={`background-color: ${packageDetails[1].package.color}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
@@ -128,11 +67,11 @@ const icon = "/src/assets/images/icons/Icon.png";
                     >
                         <div class="bg-white px-[7px] w-fit h-full rounded-lg">
                             <h1 class="font-bold text-3xl leading-10">
-                                {packageDetails[1].package?.name}
+                                {packageDetails[1].package.name}
                             </h1>
                         </div>
                         <p>
-                            {packageDetails[1].package?.description}
+                            {packageDetails[1].package.description}
                         </p>
                         <div
                             class="flex justify-start items-center w-full gap-2"
@@ -140,7 +79,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                             <img class="w-10 h-full" src={icon} alt="Icon" />
                             <button
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
-                                >{packageDetails[1].package?.buttonText}</button
+                                >{packageDetails[1].package.buttonText}</button
                             >
                         </div>
                     </div>
@@ -162,7 +101,7 @@ const icon = "/src/assets/images/icons/Icon.png";
             <!--item 3 -->
             <div
                 class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[2].package?.color}`}
+                style={`background-color: ${packageDetails[2].package.color}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
@@ -170,11 +109,11 @@ const icon = "/src/assets/images/icons/Icon.png";
                     >
                         <div class="bg-white px-[7px] w-fit h-full rounded-lg">
                             <h1 class="font-bold text-3xl leading-10">
-                                {packageDetails[2].package?.name}
+                                {packageDetails[2].package.name}
                             </h1>
                         </div>
                         <p>
-                            {packageDetails[2].package?.description}
+                            {packageDetails[2].package.description}
                         </p>
                         <div
                             class="flex justify-start items-center w-full gap-2"
@@ -182,7 +121,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                             <img class="w-10 h-full" src={icon} alt="Icon" />
                             <button
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
-                                >{packageDetails[2].package?.buttonText}</button
+                                >{packageDetails[2].package.buttonText}</button
                             >
                         </div>
                     </div>
@@ -200,7 +139,7 @@ const icon = "/src/assets/images/icons/Icon.png";
             <!--item 4 -->
             <div
                 class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[3].package?.color}`}
+                style={`background-color: ${packageDetails[3].package.color}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
@@ -210,11 +149,11 @@ const icon = "/src/assets/images/icons/Icon.png";
                             class="bg-[#FDE68A] px-[7px] w-fit h-full rounded-lg"
                         >
                             <h1 class="font-bold text-3xl leading-10">
-                                {packageDetails[3].package?.name}
+                                {packageDetails[3].package.name}
                             </h1>
                         </div>
                         <p>
-                            {packageDetails[3].package?.description}
+                            {packageDetails[3].package.description}
                         </p>
                         <div
                             class="flex justify-start items-center w-full gap-2"
@@ -222,7 +161,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                             <img class="w-10 h-full" src={icon} alt="Icon" />
                             <button
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
-                                >{packageDetails[3].package?.buttonText}</button
+                                >{packageDetails[3].package.buttonText}</button
                             >
                         </div>
                     </div>
@@ -247,59 +186,59 @@ const icon = "/src/assets/images/icons/Icon.png";
                 <div class="w-full h-[450px] relative">
                     <img
                         class="w-[148.36px] h-[223.25px] left-[606.17px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image1}
+                        src={packageDetails[4].package.image1}
                     />
                     <img
                         class="w-[148.36px] h-[130.34px] left-[303.09px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image2}
+                        src={packageDetails[4].package.image2}
                     />
                     <img
                         class="w-[148.36px] h-[85.76px] left-[757.72px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image3}
+                        src={packageDetails[4].package.image3}
                     />
                     <img
                         class="w-[148.36px] h-[130.34px] left-[151.54px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image4}
+                        src={packageDetails[4].package.image4}
                     />
                     <img
                         class="w-[148.36px] h-[124.22px] left-[454.63px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image5}
+                        src={packageDetails[4].package.image5}
                     />
                     <img
                         class="w-[148.36px] h-[223.25px] left-[909.26px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image6}
+                        src={packageDetails[4].package.image6}
                     />
                     <img
                         class="w-[148.36px] h-[223.25px] left-[454.63px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image7}
+                        src={packageDetails[4].package.image7}
                     />
                     <img
                         class="w-[148.36px] h-[223.25px] left-[757.72px] top-[89.17px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image8}
+                        src={packageDetails[4].package.image8}
                     />
                     <img
                         class="w-[148.36px] h-[130.34px] left-0 top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image9}
+                        src={packageDetails[4].package.image9}
                     />
                     <img
                         class="w-[148.36px] h-[85.76px] left-[606.17px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image10}
+                        src={packageDetails[4].package.image10}
                     />
                     <img
                         class="w-[148.36px] h-[223.25px] left-[909.26px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image11}
+                        src={packageDetails[4].package.image11}
                     />
                     <img
                         class="w-[148.36px] h-[223.25px] left-0 top-[133.75px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image12}
+                        src={packageDetails[4].package.image12}
                     />
                     <img
                         class="w-[148.36px] h-[223.25px] left-[303.09px] top-[133.75px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image13}
+                        src={packageDetails[4].package.image13}
                     />
                     <img
                         class="w-[148.36px] h-[223.25px] left-[151.54px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package?.image14}
+                        src={packageDetails[4].package.image14}
                     />
                 </div>
             </div>

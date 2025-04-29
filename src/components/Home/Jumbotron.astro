@@ -3,8 +3,6 @@ const image = "/src/assets/images/backgrounds/Main.jpg";
 import { fetchPageContent } from "../db";
 
 const data = await fetchPageContent("Home");
-
-console.log(data);
 ---
 
 <section
@@ -16,7 +14,7 @@ console.log(data);
         <div class="md:w-fit lg:w-xl h-auto">
             <h1
                 id="mainText"
-                class="mb-4 text-4xl  leading-none text-[#212529] text-[120px] font-bebas"
+                class="mb-4 text-4xl leading-none text-[#212529] text-[120px] font-bebas"
             >
                 {
                     (

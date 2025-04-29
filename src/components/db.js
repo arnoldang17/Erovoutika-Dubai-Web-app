@@ -125,9 +125,9 @@ function deleteFileContents(dbName = path) {
 async function fetchPageContent(pageName) {
     const fileData = readFile();
     const selectedIndex = fileData.selectedIndex;
-    console.log(selectedIndex);
+    // console.log(selectedIndex);
 
-    console.log("filedata: ", fileData.templates);
+    // console.log("filedata: ", fileData.templates);
 
     try {
         return Object.values(fileData.templates[selectedIndex])[0].Contents[
@@ -205,28 +205,28 @@ function getPageDetails() {
         contentValues: contentValues[index],
     }));
 
-    all.map((item, index0) => {
-        console.log("Page Name: ", item.pageName);
-        console.log("Sections: ", item.sections);
-        console.log("Content Keys: ", item.contentKeys);
-        console.log("Content Values: ", item.contentValues);
-        console.log("=====================================");
-        item.contentKeys.map((item2, index1) => {
-            console.log("Section Name: ", item.sections[index1]);
-            console.log("Content Keys: ", item2);
-            console.log("index: ", index1);
-            console.log("Content Values: ", item.contentValues[index1]);
+    // all.map((item, index0) => {
+    //     console.log("Page Name: ", item.pageName);
+    //     console.log("Sections: ", item.sections);
+    //     console.log("Content Keys: ", item.contentKeys);
+    //     console.log("Content Values: ", item.contentValues);
+    //     console.log("=====================================");
+    //     item.contentKeys.map((item2, index1) => {
+    //         console.log("Section Name: ", item.sections[index1]);
+    //         console.log("Content Keys: ", item2);
+    //         console.log("index: ", index1);
+    //         console.log("Content Values: ", item.contentValues[index1]);
 
-            item2.map((item3, index2) => {
-                console.log("Content Key: ", item3);
-                console.log(
-                    "Content Value: ",
-                    item.contentValues[index1][index2]
-                );
-            });
-            console.log("=====================================");
-        });
-    });
+    //         item2.map((item3, index2) => {
+    //             console.log("Content Key: ", item3);
+    //             console.log(
+    //                 "Content Value: ",
+    //                 item.contentValues[index1][index2]
+    //             );
+    //         });
+    //         console.log("=====================================");
+    //     });
+    // });
     return all;
 }
 

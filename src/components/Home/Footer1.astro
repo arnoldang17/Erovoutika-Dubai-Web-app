@@ -54,16 +54,21 @@ const footerContent = content.footerContent;
                     class="flex flex-wrap justify-center gap-4 md:gap-6 text-sm font-medium"
                 >
                     {
-                        footerContent.links.map((link: { name: unknown; href: string | URL | null | undefined; }) => (
-                            <li key={link.name}>
-                                <a
-                                    href={link.href}
-                                    class="hover:text-gray-300 transition"
-                                >
-                                    {link.name}
-                                </a>
-                            </li>
-                        ))
+                        footerContent.links.map(
+                            (link: {
+                                name: unknown;
+                                href: string | URL | null | undefined;
+                            }) => (
+                                <li key={link.name}>
+                                    <a
+                                        href={link.href}
+                                        class="hover:text-gray-300 transition"
+                                    >
+                                        {link.name}
+                                    </a>
+                                </li>
+                            )
+                        )
                     }
                 </ul>
             </div>
@@ -73,17 +78,18 @@ const footerContent = content.footerContent;
                 <h2 class="text-xl font-bold pb-4 text-[30px]">Follow Us!</h2>
                 <div class="flex justify-center items-center gap-4">
                     {
-                        footerContent.socials.map((socialObj: { name: string; href: string; icon: string; size: string }) => {
+                        footerContent.socials.map((socialObj) => {
+                            const key = Object.keys(socialObj)[0];
                             return (
                                 <a
-                                    href={socialObj.href}
+                                    href={socialObj[key]["href"]}
                                     class="hover:opacity-80 transition"
-                                    key={socialObj.name}
+                                    key={socialObj[key]["name"]}
                                 >
                                     <img
-                                        src={socialObj.icon}
-                                        alt={socialObj.name}
-                                        class={socialObj.size}
+                                        src={socialObj[key]["icon"]}
+                                        alt={socialObj[key]["name"]}
+                                        class={`w-${socialObj[key]["size"]} h-${socialObj[key]["size"]} md:w-8 md:h-8`}
                                     />
                                 </a>
                             );
