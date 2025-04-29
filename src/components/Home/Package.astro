@@ -38,6 +38,29 @@ let packageDetails = [
             color: "#F3F3F3",
         },
     },
+    {
+        package: {
+            image1: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D",
+            image2: "https://images.unsplash.com/photo-1528702748617-c64d49f918af?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image3: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image4: "https://images.unsplash.com/photo-1634148551170-d37d021e0cc9?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image5: "https://images.unsplash.com/photo-1494675595046-ae42af7dc2ce?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image6: "https://plus.unsplash.com/premium_photo-1697729798591-8b7e1b271515?q=80&w=1968&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image7: "https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?q=80&w=2137&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image8: "https://plus.unsplash.com/premium_photo-1661947673080-a2bb1f4d328a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image9: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image10:
+                "https://images.unsplash.com/photo-1612409578638-b890d0fa9364?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image11:
+                "https://images.unsplash.com/photo-1562595410-4859d718375e?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image12:
+                "https://images.unsplash.com/photo-1641765606160-a1381c652846?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image13:
+                "https://images.unsplash.com/photo-1641765214243-7946e3e57aad?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image14:
+                "https://plus.unsplash.com/premium_photo-1697730197947-f19e92f0035b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+    },
 ];
 
 const icon = "/src/assets/images/icons/Icon.png";
@@ -46,6 +69,7 @@ const icon = "/src/assets/images/icons/Icon.png";
 <div
     class="align-center flex flex-col justify-center items-center w-full h-fit bg-[#F3F4F6]"
 >
+    <h1 class="text-[96px] font-bebas">What’s Included</h1>
     <div
         class="flex flex-col justify-center items-center p-5 gap-5 w-full max-w-fit bg-amber-200"
     >
@@ -213,36 +237,72 @@ const icon = "/src/assets/images/icons/Icon.png";
                 </div>
             </div>
         </div>
-        <h2 class="text-5xl font-bold">Tour Gallery</h2>
         <div
-            class="relative flex justify-center items-center h-fit w-full p-10 gap-20 bg-purple-400"
+            class="relative flex justify-center items-center h-fit w-full p-10 gap-5 bg-purple-400"
         >
             <div
-                class="rounded-[45px] w-full h-[312px] align-center bg-[#F3F3F3] overflow-hidden"
+                class="rounded-[45px] w-full h-[450px] flex flex-col items-center justify-center p-10 gap-5 bg-white overflow-hidden"
             >
-                <div class="grid grid-cols-5 items-stretch">
-                    <div class="bg-yellow-300 h-20">01</div>
-                    <div class="bg-red-300 h-20">01</div>
-                    <div class="bg-blue-300 h-20">01</div>
-                    <div class="bg-orange-300 h-20">01</div>
-                    <div class="bg-purple-300 h-20">01</div>
-                    <div class="bg-amber-300 h-20">01</div>
-                    <div class="bg-violet-300 h-20">01</div>
-                    <div class="bg-green-300 h-20">01</div>
-                    <div class="bg-teal-300 h-20">01</div>
-                    <div class="bg-yellow-300 h-20">01</div>
-                    <div class="bg-fuchsia-700 h-20">01</div>
-                    <div class="bg-yellow-300 h-20">01</div>
-                    <div class="bg-yellow-500 h-20">01</div>
-                    <div class="bg-fuchsia-700 h-20">01</div>
-                    <div class="bg-yellow-800 h-20">01</div>
-                    <div class="bg-yellow-300 h-20">01</div>
-                    <div class="bg-red-300 h-20">01</div>
-                    <div class="bg-blue-300 h-20">01</div>
-                    <div class="bg-orange-300 h-20">01</div>
-                    <div class="bg-purple-300 h-20">01</div>
+                <h2 class="text-5xl font-bold">Tour Gallery</h2>
+                <div class="w-full h-[450px] relative">
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-[606.17px] top-0 absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image1}
+                    />
+                    <img
+                        class="w-[148.36px] h-[130.34px] left-[303.09px] top-0 absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image2}
+                    />
+                    <img
+                        class="w-[148.36px] h-[85.76px] left-[757.72px] top-0 absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image3}
+                    />
+                    <img
+                        class="w-[148.36px] h-[130.34px] left-[151.54px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image4}
+                    />
+                    <img
+                        class="w-[148.36px] h-[124.22px] left-[454.63px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image5}
+                    />
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-[909.26px] top-0 absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image6}
+                    />
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-[454.63px] top-0 absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image7}
+                    />
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-[757.72px] top-[89.17px] absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image8}
+                    />
+                    <img
+                        class="w-[148.36px] h-[130.34px] left-0 top-0 absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image9}
+                    />
+                    <img
+                        class="w-[148.36px] h-[85.76px] left-[606.17px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image10}
+                    />
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-[909.26px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image11}
+                    />
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-0 top-[133.75px] absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image12}
+                    />
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-[303.09px] top-[133.75px] absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image13}
+                    />
+                    <img
+                        class="w-[148.36px] h-[223.25px] left-[151.54px] top-0 absolute rounded-sm border-[0.33px] border-black"
+                        src={packageDetails[4].package?.image14}
+                    />
                 </div>
             </div>
         </div>
     </div>
-</div>>
+</div>
