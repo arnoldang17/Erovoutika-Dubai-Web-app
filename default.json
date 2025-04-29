@@ -132,14 +132,14 @@
                             "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
                         }
                     },
-                    "Trainings": {
+                    "Training": {
                         "hero": {
                             "mainText": "Welcome to Erovoutika Dubai3333",
                             "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
                             "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
                         }
                     },
-                    "Tournaments": {
+                    "Tournament": {
                         "Navbar": {
                             "links": [
                                 { "name": "Home", "path": "/" },
