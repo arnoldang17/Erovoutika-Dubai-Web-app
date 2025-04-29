@@ -1,62 +1,53 @@
 ---
 import { fetchPageContent } from "../db";
-// async function fetchAdminContent() {
-//   return {
-
-//     Home:{
-//         Robolution:{
-//             intro1: "What is ROBOLUTION DUBAI 2025?",
-//             sub1: "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
-//             image1:   "./bot1.png",
-
-//             intro2: "Join Our Community!",
-//             sub2: "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
-//             image2: "./joinus.png",
-//         }
-//     }
-
-//   };
-// }
-
 const content = await fetchPageContent("Home");
 ---
 
 <div class="bg-white">
-    <div class="grid md:grid-cols-2 grid-cols-1 lg:p-56 sm:p-36 p-10 gap-10">
-        <div>
-            <h3
-                class="font-semibold xl:text-7xl lg:text-5xl text-2xl text-black mb-4"
-                set:html={content.Robolution.intro1}
-            />
-            <h4
-                class="text-base text-zinc-800 mt-4"
-                set:html={content.Robolution.sub1}
-            />
+    <div class="grid lg:grid-cols-1 gap-10">
+        <div
+            class="grid grid-cols-2 items-center justify-center bg-gray-400 mx-auto gap-20 w-auto p-5"
+        >
+            <div class="flex flex-wrap w-full max-w-[610px] bg-violet-500">
+                <h3
+                    class="font-semibold xl:text-7xl lg:text-5xl text-4xl text-black bg-amber-600 mb-4"
+                    set:html={content.Robolution.intro1}
+                />
+                <h4
+                    class="text-base text-zinc-800 mt-4 bg-blue-600"
+                    set:html={content.Robolution.sub1}
+                />
+            </div>
+
+            <div class="place-items-center bg-red-500">
+                <img
+                    src={content.Robolution.image1}
+                    class="h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
+                />
+            </div>
         </div>
 
-        <div class="place-items-center">
-            <img
-                src={content.Robolution.image1}
-                class="h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
-            />
-        </div>
-
-        <div class="sm:mt-24 mt-5 place-items-center">
-            <img
-                src={content.Robolution.image2}
-                class="h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
-            />
-        </div>
-
-        <div class="place-items-start mt-24">
-            <h3
-                class="font-semibold xl:text-7xl lg:text-5xl text-2xl text-black mb-4"
-                set:html={content.Robolution.intro2}
-            />
-            <h4
-                class="text-base text-zinc-800 mt-4"
-                set:html={content.Robolution.sub2}
-            />
+        <div
+            class="grid grid-cols-2 bg-yellow-400 items-center justify-center mx-auto gap-20 w-auto p-5"
+        >
+            <div class="place-items-center bg-PinkEnd">
+                <img
+                    src={content.Robolution.image2}
+                    class="h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
+                />
+            </div>
+            <div class="flex flex-wrap bg-gray-400 w-full max-w-[610px]">
+                <div class="place-items-start bg-orange-500">
+                    <h3
+                        class="font-semibold xl:text-7xl lg:text-5xl text-4xl text-black mb-4"
+                        set:html={content.Robolution.intro2}
+                    />
+                </div>
+                <h4
+                    class="text-base text-zinc-800 mt-4 bg-cyan-900"
+                    set:html={content.Robolution.sub2}
+                />
+            </div>
         </div>
     </div>
 </div>

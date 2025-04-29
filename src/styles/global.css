@@ -186,7 +186,14 @@
   --font-roboto: 'Roboto', sans-serif;
 
   --color-DarkBlue: #0B0221;
+    
+  --color-highlightPurple: #8B5CF6;
 
+  --color-BabyBlue: #2562FF;
+
+  --color-BlueStart: #2600FC;
+
+  --color-PinkEnd: #FF00EA;
 }
 
 
@@ -196,14 +203,15 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Roboto', sans-serif;
-    }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Roboto', sans-serif;
+  }
 }
