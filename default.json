@@ -43,6 +43,7 @@
                                     "name": "Competition",
                                     "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
                                     "buttonText": "learn more",
+                                    "buttonLink": "/Tournament",
                                     "color": "#F3F3F3"
                                 }
                             },
@@ -51,6 +52,7 @@
                                     "name": "Trainings",
                                     "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
                                     "buttonText": "learn more",
+                                    "buttonLink": "/Trainings",
                                     "color": "#FDE68A"
                                 }
                             },
@@ -59,6 +61,7 @@
                                     "name": "Conference",
                                     "description": "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
                                     "buttonText": "learn more",
+                                    "buttonLink": "#",
                                     "color": "#6AAAFF"
                                 }
                             },
@@ -67,6 +70,7 @@
                                     "name": "Awards",
                                     "description": "Erovoutika will recognize excellence with Robotics Coach of the Year, Robotics Club of the Year, Global Young Innovator Award, and Special Awards for outstanding achievements.",
                                     "buttonText": "learn more",
+                                    "buttonLink": "#",
                                     "color": "#F3F3F3"
                                 }
                             },

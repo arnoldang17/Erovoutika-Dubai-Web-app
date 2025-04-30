@@ -6,7 +6,8 @@ const packageDetails = data.package;
 const icon = "/src/assets/images/icons/Icon.png";
 ---
 
-<div
+<section
+    id="packages"
     class="align-center flex flex-col justify-center items-center w-full h-fit bg-[#F3F4F6]"
 >
     <h1 class="text-[96px] font-bebas">What’s Included</h1>
@@ -40,9 +41,11 @@ const icon = "/src/assets/images/icons/Icon.png";
                             class="flex justify-start items-center w-full gap-2"
                         >
                             <img class="w-10 h-full" src={icon} alt="Icon" />
-                            <button
+                            <a
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
+                                href={packageDetails[0].package.buttonLink}
                                 >{packageDetails[0].package.buttonText}
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -77,9 +80,10 @@ const icon = "/src/assets/images/icons/Icon.png";
                             class="flex justify-start items-center w-full gap-2"
                         >
                             <img class="w-10 h-full" src={icon} alt="Icon" />
-                            <button
+                            <a
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
-                                >{packageDetails[1].package.buttonText}</button
+                                href={packageDetails[1].package.buttonLink}
+                                >{packageDetails[1].package.buttonText}</a
                             >
                         </div>
                     </div>
@@ -119,9 +123,10 @@ const icon = "/src/assets/images/icons/Icon.png";
                             class="flex justify-start items-center w-full gap-2"
                         >
                             <img class="w-10 h-full" src={icon} alt="Icon" />
-                            <button
+                            <a
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
-                                >{packageDetails[2].package.buttonText}</button
+                                href={packageDetails[2].package.buttonLink}
+                                >{packageDetails[2].package.buttonText}</a
                             >
                         </div>
                     </div>
@@ -159,9 +164,10 @@ const icon = "/src/assets/images/icons/Icon.png";
                             class="flex justify-start items-center w-full gap-2"
                         >
                             <img class="w-10 h-full" src={icon} alt="Icon" />
-                            <button
+                            <a
                                 class="flex items-center w-fit p-4 h-10 rounded-xl"
-                                >{packageDetails[3].package.buttonText}</button
+                                href={packageDetails[3].package.buttonLink}
+                                >{packageDetails[3].package.buttonText}</a
                             >
                         </div>
                     </div>
@@ -244,4 +250,4 @@ const icon = "/src/assets/images/icons/Icon.png";
             </div>
         </div>
     </div>
-</div>
+</section>

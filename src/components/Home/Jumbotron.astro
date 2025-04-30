@@ -7,11 +7,10 @@ const data = await fetchPageContent("Home");
 
 <section
     style={`background-image: url('${data.hero.imageDirectory}')`}
-    class={`100vh w-full bg-cover bg-no-repeat bg-center`}
+    class={`flex justify-start 100vh w-full bg-cover bg-no-repeat bg-center p-[40px]`}
 >
-    <!-- <Nav /> -->
-    <div class="px-4 mx-auto max-w-screen-xl h-screen text-left py-24 lg:py-56">
-        <div class="md:w-fit lg:w-xl h-auto">
+    <div class="flex flex-col h-screen w-[784px] py-35 lg:py-56">
+        <div class="w-full h-auto">
             <h1
                 id="mainText"
                 class="mb-4 text-4xl leading-none text-[#212529] text-[120px] font-bebas"
@@ -25,13 +24,17 @@ const data = await fetchPageContent("Home");
                 }
                 {data.hero.mainText.split(" ").slice(1).join(" ")}
             </h1>
+        </div>
+        <div class="w-full h-auto">
             <p
                 class="text-left mb-8 text-lg font-normal text-[#212529] lg:text-xl"
             >
                 {data.hero.subText}
             </p>
+        </div>
+        <div class="flex items-center justify-start mt-8">
             <a
-                href="#"
+                href="#packages"
                 class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-[#212529] rounded-full bg-white hover:bg-amber-50 focus:ring-4 focus:ring-blue-300"
             >
                 Get started
@@ -51,7 +54,6 @@ const data = await fetchPageContent("Home");
                 </svg>
             </a>
         </div>
-        <div class="flex space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-        </div>
     </div>
 </section>
+
