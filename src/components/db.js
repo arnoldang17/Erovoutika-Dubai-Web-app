@@ -168,7 +168,7 @@ function getPageDetails() {
     // }
     const contentKeys = pages.map((key, index) => {
         return sections[index].map((element) => {
-            console.log(element);
+            // console.log(element);
             return Object.keys(
                 Object.values(fileData.templates[selectedIndex])[0].Contents[
                     key
@@ -179,7 +179,7 @@ function getPageDetails() {
 
     const contentValues = pages.map((key, index) => {
         return sections[index].map((element) => {
-            console.log(element);
+            // console.log(element);
             return Object.values(
                 Object.values(fileData.templates[selectedIndex])[0].Contents[
                     key
@@ -230,7 +230,7 @@ function getPageDetails() {
     return all;
 }
 
-// console.log(await fetchPageContent("Home"));
+// console.log(await fetchPageContent("Training"));
 
 // deleteFileContents();
 export default getDbData;
