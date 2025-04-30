@@ -9,7 +9,6 @@ import Robolution from "@/components/Home/Robolution.astro";
 import Highlights from "@/components/Home/Highlights.astro";
 import FrequentlyAsk from "@/components/Home/FrequentlyAsk.astro";
 import Partners from "@/components/Home/Partners";
-import Hero from "@/components/Hero.astro";
 const accordionData = [
     {
         title: "Is it accessible?",
@@ -29,21 +28,18 @@ const accordionData = [
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+
 <Layout>
-    
     <!-- <Hero/> -->
     <Jumbotron />
     <Robolution />
-    
+
     <Package />
     <Highlights />
     <Join />
     <!-- <Admin /> -->
     <Partners />
     <FrequentlyAsk />
-
-  
-
 </Layout>
 
 <style>
