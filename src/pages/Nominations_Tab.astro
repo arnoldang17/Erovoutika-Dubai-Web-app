@@ -21,7 +21,7 @@ const content = await NominationContent();
             <button class="nominate-button">{content.hero_buttonText}</button>
         </div>
     </section>
-    <section class="nomination-form" id="nomination-form">
+    <section class="nomination-form" id="nomination-section">
         <NominationForm/>
     </section>
 </body>
@@ -84,7 +84,7 @@ const content = await NominationContent();
 <script is:inline>
     const nominateButton = document.querySelector(".nominate-button");
     nominateButton.addEventListener("click", () => {
-    const introSection = document.getElementById("nomination-form");
+    const introSection = document.getElementById("nomination-section");
     if (introSection) {
       introSection.scrollIntoView({ behavior: "smooth" });
     } else {
