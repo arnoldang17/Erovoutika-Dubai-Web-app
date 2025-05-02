@@ -1,0 +1,103 @@
+---
+const newsContent = {
+  sectionTitle: "News and Updates",
+  moreNewsLink: {
+    text: "More News →",
+    href: "/News",
+  },
+  cards: [
+    {
+      NewsCard1: {
+        title: "ROBOLUTION DUBAI 2025",
+        date: "December 15-18, 2025",
+        description:
+          "Join us for an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+        image: "/src/assets/images/NewsUpdateImages/Poster.png",
+        alt: "ROBOlution Dubai",
+        link: "https://www.facebook.com/share/p/1FjVj8sWys/",
+      },
+    },
+    {
+      NewsCard2: {
+        title: "Calling All Robotics Coaches Around the Globe!",
+        date: "April 28, 2025",
+        description:
+          "Whether you’re coaching in a local school or guiding international champions — this is your MOMENT.",
+        image: "/src/assets/images/NewsUpdateImages/RobolutionDubai.jpg",
+        alt: "RobolutionDubai",
+        link: "https://www.facebook.com/share/p/16UfvX7ZW1/",
+      },
+    },
+    {
+      NewsCard3: {
+        title:
+          "Erovoutika Honored as Outstanding Partner by St. Dominic College of Asia",
+        date: "April 26, 2025",
+        description:
+          "ERovoutika Electronics Robotics Automation has been awarded and recognized as an Outstanding Partner by St. Dominic College of Asia (SDCA)...",
+        image: "/src/assets/images/NewsUpdateImages/Outstanding.jpg",
+        alt: "Outstanding",
+        link: "https://www.facebook.com/share/p/16MmGyfeGb/",
+      },
+    },
+    {
+      NewsCard4: {
+        title: "Murata Robolution: Erovouthon 2.0 Competition 2025",
+        date: "March 15, 2025",
+        description:
+          "The Murata Robolution: Erovouthon 2.0 Competition 2025 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP).",
+        image: "/src/assets/images/NewsUpdateImages/Erovouthon.png",
+        alt: "Erovouthon",
+        link: "https://www.facebook.com/share/p/1YaF1RkjTF/",
+      },
+    },
+  ],
+};
+---
+
+<section class="bg-white p-5 md:px-16 lg:px-24">
+  <div class="text-center mb-5">
+    <h2 class="font-bold text-gray-800 text-[clamp(1.5rem,5vw,2.25rem)]">
+      {newsContent.sectionTitle}
+    </h2>
+    <a
+      href={newsContent.moreNewsLink.href}
+      class="text-[clamp(1rem,2vw,1.125rem)] text-blue-600 hover:underline mt-2 inline-block"
+    >
+      {newsContent.moreNewsLink.text}
+    </a>
+  </div>
+
+  <div class="container mx-auto px-5 py-5">
+    <div class="flex flex-wrap justify-center gap-10">
+      {
+        newsContent.cards.map((cardWrapper) => {
+          const key = Object.keys(cardWrapper)[0];
+          const card = cardWrapper[key];
+          return (
+            <a href={card.link} target="_blank" class="w-[350px] h-full" key={key}>
+              <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow w-full hover:scale-[1.02] duration-200">
+                <img
+                  src={card.image}
+                  alt={card.alt}
+                  class="w-full h-40 object-fill"
+                />
+                <div class="p-6 flex flex-col justify-between min-h-[200px]">
+                  <p class="text-[clamp(0.75rem,1.2vw,0.875rem)] text-gray-500 mb-1">
+                    {card.date}
+                  </p>
+                  <h3 class="font-semibold text-gray-900 mb-2 text-[clamp(1rem,2.5vw,1.125rem)]">
+                    {card.title}
+                  </h3>
+                  <p class="text-[clamp(0.875rem,1.5vw,1rem)] text-gray-700">
+                    {card.description}
+                  </p>
+                </div>
+              </div>
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
