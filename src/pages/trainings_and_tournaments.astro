@@ -1,0 +1,396 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import ContactInformation from "../components/Contact_Information.astro";
+---
+
+<Layout>
+
+  <div class="page-content-intro">
+
+    <div class="trainings_and_tournaments">
+      <h1>JOIN US</h1>
+      <p>For an International Training & Tournament Camp<br>
+      In Robotics & Automation and Cybersecurity with<br> Certification!</p>
+      </div>
+    <div class="details">
+      <div>
+      <img src="/images/welcome_dubai.png" alt="Dubai Logo" />
+      </div>
+    </div>
+
+
+    </div>
+
+    <div class="page-content-body">
+      <div class="main-details">
+        <h1>What Should <span class="highlight">YOU</span> Know?</h1>
+        <p>This camp is designed to enhance your skills with hands-on<br>
+        training, expert-led sessions, and global networking<br> opportunities</p>
+      </div>
+
+      <div class ="banner-details">
+        <h3>
+          Don't miss this chance to level up your career in cutting-edge technology!
+        </h3>
+      </div>
+
+      <div class="card-info">
+
+        <div class="card">
+          <div class="icon-text-container">
+            <span class="icon"><i class="fa-solid fa-calendar-days"></i></span>
+            <div class="text">
+              <p class="title">DATE</p>
+              <p class="details">Dec. 15-18, 2025</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="icon-text-container">
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div class="text">
+              <p class="title">WHERE</p>
+              <p class="details">Al-Barsha-Dubai</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="icon-text-container">
+            <span class="icon"><i class="fa-solid fa-money-check-dollar"></i></span>
+            <div class="text">
+              <p class="title">EVENT FEE</p>
+              <p class="details">250 AED</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class ="banner-register">
+        <div>
+        <h2>Reserve Your Slot Now!</h2>
+        <button class="register" onclick="window.open('https://docs.google.com/forms/d/19oF1ymwkBek8hsj_ZtxSxcfvQTqg9ViUseUFHBDtqS8/preview?fbclid=IwY2xjawItESpleHRuA2FlbQIxMAABHRuGmMOt5eKqs2HOK3fkRv9KCl4S4iGqfiBdPG2ACMeZPJ394R9DGQwakQ_aem_y9INSaTR6z7es73RfY3gaw', '_blank');">REGISTER</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <ContactInformation/>
+</Layout>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.page-content-intro {
+  padding: 2rem;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('/images/TnT Bg1.png');
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.trainings_and_tournaments {
+  flex: 1;
+  max-width: 50%;
+  text-align: left; /* Center text */
+  margin: auto; /* Center within the flex container */
+}
+
+.trainings_and_tournaments h1 {
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.trainings_and_tournaments p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.details {
+  flex: 1;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.details img {
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .page-content-intro {
+    flex-direction: column;
+    gap: 1rem;
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .trainings_and_tournaments {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .trainings_and_tournaments h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .trainings_and_tournaments p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .details img {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainings_and_tournaments h1 {
+    font-size: 2rem;
+  }
+
+  .trainings_and_tournaments p {
+    font-size: 0.9rem;
+  }
+
+  .details img {
+    max-width: 75%;
+  }
+}
+.page-content-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: url('/images/TnT Bg2.png') no-repeat center center;
+  background-size: cover;
+  object-fit: cover;
+  color: rgb(0, 0, 0);
+  min-height: 150vh;
+  text-align: center;
+}
+
+.main-details h1 {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-details .highlight {
+  color: #00008B;
+}
+
+.main-details p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 2.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.banner-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+.banner-details h3 {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 2.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards Container */
+.card-info {
+  display: flex;
+  gap: 2rem;
+  padding: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Individual Cards */
+.card {
+  background: linear-gradient(145deg, rgba(0, 0, 139, 0.9), rgba(28, 30, 83, 0.9));
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  width: 250px;
+  margin: 10px auto;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon-text-container {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #6078EA, #17EAD9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  gap: 5px;
+}
+
+.text .title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.text .details {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Registration Section */
+.banner-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-register h2 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Register Button */
+.register {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding: 15px 30px;
+  width: 180px;
+  background-color: #00008B;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%; 
+    max-width: 300px;
+  }
+
+  .main-details h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-details p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .banner-register h2 {
+    font-size: 1.5rem;
+  }
+
+  .register {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-details h1 {
+    font-size: 2rem;
+  }
+
+  .main-details p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+
+  .card-info {
+    padding: 10px;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  .register {
+    width: 150px;
+  }
+}
+</style>
