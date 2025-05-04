@@ -57,7 +57,7 @@ async function getDbData() {
         return [];
     }
 };
-await insertDbData(); // Call the function to insert data into the database
+
 await getDbData(); // Call the function to fetch data from the database
 
 function mapDbRowsToObjects(rows) {
