@@ -19,8 +19,11 @@ import { log } from "console";
 // port: 5432,
 // database: "test",
 
-const supabaseUrl = import.meta.env.SUPABASE_URL;
-const supabaseKey = import.meta.env.SUPABASE_ANON_KEY;
+// const supabaseUrl = import.meta.env.SUPABASE_URL;
+// const supabaseKey = import.meta.env.SUPABASE_ANON_KEY;
+const supabaseUrl = " https://zrwokrbdolhwjwabonwk.supabase.co/";
+const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpyd29rcmJkb2xod2p3YWJvbndrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3MjgyMDAsImV4cCI6MjA1OTMwNDIwMH0.aTj5w3lP0p3PurDhR_sIYT1fszvoAV4PpAuOMEX18ZA";
 const connectionInfo = {
     db: createClient(supabaseUrl, supabaseKey),
     status: false,
@@ -44,9 +47,9 @@ async function getDbData() {
 
         // Map the rows to objects if needed
         const mappedData = mapDbRowsToObjects(data);
-        console.log("Mapped data:", mappedData);
+        // console.log("Mapped data:", mappedData);
         tdata.templates = mappedData; // Update the JSON data with fetched data
-        console.log(tdata.templates);
+        // console.log(tdata.templates);
         writeFile(path, tdata); // Write the updated data back to the JSON file
         return mappedData;
     } catch (err) {
@@ -54,6 +57,8 @@ async function getDbData() {
         return [];
     }
 };
+await insertDbData(); // Call the function to insert data into the database
+await getDbData(); // Call the function to fetch data from the database
 
 function mapDbRowsToObjects(rows) {
     return rows.map(({ Name, config }) => {
@@ -75,15 +80,15 @@ async function insertDbData() {
     });
 
     try {
-        // Perform the bulk insert
+        // Perform the upsert operation
         const { data, error } = await connectionInfo.db
             .from("Templates")
-            .insert(insertData);
+            .upsert(insertData, { onConflict: "Name" }); // Use "Name" as the unique key
 
         if (error) {
-            console.error("Error inserting data:", error);
+            console.error("Error inserting/updating data:", error);
         } else {
-            console.log("Inserted data:", data);
+            console.log("Inserted/Updated data:", data);
         }
     } catch (err) {
         console.error("Unexpected error:", err);

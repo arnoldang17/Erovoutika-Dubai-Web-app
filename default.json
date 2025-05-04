@@ -1,6 +1,299 @@
 {
     "templates": [
-        
+        {
+            "Default": {
+                "Contents": {
+                    "Home": {
+                        "bannerContent": {
+                            "backgroundColor": "#FFE492",
+                            "message": "Nominate the Bright Minds of Tomorrow",
+                            "buttonText": "NOMINATE NOW",
+                            "buttonHref": "#",
+                            "buttonBackground": "#0075FF",
+                            "buttonHover": "#0060CC"
+                        },
+                        "hero": {
+                            "mainText": "Welcome to Erovoutika Dubai",
+                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
+                        },
+                        "Robolution": {
+                            "intro1": "What is ROBOLUTION DUBAI 2025?",
+                            "sub1": "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
+                            "image1": "./bot1.png",
+                            "intro2": "Join Our Community!",
+                            "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
+                            "image2": "./joinus.png"
+                        },
+                        "package": [
+                            {
+                                "package": {
+                                    "name": "Competition",
+                                    "titleColor": "#6AAAFF",
+                                    "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
+                                    "buttonText": "learn more",
+                                    "buttonLink": "/Tournament",
+                                    "color": "#F3F3F3",
+                                    "display": ""
+                                }
+                            },
+                            {
+                                "package": {
+                                    "name": "Trainings",
+                                    "titleColor": "#F3F3F3",
+                                    "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
+                                    "buttonText": "learn more",
+                                    "buttonLink": "/Trainings",
+                                    "color": "#FDE68A",
+                                    "display": ""
+                                }
+                            },
+                            {
+                                "package": {
+                                    "name": "Conference",
+                                    "titleColor": "#F3F3F3",
+                                    "description": "Join experts and innovators for discussions, panels, and networking on robotics, automation, cybersecurity, and R&D, shaping the future of technology.",
+                                    "buttonText": "learn more",
+                                    "buttonLink": "#",
+                                    "color": "#6AAAFF",
+                                    "display": ""
+                                }
+                            },
+                            {
+                                "package": {
+                                    "name": "Awards",
+                                    "titleColor": "#FDE68A",
+                                    "description": "Erovoutika will recognize excellence with Robotics Coach of the Year, Robotics Club of the Year, Global Young Innovator Award, and Special Awards for outstanding achievements.",
+                                    "buttonText": "learn more",
+                                    "buttonLink": "#",
+                                    "color": "#F3F3F3",
+                                    "display": ""
+                                }
+                            },
+                            {
+                                "package": {
+                                    "image1": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D",
+                                    "image2": "https://images.unsplash.com/photo-1528702748617-c64d49f918af?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image3": "https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image4": "https://images.unsplash.com/photo-1634148551170-d37d021e0cc9?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image5": "https://images.unsplash.com/photo-1494675595046-ae42af7dc2ce?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image6": "https://plus.unsplash.com/premium_photo-1697729798591-8b7e1b271515?q=80&w=1968&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image7": "https://images.unsplash.com/photo-1628859017536-c2f1d69f3c84?q=80&w=2137&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image8": "https://plus.unsplash.com/premium_photo-1661947673080-a2bb1f4d328a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image9": "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image10": "https://images.unsplash.com/photo-1612409578638-b890d0fa9364?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image11": "https://images.unsplash.com/photo-1562595410-4859d718375e?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image12": "https://images.unsplash.com/photo-1641765606160-a1381c652846?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image13": "https://images.unsplash.com/photo-1641765214243-7946e3e57aad?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image14": "https://plus.unsplash.com/premium_photo-1697730197947-f19e92f0035b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image15": "https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "image16": "https://images.unsplash.com/photo-1722502831765-e11188565aad?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "display": ""
+                                }
+                            }
+                        ],
+                        "Highlights": {
+                            "Title": "KEY HIGHLIGHTS",
+                            "Icon1": "./highlights/trophy.png",
+                            "Highlight1": "International Awards",
+                            "description1": "Recognizing outstanding educators and Erovoutika partners in academia and industry.",
+                            "Icon2": "./highlights/tournament.png",
+                            "Highlight2": "Tournament",
+                            "description2": "After expert-led training on robotics, research and development, and cybersecurity.",
+                            "Icon3": "./highlights/workshop.png",
+                            "Highlight3": "Hands-on Workshops",
+                            "description3": "To enhance technical and research skills in  journal publication and patenting guidance.",
+                            "Icon4": "./highlights/showcase.png",
+                            "Highlight4": "Showcase",
+                            "description4": "the research and innovation projects.",
+                            "Icon5": "./highlights/network.png",
+                            "Highlight5": "Global Networking",
+                            "description5": "with professionals, educators, and industry leaders."
+                        },
+                        "joinContent": {
+                            "title": "Join the ROBOLUTION!",
+                            "body": "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
+                            "button": "Register Now",
+                            "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                        },
+                        "Partners": {
+                            "src": [
+                                "/src/assets/images/partners/1.png",
+                                "/src/assets/images/partners/2.png",
+                                "/src/assets/images/partners/3.png",
+                                "/src/assets/images/partners/4.png",
+                                "/src/assets/images/partners/5.png",
+                                "/src/assets/images/partners/6.png",
+                                "/src/assets/images/partners/7.png"
+                            ]
+                        },
+                        "FrequentlyAsk": {
+                            "Title": "FREQUENTLY ASKED QUESTIONS",
+                            "description1": "Need Help? Check Out Our Most Common Queries",
+                            "Question1": "WHAT WILL BE THE OUTLINE OF THE EVENT?",
+                            "Answer1": "Most of the outlines of the event of Erovoutika will be posted weeks prior to the said event, so stay tuned! Additional info shall also be given to your respective email once successfully registered.",
+                            "Question2": "WHO CAN PARTICIPATE?",
+                            "Answer2": "Anyone. If you have interest in one of our events no need to hesitate to join us!",
+                            "Question3": "WHAT TO EXPECT?",
+                            "Answer3": " Enhance your knowledge, experience and connect with people who have the same interest as you! Join us in our ROBOLUTION!"
+                        },
+                        "footerContent": {
+                            "links": [
+                                {
+                                    "name": "Home",
+                                    "href": "/"
+                                },
+                                {
+                                    "name": "News",
+                                    "href": "/News"
+                                },
+                                {
+                                    "name": "Tournaments",
+                                    "href": "/Tournament"
+                                },
+                                {
+                                    "name": "Trainings",
+                                    "href": "/Trainings"
+                                }
+                            ],
+                            "contact": {
+                                "email": "erovoutika@gmail.com",
+                                "qrCode": "/src/assets/images/footer-images/telephone-qr-code.png"
+                            },
+                            "socials": [
+                                {
+                                    "social1": {
+                                        "name": "LinkedIn",
+                                        "href": "https://ph.linkedin.com/company/erovoutika",
+                                        "icon": "/src/assets/images/footer-images/Linkedin.png",
+                                        "size": "w-5 h-5"
+                                    }
+                                },
+                                {
+                                    "social2": {
+                                        "name": "Facebook",
+                                        "href": "https://www.facebook.com/erovoutika",
+                                        "icon": "/src/assets/images/footer-images/Facebook.png",
+                                        "size": "w-6 h-6"
+                                    }
+                                },
+                                {
+                                    "social3": {
+                                        "name": "Instagram",
+                                        "href": "https://www.instagram.com/erovoutikainternational/",
+                                        "icon": "/src/assets/images/footer-images/Instagram.png",
+                                        "size": "w-6 h-6"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "News": {
+                        "hero": {
+                            "mainText": "Welcome to Erovoutika Dubai2222",
+                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
+                        }
+                    },
+                    "Training": {
+                        "Hero": {
+                            "title": "BE PART OF THE<br><span class='underline'>FUTURE!</span>",
+                            "subtitle": "Join us for an International Training & Tournament Camp!",
+                            "background": "https://zrwokrbdolhwjwabonwk.supabase.co/storage/v1/object/public/training-section//Trainings.png",
+                            "buttonText": "Learn More"
+                        },
+                        "Introduction": {
+                            "title": "Get Better Everyday In",
+                            "subtitle": "Robolution Dubai 2025 challenges you to grow in robotics, automation, and cybersecurity. By competing, learning, and networking with experts worldwide, you'll enhance your technical skills, problem-solving abilities, and innovation mindset—preparing you for future success!"
+                        },
+                        "Content_1": {
+                            "title": "Robotics & Automation",
+                            "subtitle": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
+                            "ImageDirectory": "https://zrwokrbdolhwjwabonwk.supabase.co/storage/v1/object/public/training-section//erobot.png"
+                        },
+                        "Content_2": {
+                            "title": "Cybersecurity",
+                            "subtitle": "Erovoutika promotes cybersecurity education and training by integrating network security, ethical hacking, and data protection into its programs. Through hands-on workshops, certifications, and competitions, participants gain expertise in threat detection, encryption, and cybersecurity best practices.",
+                            "ImageDirectory": "https://zrwokrbdolhwjwabonwk.supabase.co/storage/v1/object/public/training-section//cybersecurity.png"
+                        },
+                        "Content_3": {
+                            "title": "Research & Development",
+                            "subtitle": "Erovoutika is dedicated to advancing innovation through Research & Development (R&D), with a strong emphasis on robotics, automation, cybersecurity, and AI-powered solutions. Additionally, it explores technical writing for journal publications and patenting, fostering knowledge sharing and technological advancements.",
+                            "ImageDirectory": "https://zrwokrbdolhwjwabonwk.supabase.co/storage/v1/object/public/training-section//rnd.png"
+                        },
+                        "Content_4": {
+                            "title": "Join Us",
+                            "minititle": "START BUILDING IDEAS",
+                            "subtitle": "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
+                            "buttonText": "Register Now",
+                            "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                        }
+                    },
+                    "Tournament": {
+                        "Navbar": {
+                            "links": [
+                                {
+                                    "name": "Home",
+                                    "path": "/"
+                                },
+                                {
+                                    "name": "News",
+                                    "path": "/News"
+                                },
+                                {
+                                    "name": "Trainings",
+                                    "path": "/Trainings"
+                                },
+                                {
+                                    "name": "Tournaments",
+                                    "path": "/Tournament"
+                                }
+                            ],
+                            "image": "/src/assets/images/Erovoutika Dubai logo.png",
+                            "buttonText": "Register Now",
+                            "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                        },
+                        "Hero": {
+                            "title": "BE PART OF THE<br><span class='underline decoration-[#C084FC]'>FUTURE!</span>",
+                            "subtitle": "Join us for an International Training & Tournament Camp!",
+                            "background": "/src/assets/images/backgrounds/Herobg.png",
+                            "buttonText": "Learn More"
+                        },
+                        "Overview": {
+                            "subheadings": "Overview",
+                            "Headings": "Tournament",
+                            "info": "Robolution Dubai 2025 features three dynamic tracks designed to challenge participants in innovation, problem-solving, and technical expertise. Compete against global talents, collaborate with experts, and push the boundaries of technology in the following <span class='text-sky-500'>categories:</span>"
+                        },
+                        "Pictures": {
+                            "erobot": "/src/assets/images/tournament/erobot.png",
+                            "eromath": "/src/assets/images/tournament/eromath.png",
+                            "freestyle": "/src/assets/images/tournament/freestyle.png",
+                            "cybersecurity": "/src/assets/images/tournament/cybersecurity.png"
+                        },
+                        "Teachers": {
+                            "title": "Who can Participate?",
+                            "image": "./ParticipateImages/teachers.png",
+                            "header": "Teachers",
+                            "subtext": "Teachers and industry practitioners can form teams of <span class='text-[#8B5CF6]'> 2 to 5 members </span> to represent their school or company. Using Erobot kits, teams will compete in Robotics & Automation, R&D, and Cybersecurity. The tournament showcases skills gained from a two-day training camp."
+                        },
+                        "Students": {
+                            "image": "./ParticipateImages/students.png",
+                            "header": "Students",
+                            "subtext": "High school or college teams up to <span class='text-amber-200'> 2 to 5 members </span> present their projects in a five-minute pitch, showcasing an innovative, functional prototype. They must also prepare a roll-up poster detailing the title, objectives, methodology, key features, and real-world applications."
+                        },
+                        "Compete": {
+                            "header": "Ready to <span class='text-transparent bg-clip-text bg-gradient-to-r from-BlueStart via-purple-600 to-PinkEnd'> Compete?</span>",
+                            "subtext": "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
+                            "buttonText": "Register Now",
+                            "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "test": {}
+        }
     ],
     "selectedIndex": 0
 }

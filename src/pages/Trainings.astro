@@ -81,547 +81,549 @@ const content = await fetchPageContent("Training");
             />
             <h1 class="content-4-title" set:html={content.Content_4.title} />
             <p class="content-4-subtitle">{content.Content_4.subtitle}</p>
-            <button class="content-4-button"
-                >{content.Content_4.buttonText}</button
+            <a
+                href={content.Content_4.buttonLink}
+                class="content-4-button"
+                target="_blank"
             >
+                {content.Content_4.buttonText}
+            </a>
         </div>
     </section>
 </Layout>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap");
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap");
 
-        /* Hero Section */
-        .hero {
-            display: flex;
+    /* Hero Section */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+    /* Hero Title */
+    .hero-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 6rem;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-title .underline {
+        text-decoration: underline;
+        text-decoration-thickness: 0.5px;
+        text-underline-offset: 2px;
+        color: #ffffff;
+    }
+    /* Hero Subtitle */
+    .hero-subtitle {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+    /* Hero Button */
+    .hero-button {
+        background-color: #ffffff;
+        color: black;
+        padding: 15px 30px;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        transition:
+            background-color 0.3s,
+            transform 0.2s;
+    }
+    .hero-button:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+    }
+    /* Introduction */
+    .introduction {
+        background: white;
+        height: fit-content;
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+        border-radius: 8px;
+        margin: 20px auto;
+        max-width: 750px;
+    }
+    .intro-title {
+        font-family: Roboto, sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 16px;
+    }
+    .intro-subtitle {
+        font-family: Roboto, sans-serif;
+        font-size: 1.2rem;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .content-1 {
+        background-color: #0b0221;
+        padding: 30px;
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .content-1-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 1100px;
+        height: fit-content;
+        gap: 50px;
+    }
+
+    .content-1-text {
+        font-family: Roboto, sans-serif;
+        flex: 1;
+        color: white;
+        max-height: 80%;
+        padding: auto 20px;
+    }
+
+    .content-1-title {
+        font-size: 2.2rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        color: white;
+        background: #2562ff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+    }
+
+    .content-1-subtitle {
+        font-family: Roboto, sans-serif;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+
+    .content-1-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #233876;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .content-1-image img {
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 1024px) {
+        .content-1-container {
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            padding: 20px;
-            color: white;
             text-align: center;
-        }
-        /* Hero Title */
-        .hero-title {
-            font-family: "Bebas Neue", sans-serif;
-            font-size: 6rem;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
-        }
-
-        .hero-title .underline {
-            text-decoration: underline;
-            text-decoration-thickness: 0.5px;
-            text-underline-offset: 2px;
-            color: #ffffff;
-        }
-        /* Hero Subtitle */
-        .hero-subtitle {
-            font-family: "Poppins", sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        /* Hero Button */
-        .hero-button {
-            background-color: #ffffff;
-            color: black;
-            padding: 15px 30px;
-            font-size: 1rem;
-            font-family: "Poppins", sans-serif;
-            text-transform: uppercase;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition:
-                background-color 0.3s,
-                transform 0.2s;
-        }
-        .hero-button:hover {
-            background-color: #f0f0f0;
-            transform: scale(1.05);
-        }
-        /* Introduction */
-        .introduction {
-            background: white;
             height: fit-content;
-            padding: 40px 20px;
-            text-align: center;
-            align-items: center;
-            border-radius: 8px;
-            margin: 20px auto;
-            max-width: 750px;
-        }
-        .intro-title {
-            font-family: Roboto, sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #212529;
-            margin-bottom: 16px;
-        }
-        .intro-subtitle {
-            font-family: Roboto, sans-serif;
-            font-size: 1.2rem;
-            color: #475569;
-            line-height: 1.6;
-            margin: 0;
         }
 
         .content-1 {
-            background-color: #0b0221;
-            padding: 30px;
-            height: 65vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        .content-1-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            max-width: 1100px;
-            height: fit-content;
-            gap: 50px;
+            padding: 20px;
+            min-height: fit-content;
         }
 
         .content-1-text {
-            font-family: Roboto, sans-serif;
-            flex: 1;
-            color: white;
-            max-height: 80%;
-            padding: auto 20px;
+            width: 100%;
+            padding: 0 20px;
         }
 
         .content-1-title {
-            font-size: 2.2rem;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-            color: white;
-            background: #2562ff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-bottom: 2.5rem;
+            font-size: 2rem;
         }
 
         .content-1-subtitle {
-            font-family: Roboto, sans-serif;
-            font-size: 1.2rem;
-            margin-top: 10px;
-            line-height: 1.5;
+            font-size: 1.3rem;
         }
 
         .content-1-image {
-            flex: 1;
-            display: flex;
+            width: 100%;
             justify-content: center;
+        }
+
+        .content-1-image {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+    @media (max-width: 768px) {
+        .content-1-container {
+            flex-direction: column;
+            text-align: center;
             align-items: center;
-            background-color: #233876;
+            height: fit-content;
+        }
+
+        .content-1 {
+            padding: 20px;
+            min-height: fit-content;
+        }
+
+        .content-1-title {
+            font-size: 1.8rem;
+        }
+
+        .content-1-subtitle {
+            font-size: 1.2rem;
+        }
+
+        .content-1-image {
+            width: 100%;
+            height: fit-content;
             padding: 15px;
-            border-radius: 10px;
+            max-width: 400px;
         }
+    }
 
-        .content-1-image img {
-            margin: 0;
-            border-radius: 10px;
-        }
+    .content-2 {
+        background-color: #f1f5f9;
+        padding: 30px;
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
 
-        @media (max-width: 1024px) {
-            .content-1-container {
-                flex-direction: column;
-                text-align: center;
-                height: fit-content;
-            }
+    .content-2-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 1100px;
+        height: fit-content;
+        gap: 50px;
+    }
 
-            .content-1 {
-                padding: 20px;
-                min-height: fit-content;
-            }
+    .content-2-text {
+        flex: 1;
+        color: #212529;
+        padding: auto 20px;
+    }
 
-            .content-1-text {
-                width: 100%;
-                padding: 0 20px;
-            }
+    .content-2-title {
+        font-size: 2.2rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        color: #212529;
+        background: #ffe492;
+        padding: 10px 15px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+    }
 
-            .content-1-title {
-                font-size: 2rem;
-            }
+    .content-2-subtitle {
+        font-family: Roboto, sans-serif;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
 
-            .content-1-subtitle {
-                font-size: 1.3rem;
-            }
+    .content-2-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffe492;
+        padding: 15px;
+        border-radius: 10px;
+    }
 
-            .content-1-image {
-                width: 100%;
-                justify-content: center;
-            }
+    .content-2-image img {
+        margin: 0;
+        border-radius: 10px;
+    }
 
-            .content-1-image {
-                width: 100%;
-                max-width: 400px;
-            }
-        }
-        @media (max-width: 768px) {
-            .content-1-container {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                height: fit-content;
-            }
-
-            .content-1 {
-                padding: 20px;
-                min-height: fit-content;
-            }
-
-            .content-1-title {
-                font-size: 1.8rem;
-            }
-
-            .content-1-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .content-1-image {
-                width: 100%;
-                height: fit-content;
-                padding: 15px;
-                max-width: 400px;
-            }
+    @media (max-width: 1024px) {
+        .content-2-container {
+            flex-direction: column-reverse;
+            text-align: center;
+            height: fit-content;
         }
 
         .content-2 {
-            background-color: #f1f5f9;
-            padding: 30px;
-            height: 65vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        .content-2-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            max-width: 1100px;
-            height: fit-content;
-            gap: 50px;
+            padding: 20px;
+            min-height: fit-content;
         }
 
         .content-2-text {
-            flex: 1;
-            color: #212529;
-            padding: auto 20px;
+            width: 100%;
+            padding: 0 20px;
         }
 
         .content-2-title {
-            font-size: 2.2rem;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-            color: #212529;
-            background: #ffe492;
-            padding: 10px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-bottom: 2.5rem;
+            font-size: 2rem;
         }
 
         .content-2-subtitle {
-            font-family: Roboto, sans-serif;
-            font-size: 1.2rem;
-            margin-top: 10px;
-            line-height: 1.5;
+            font-size: 1.3rem;
         }
 
         .content-2-image {
-            flex: 1;
-            display: flex;
+            width: 100%;
             justify-content: center;
-            align-items: center;
-            background-color: #ffe492;
+        }
+
+        .content-2-image {
+            width: 100%;
+            max-width: 400px;
             padding: 15px;
-            border-radius: 10px;
+        }
+    }
+    @media (max-width: 768px) {
+        .content-2-container {
+            flex-direction: column-reverse;
+            text-align: center;
+            height: fit-content;
         }
 
-        .content-2-image img {
-            margin: 0;
-            border-radius: 10px;
+        .content-2 {
+            padding: 20px;
+            min-height: fit-content;
         }
 
-        @media (max-width: 1024px) {
-            .content-2-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                height: fit-content;
-            }
-
-            .content-2 {
-                padding: 20px;
-                min-height: fit-content;
-            }
-
-            .content-2-text {
-                width: 100%;
-                padding: 0 20px;
-            }
-
-            .content-2-title {
-                font-size: 2rem;
-            }
-
-            .content-2-subtitle {
-                font-size: 1.3rem;
-            }
-
-            .content-2-image {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .content-2-image {
-                width: 100%;
-                max-width: 400px;
-                padding: 15px;
-            }
+        .content-2-image {
+            width: 100%;
+            max-width: 400px;
         }
-        @media (max-width: 768px) {
-            .content-2-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                height: fit-content;
-            }
 
-            .content-2 {
-                padding: 20px;
-                min-height: fit-content;
-            }
+        .content-2-text {
+            width: 100%;
+        }
 
-            .content-2-image {
-                width: 100%;
-                max-width: 400px;
-            }
+        .content-2-title {
+            margin-bottom: 3rem;
+        }
+    }
 
-            .content-2-text {
-                width: 100%;
-            }
+    .content-3 {
+        background-color: #0b0221;
+        padding: 30px;
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
 
-            .content-2-title {
-                margin-bottom: 3rem;
-            }
+    .content-3-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        max-width: 1100px;
+        height: fit-content;
+        gap: 60px;
+    }
+
+    .content-3-text {
+        font-family: Roboto, sans-serif;
+        flex: 1;
+        color: white;
+        padding: auto 20px;
+    }
+
+    .content-3-title {
+        font-size: 2.2rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        color: white;
+        background: #2562ff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+    }
+
+    .content-3-subtitle {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+
+    .content-3-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #233876;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .content-3-image img {
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 1024px) {
+        .content-3-container {
+            flex-direction: column;
+            text-align: center;
+            height: fit-content;
         }
 
         .content-3 {
-            background-color: #0b0221;
-            padding: 30px;
-            height: 65vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-        }
-
-        .content-3-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            max-width: 1100px;
-            height: fit-content;
-            gap: 60px;
+            padding: 20px;
+            min-height: fit-content;
         }
 
         .content-3-text {
-            font-family: Roboto, sans-serif;
-            flex: 1;
-            color: white;
-            padding: auto 20px;
+            width: 100%;
+            padding: 0 20px;
         }
 
         .content-3-title {
-            font-size: 2.2rem;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-            color: white;
-            background: #2562ff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+
+        .content-3-subtitle {
+            font-size: 1.3rem;
+        }
+
+        .content-3-image {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .content-3-image {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+    @media (max-width: 768px) {
+        .content-3-container {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            height: fit-content;
+        }
+
+        .content-3 {
+            padding: 20px;
+            min-height: fit-content;
+        }
+
+        .content-3-title {
+            font-size: 1.8rem;
         }
 
         .content-3-subtitle {
             font-size: 1.2rem;
-            margin-top: 10px;
-            line-height: 1.5;
         }
 
         .content-3-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #233876;
-            padding: 15px;
-            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
         }
+    }
 
-        .content-3-image img {
-            margin: 0;
-            border-radius: 10px;
-        }
+    .content-4 {
+        background: white;
+        height: 55vh;
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+        border-radius: 8px;
+        margin: 20px auto;
+        max-width: 750px;
+        height: fit-content;
+    }
 
-        @media (max-width: 1024px) {
-            .content-3-container {
-                flex-direction: column;
-                text-align: center;
-                height: fit-content;
-            }
+    .content-4-minititle {
+        font-family: Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fea400;
+        margin-bottom: 16px;
+    }
 
-            .content-3 {
-                padding: 20px;
-                min-height: fit-content;
-            }
+    .content-4-title {
+        font-family: Roboto, sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 16px;
+    }
+    .content-4-subtitle {
+        font-family: Roboto, sans-serif;
+        font-size: 1.2rem;
+        color: #475569;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
 
-            .content-3-text {
-                width: 100%;
-                padding: 0 20px;
-            }
-
-            .content-3-title {
-                font-size: 2rem;
-            }
-
-            .content-3-subtitle {
-                font-size: 1.3rem;
-            }
-
-            .content-3-image {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .content-3-image {
-                width: 100%;
-                max-width: 400px;
-            }
-        }
-        @media (max-width: 768px) {
-            .content-3-container {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                height: fit-content;
-            }
-
-            .content-3 {
-                padding: 20px;
-                min-height: fit-content;
-            }
-
-            .content-3-title {
-                font-size: 1.8rem;
-            }
-
-            .content-3-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .content-3-image {
-                width: 100%;
-                max-width: 400px;
-            }
-        }
-
+    .content-4-button {
+        background-color: #2562ff;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 50px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        transition:
+            background-color 0.3s,
+            transform 0.2s;
+    }
+    .content-4-button:hover {
+        background-color: #f0f0f0;
+        color: black;
+        transform: scale(1.05);
+    }
+    @media (max-width: 786px) {
         .content-4 {
-            background: white;
-            height: 55vh;
-            padding: 40px 20px;
-            text-align: center;
-            align-items: center;
-            border-radius: 8px;
-            margin: 20px auto;
-            max-width: 750px;
             height: fit-content;
         }
+    }
+</style>
 
-        .content-4-minititle {
-            font-family: Roboto, sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: #fea400;
-            margin-bottom: 16px;
-        }
+<script>
+    const learnMoreButton = document.querySelector(".hero-button");
 
-        .content-4-title {
-            font-family: Roboto, sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #212529;
-            margin-bottom: 16px;
-        }
-        .content-4-subtitle {
-            font-family: Roboto, sans-serif;
-            font-size: 1.2rem;
-            color: #475569;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        .content-4-button {
-            background-color: #2562ff;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1rem;
-            font-family: "Poppins", sans-serif;
-            text-transform: uppercase;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition:
-                background-color 0.3s,
-                transform 0.2s;
-        }
-        .content-4-button:hover {
-            background-color: #f0f0f0;
-            color: black;
-            transform: scale(1.05);
-        }
-        @media (max-width: 786px) {
-            .content-4 {
-                height: fit-content;
+    if (learnMoreButton) {
+        learnMoreButton.addEventListener("click", () => {
+            const introSection = document.getElementById("introduction");
+            if (introSection) {
+                const navbarHeight = document.querySelector("nav").offsetHeight;
+                window.scrollTo({
+                    top: introSection.offsetTop - navbarHeight,
+                    behavior: "smooth",
+                });
+            } else {
+                console.error("Introduction section not found.");
             }
-        }
-    </style>
-
-    <script>
-        const learnMoreButton = document.querySelector(".hero-button");
-
-        if (learnMoreButton) {
-            learnMoreButton.addEventListener("click", () => {
-                const introSection = document.getElementById("introduction");
-                if (introSection) {
-                    const navbarHeight =
-                        document.querySelector("nav").offsetHeight;
-                    window.scrollTo({
-                        top: introSection.offsetTop - navbarHeight,
-                        behavior: "smooth",
-                    });
-                } else {
-                    console.error("Introduction section not found.");
-                }
-            });
-        } else {
-            console.error("Hero button not found.");
-        }
-    </script></Layout
->
+        });
+    } else {
+        console.error("Hero button not found.");
+    }
+</script>
