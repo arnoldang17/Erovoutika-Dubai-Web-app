@@ -10,39 +10,50 @@ const icon = "/src/assets/images/icons/Icon.png";
     id="packages"
     class="align-center flex flex-col justify-center items-center w-full h-fit bg-[#F3F4F6]"
 >
-    <h1 class="text-[96px] font-bebas">What’s Included</h1>
+    <h1 class="text-5xl lg:text-[96px] p-5 text-center font-bebas">
+        What’s Included
+    </h1>
     <div
         class="flex flex-col justify-center items-center p-5 gap-5 w-full max-w-fit bg-amber-200"
     >
         <div
-            class="flex flex-col lg:flex-row justify-center p-10 gap-y-10 lg:gap-20 h-fit w-full bg-purple-600"
+            class="flex flex-wrap lg:flex-row justify-center p-2 lg:p-10 gap-y-5 lg:gap-20 h-fit w-full bg-purple-600"
         >
             <!--item 1 -->
 
             <div
-                class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[0].package.color}`}
+                class="rounded-[45px] flex w-[600px] h-[312px] overflow-hidden"
+                style={`background-color: ${packageDetails[0].package.color}; display: ${packageDetails[0].package.display}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
-                        class="flex flex-col items-start p-4 gap-4 w-full lg:min-w-[306px] h-fit"
+                        class="flex flex-col items-center lg:items-start justify-center p-4 gap-4 w-full lg:min-w-[306px] h-full"
                     >
                         <div
-                            class="bg-[#6AAAFF] px-[7px] w-fit h-full rounded-lg"
+                            class="bg-[#6AAAFF] px-[7px] w-fit lg:h-full rounded-lg"
+                            style={`background-color: ${packageDetails[0].package.titleColor}`}
                         >
-                            <h1 class="font-bold text-3xl leading-10">
+                            <h1
+                                class="font-bold text-2xl md:text-2xl lg:text-3xl leading-10"
+                            >
                                 {packageDetails[0].package.name}
                             </h1>
                         </div>
-                        <p>
+                        <p
+                            class="text-xs text-center lg:text-start md:text-xl lg:text-[17px]"
+                        >
                             {packageDetails[0].package.description}
                         </p>
                         <div
-                            class="flex justify-start items-center w-full gap-2"
+                            class="flex justify-center lg:justify-start items-center w-full gap-2"
                         >
-                            <img class="w-10 h-full" src={icon} alt="Icon" />
+                            <img
+                                class="w-5 h-5 lg:w-10 lg:h-full"
+                                src={icon}
+                                alt="Icon"
+                            />
                             <a
-                                class="flex items-center w-fit p-4 h-10 rounded-xl"
+                                class="flex items-center text-xs lg:text-[17px] w-fit lg:p-2 h-10 rounded-xl"
                                 href={packageDetails[0].package.buttonLink}
                                 >{packageDetails[0].package.buttonText}
                             </a>
@@ -50,7 +61,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                     </div>
                 </div>
                 <div
-                    class="flex justify-center items-center w-[70%] lg:w-full h-full"
+                    class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
                         class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
@@ -62,26 +73,37 @@ const icon = "/src/assets/images/icons/Icon.png";
             <!--item 2 -->
             <div
                 class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[1].package.color}`}
+                style={`background-color: ${packageDetails[1].package.color}; display: ${packageDetails[1].package.display}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
-                        class="flex flex-col items-start p-4 gap-4 w-full lg:min-w-[306px] h-fit"
+                        class="flex flex-col items-center lg:items-start justify-center p-4 gap-4 w-full lg:min-w-[306px] h-fit"
                     >
-                        <div class="bg-white px-[7px] w-fit h-full rounded-lg">
-                            <h1 class="font-bold text-3xl leading-10">
+                        <div
+                            class="bg-white px-[7px] w-fit h-full rounded-lg"
+                            style={`background-color: ${packageDetails[1].package.titleColor}`}
+                        >
+                            <h1
+                                class="font-bold text-2xl md:text-2xl lg:text-3xl leading-10"
+                            >
                                 {packageDetails[1].package.name}
                             </h1>
                         </div>
-                        <p>
+                        <p
+                            class="text-xs text-center lg:text-start md:text-xl lg:text-[17px]"
+                        >
                             {packageDetails[1].package.description}
                         </p>
                         <div
-                            class="flex justify-start items-center w-full gap-2"
+                            class="flex justify-center lg:justify-start items-center w-full gap-2"
                         >
-                            <img class="w-10 h-full" src={icon} alt="Icon" />
+                            <img
+                                class="w-5 h-5 lg:w-10 lg:h-full"
+                                src={icon}
+                                alt="Icon"
+                            />
                             <a
-                                class="flex items-center w-fit p-4 h-10 rounded-xl"
+                                class="flex items-center text-xs lg:text-[17px] w-fit lg:p-2 h-10 rounded-xl"
                                 href={packageDetails[1].package.buttonLink}
                                 >{packageDetails[1].package.buttonText}</a
                             >
@@ -89,7 +111,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                     </div>
                 </div>
                 <div
-                    class="flex justify-center items-center w-[70%] lg:w-full h-full"
+                    class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
                         class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
@@ -100,31 +122,42 @@ const icon = "/src/assets/images/icons/Icon.png";
         </div>
 
         <div
-            class="flex lg:flex-row sm:flex-col justify-center p-10 gap-y-10 lg:gap-20 h-fit w-full bg-emerald-300"
+            class="flex flex-wrap lg:flex-row justify-center p-2 lg:p-10 gap-y-5 lg:gap-20 h-fit w-full bg-emerald-300"
         >
             <!--item 3 -->
             <div
-                class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[2].package.color}`}
+                class="rounded-[45px] flex w-[600px] h-[312px] overflow-hidden"
+                style={`background-color: ${packageDetails[2].package.color}; display: ${packageDetails[2].package.display}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
-                        class="flex flex-col items-start p-4 gap-4 w-full lg:min-w-[306px] h-fit"
+                        class="flex flex-col items-center lg:items-start justify-center p-4 gap-4 w-full lg:min-w-[306px] h-fit"
                     >
-                        <div class="bg-white px-[7px] w-fit h-full rounded-lg">
-                            <h1 class="font-bold text-3xl leading-10">
+                        <div
+                            class="bg-white px-[7px] w-fit h-full rounded-lg"
+                            style={`background-color: ${packageDetails[2].package.titleColor}`}
+                        >
+                            <h1
+                                class="font-bold text-2xl md:text-2xl lg:text-3xl leading-10"
+                            >
                                 {packageDetails[2].package.name}
                             </h1>
                         </div>
-                        <p>
+                        <p
+                            class="text-xs text-center lg:text-start md:text-xl lg:text-[17px]"
+                        >
                             {packageDetails[2].package.description}
                         </p>
                         <div
-                            class="flex justify-start items-center w-full gap-2"
+                            class="flex justify-center lg:justify-start items-center w-full gap-2"
                         >
-                            <img class="w-10 h-full" src={icon} alt="Icon" />
+                            <img
+                                class="w-5 h-5 lg:w-10 lg:h-full"
+                                src={icon}
+                                alt="Icon"
+                            />
                             <a
-                                class="flex items-center w-fit p-4 h-10 rounded-xl"
+                                class="flex items-center text-xs lg:text-[17px] w-fit lg:p-2 h-10 rounded-xl"
                                 href={packageDetails[2].package.buttonLink}
                                 >{packageDetails[2].package.buttonText}</a
                             >
@@ -132,7 +165,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                     </div>
                 </div>
                 <div
-                    class="flex justify-center items-center w-[70%] lg:w-full h-full"
+                    class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
                         class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
@@ -144,28 +177,37 @@ const icon = "/src/assets/images/icons/Icon.png";
             <!--item 4 -->
             <div
                 class="rounded-[45px] flex w-full max-w-[600px] h-[312px] overflow-hidden"
-                style={`background-color: ${packageDetails[3].package.color}`}
+                style={`background-color: ${packageDetails[3].package.color}; display: ${packageDetails[3].package.display}`}
             >
                 <div class="flex justify-center items-center w-full h-full p-4">
                     <div
-                        class="flex flex-col items-start p-4 gap-4 w-full lg:min-w-[306px] h-fit"
+                        class="flex flex-col items-center lg:items-start justify-center p-4 gap-4 w-full lg:min-w-[306px] h-fit"
                     >
                         <div
                             class="bg-[#FDE68A] px-[7px] w-fit h-full rounded-lg"
+                            style={`background-color: ${packageDetails[3].package.titleColor}`}
                         >
-                            <h1 class="font-bold text-3xl leading-10">
+                            <h1
+                                class="font-bold text-2xl md:text-2xl lg:text-3xl leading-10"
+                            >
                                 {packageDetails[3].package.name}
                             </h1>
                         </div>
-                        <p>
+                        <p
+                            class="text-xs text-center lg:text-start md:text-xl lg:text-[17px]"
+                        >
                             {packageDetails[3].package.description}
                         </p>
                         <div
-                            class="flex justify-start items-center w-full gap-2"
+                            class="flex justify-center lg:justify-start items-center w-full gap-2"
                         >
-                            <img class="w-10 h-full" src={icon} alt="Icon" />
+                            <img
+                                class="w-5 h-5 lg:w-10 lg:h-full"
+                                src={icon}
+                                alt="Icon"
+                            />
                             <a
-                                class="flex items-center w-fit p-4 h-10 rounded-xl"
+                                class="flex items-center text-xs lg:text-[17px] w-fit p-2 h-10 rounded-xl"
                                 href={packageDetails[3].package.buttonLink}
                                 >{packageDetails[3].package.buttonText}</a
                             >
@@ -173,7 +215,7 @@ const icon = "/src/assets/images/icons/Icon.png";
                     </div>
                 </div>
                 <div
-                    class="flex justify-center items-center w-[70%] lg:w-full h-full"
+                    class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
                         class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
@@ -182,70 +224,39 @@ const icon = "/src/assets/images/icons/Icon.png";
                 </div>
             </div>
         </div>
+
+        <!--item 5 -->
         <div
-            class="relative flex justify-center items-center h-fit w-full p-10 gap-5 bg-purple-400"
+            class="relative flex flex-col justify-center items-center h-fit w-full p-5 sm:p-10 gap-5 bg-purple-400"
         >
             <div
-                class="rounded-[45px] w-full h-[450px] flex flex-col items-center justify-center p-10 gap-5 bg-white overflow-hidden"
+                class="rounded-[20px] sm:rounded-[45px] w-full h-auto flex flex-col items-center justify-center p-5 sm:p-10 gap-5 bg-white overflow-hidden"
             >
-                <h2 class="text-5xl font-bold">Tour Gallery</h2>
-                <div class="w-full h-[450px] relative">
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-[606.17px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image1}
-                    />
-                    <img
-                        class="w-[148.36px] h-[130.34px] left-[303.09px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image2}
-                    />
-                    <img
-                        class="w-[148.36px] h-[85.76px] left-[757.72px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image3}
-                    />
-                    <img
-                        class="w-[148.36px] h-[130.34px] left-[151.54px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image4}
-                    />
-                    <img
-                        class="w-[148.36px] h-[124.22px] left-[454.63px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image5}
-                    />
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-[909.26px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image6}
-                    />
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-[454.63px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image7}
-                    />
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-[757.72px] top-[89.17px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image8}
-                    />
-                    <img
-                        class="w-[148.36px] h-[130.34px] left-0 top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image9}
-                    />
-                    <img
-                        class="w-[148.36px] h-[85.76px] left-[606.17px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image10}
-                    />
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-[909.26px] top-[226.66px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image11}
-                    />
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-0 top-[133.75px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image12}
-                    />
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-[303.09px] top-[133.75px] absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image13}
-                    />
-                    <img
-                        class="w-[148.36px] h-[223.25px] left-[151.54px] top-0 absolute rounded-sm border-[0.33px] border-black"
-                        src={packageDetails[4].package.image14}
-                    />
+                <h2 class="text-3xl sm:text-5xl font-bold text-center mb-5">
+                    Tour Gallery
+                </h2>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 w-full"
+                >
+                    {
+                        Object.keys(packageDetails[4]?.package || {})
+                            .filter((key) => key.startsWith("image")) // Filter keys that start with "image"
+                            .map((key, index) => {
+                                const imageSrc = packageDetails[4].package[key];
+                                return imageSrc ? ( // Check if the src is not empty
+                                    <div
+                                        key={index}
+                                        class="relative w-full h-[150px] sm:h-[200px] rounded-lg overflow-hidden border border-gray-300 shadow-md hover:scale-105 transition-transform duration-300"
+                                    >
+                                        <img
+                                            class="w-full h-full object-cover"
+                                            src={imageSrc}
+                                            alt={`Portrait ${index + 1}`}
+                                        />
+                                    </div>
+                                ) : null; // Skip rendering if src is empty
+                            })
+                    }
                 </div>
             </div>
         </div>

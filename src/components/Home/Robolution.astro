@@ -6,15 +6,15 @@ const content = await fetchPageContent("Home");
 <div class="bg-white">
     <div class="grid lg:grid-cols-1 gap-10">
         <div
-            class="grid grid-cols-2 items-center justify-center bg-gray-400 mx-auto gap-20 w-auto p-5"
+            class="grid grid-cols-2 items-center justify-center bg-gray-400 mx-auto gap-5 lg:gap-20 w-auto p-5"
         >
             <div class="flex flex-wrap w-full max-w-[610px] bg-violet-500">
                 <h3
-                    class="font-semibold xl:text-7xl lg:text-5xl text-4xl text-black bg-amber-600 mb-4"
+                    class="font-semibold xl:text-7xl lg:text-5xl text-2xl text-black bg-amber-600 mb-4"
                     set:html={content.Robolution.intro1}
                 />
                 <h4
-                    class="text-base text-zinc-800 mt-4 bg-blue-600"
+                    class="text-xs lg:text-base text-zinc-800 mt-4 bg-blue-600"
                     set:html={content.Robolution.sub1}
                 />
             </div>
@@ -22,29 +22,27 @@ const content = await fetchPageContent("Home");
             <div class="place-items-center bg-red-500">
                 <img
                     src={content.Robolution.image1}
-                    class="h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
+                    class="h-auto lg:h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
                 />
             </div>
         </div>
 
         <div
-            class="grid grid-cols-2 bg-yellow-400 items-center justify-center mx-auto gap-20 w-auto p-5"
+            class="grid grid-cols-2 bg-yellow-400 items-center justify-center mx-auto gap-5 lg:gap-20 w-auto p-5"
         >
             <div class="place-items-center bg-PinkEnd">
                 <img
                     src={content.Robolution.image2}
-                    class="h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
+                    class="h-auto lg:h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
                 />
             </div>
             <div class="flex flex-wrap bg-gray-400 w-full max-w-[610px]">
-                <div class="place-items-start bg-orange-500">
-                    <h3
-                        class="font-semibold xl:text-7xl lg:text-5xl text-4xl text-black mb-4"
-                        set:html={content.Robolution.intro2}
-                    />
-                </div>
+                <h3
+                    class="font-semibold xl:text-7xl lg:text-5xl text-2xl bg-orange-500 text-black mb-4"
+                    set:html={content.Robolution.intro2}
+                />
                 <h4
-                    class="text-base text-zinc-800 mt-4 bg-cyan-900"
+                    class="text-xs lg:text-base text-zinc-800 mt-4 bg-cyan-900"
                     set:html={content.Robolution.sub2}
                 />
             </div>

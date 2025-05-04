@@ -1,8 +1,13 @@
 ---
+import getDbData from "@/components/db";
+
+// Fetch data before anything else
+const data = await getDbData();
+console.log(data);
+
 import Nav from "../components/navbar.astro";
 import Banner from "../components/Home/Banner.astro";
 import Footer1 from "../components/Home/Footer1.astro";
-
 import "./src/styles/global.css";
 ---
 
@@ -64,10 +69,10 @@ import "./src/styles/global.css";
 </html>
 
 <style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>

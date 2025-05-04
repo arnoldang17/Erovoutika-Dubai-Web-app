@@ -7,13 +7,13 @@ const data = await fetchPageContent("Home");
 
 <section
     style={`background-image: url('${data.hero.imageDirectory}')`}
-    class={`flex justify-start 100vh w-full bg-cover bg-no-repeat bg-center p-[40px]`}
+    class={`flex justify-start w-full bg-cover bg-no-repeat bg-center p-[40px]`}
 >
-    <div class="flex flex-col h-screen w-[784px] py-35 lg:py-56">
+    <div class="flex flex-col lg:h-screen w-[784px] py-35 lg:py-56">
         <div class="w-full h-auto">
             <h1
                 id="mainText"
-                class="mb-4 text-4xl leading-none text-[#212529] text-[120px] font-bebas"
+                class="mb-4 text-6xl leading-none text-[#212529] lg:text-[120px] font-bebas"
             >
                 {
                     (

@@ -1,5 +1,8 @@
 ---
+import { Accordion } from "@/components/Accordion";
 import Layout from "../layouts/Layout.astro";
+import { getPageDetails } from "@/components/db";
+const pageDetails = await getPageDetails();
 ---
 
 <Layout>
@@ -13,4 +16,6 @@ import Layout from "../layouts/Layout.astro";
             </button>
         </div>
     </div>
+
+    <Accordion pageDetails={pageDetails} client:idle />
 </Layout>
