@@ -9,7 +9,7 @@ const copyTheme = await fetchPageContent("Tournament");
 const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
 ---
 
-<Layout>
+<Layout title="Erovoutika Dubai - Tournament">
     <Hero />
     <div class="overview" id="OverView">
         <div>
@@ -37,7 +37,7 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
     <div>
         <div class="h-fit p-4 bg-[#0B0221] justify-items-center">
             <h1
-                class="roboto-bold text-center md:text-7xl text-4xl text-white"
+                class="roboto-bold text-center md:text-6xl text-4xl text-white"
                 set:html={copyTheme.Teachers.title}
             />
         </div>
@@ -190,23 +190,24 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
     .subhead {
         font-family: "Inter";
         font-weight: 600;
-        font-size: 30px;
+        font-size: 24px;
         line-height: 1.2;
-        margin-bottom: 1.2rem;
+        /* margin-bottom: 1.2rem; */
         color: #6941c6;
     }
     .head {
         font-family: "Inter";
         font-weight: 600;
-        font-size: 58px;
+        font-size: 4rem;
         line-height: 1.2;
         margin-bottom: 1.2rem;
+        font-weight: bold;
         color: black;
     }
     .info {
         font-family: "Inter";
         font-weight: 300;
-        font-size: 20px;
+        font-size: 1.2rem;
         line-height: 1.2;
         margin-bottom: 1.2rem;
         color: gray;

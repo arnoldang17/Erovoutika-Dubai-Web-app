@@ -3,27 +3,65 @@
         {
             "Default": {
                 "Contents": {
-                    "Home": {
+                    "Navbar": {
+                        "Content": {
+                            "links": [
+                                {
+                                    "name": "Home",
+                                    "path": "/"
+                                },
+                                {
+                                    "name": "News",
+                                    "path": "/News"
+                                },
+                                {
+                                    "name": "Trainings",
+                                    "path": "/Trainings"
+                                },
+                                {
+                                    "name": "Tournaments",
+                                    "path": "/Tournament"
+                                }
+                            ],
+                            "image": "/src/assets/images/Erovoutika Dubai logo.png",
+                            "buttonText": "Register Now",
+                            "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                        }
+                    },
+                    "Banner": {
                         "bannerContent": {
                             "backgroundColor": "#FFE492",
                             "message": "Nominate the Bright Minds of Tomorrow",
                             "buttonText": "NOMINATE NOW",
-                            "buttonHref": "#",
+                            "buttonHref": "/Nominations_Tab",
                             "buttonBackground": "#0075FF",
                             "buttonHover": "#0060CC"
-                        },
+                        }
+                    },
+                    "Nomination": {
+                        "NominationContent": {
+                            "hero_title": "RECOGNIZE EXCELLENCE IN INNOVATION",
+                            "hero_subtitle": "Nominate outstanding individuals and teams who are shaping the future of technology with Erovoutika.",
+                            "hero_background": "/backgrounds/Nomination-Banner.jpg",
+                            "hero_buttonText": "Nominate Now"
+                        }
+                    },
+                    "Home": {
                         "hero": {
                             "mainText": "Welcome to Erovoutika Dubai",
                             "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
+                            "buttonText": "Learn More",
+                            "videoDirectory": "/src/assets/images/backgrounds/hero.mp4"
                         },
                         "Robolution": {
                             "intro1": "What is ROBOLUTION DUBAI 2025?",
                             "sub1": "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
                             "image1": "./bot1.png",
+                            "containerColor1": "#FAF5FF",
                             "intro2": "Join Our Community!",
                             "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
-                            "image2": "./joinus.png"
+                            "image2": "./joinus.png",
+                            "containerColor2": "#A7F3D0"
                         },
                         "package": [
                             {
@@ -34,6 +72,8 @@
                                     "buttonText": "learn more",
                                     "buttonLink": "/Tournament",
                                     "color": "#F3F3F3",
+                                    "containerColor": "#7C3AED",
+                                    "image": "/src/assets/images/package/Competition.jpg",
                                     "display": ""
                                 }
                             },
@@ -45,6 +85,7 @@
                                     "buttonText": "learn more",
                                     "buttonLink": "/Trainings",
                                     "color": "#FDE68A",
+                                    "image": "/src/assets/images/package/Training.webp",
                                     "display": ""
                                 }
                             },
@@ -56,6 +97,8 @@
                                     "buttonText": "learn more",
                                     "buttonLink": "#",
                                     "color": "#6AAAFF",
+                                    "containerColor": "#6EE7B7",
+                                    "image": "/src/assets/images/package/Conference.jpg",
                                     "display": ""
                                 }
                             },
@@ -67,6 +110,7 @@
                                     "buttonText": "learn more",
                                     "buttonLink": "#",
                                     "color": "#F3F3F3",
+                                    "image": "/src/assets/images/package/Awards.avif",
                                     "display": ""
                                 }
                             },
@@ -88,6 +132,7 @@
                                     "image14": "https://plus.unsplash.com/premium_photo-1697730197947-f19e92f0035b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                                     "image15": "https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                                     "image16": "https://images.unsplash.com/photo-1722502831765-e11188565aad?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                    "containerColor": "#9F7AEA",
                                     "display": ""
                                 }
                             }
@@ -118,13 +163,27 @@
                         },
                         "Partners": {
                             "src": [
-                                "/src/assets/images/partners/1.png",
-                                "/src/assets/images/partners/2.png",
-                                "/src/assets/images/partners/3.png",
-                                "/src/assets/images/partners/4.png",
-                                "/src/assets/images/partners/5.png",
-                                "/src/assets/images/partners/6.png",
-                                "/src/assets/images/partners/7.png"
+                                {
+                                    "image": "/src/assets/images/partners/1.png"
+                                },
+                                {
+                                    "image": "/src/assets/images/partners/2.png"
+                                },
+                                {
+                                    "image": "/src/assets/images/partners/3.png"
+                                },
+                                {
+                                    "image": "/src/assets/images/partners/4.png"
+                                },
+                                {
+                                    "image": "/src/assets/images/partners/5.png"
+                                },
+                                {
+                                    "image": "/src/assets/images/partners/6.png"
+                                },
+                                {
+                                    "image": "/src/assets/images/partners/7.png"
+                                }
                             ]
                         },
                         "FrequentlyAsk": {
@@ -230,29 +289,6 @@
                         }
                     },
                     "Tournament": {
-                        "Navbar": {
-                            "links": [
-                                {
-                                    "name": "Home",
-                                    "path": "/"
-                                },
-                                {
-                                    "name": "News",
-                                    "path": "/News"
-                                },
-                                {
-                                    "name": "Trainings",
-                                    "path": "/Trainings"
-                                },
-                                {
-                                    "name": "Tournaments",
-                                    "path": "/Tournament"
-                                }
-                            ],
-                            "image": "/src/assets/images/Erovoutika Dubai logo.png",
-                            "buttonText": "Register Now",
-                            "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
-                        },
                         "Hero": {
                             "title": "BE PART OF THE<br><span class='underline decoration-[#C084FC]'>FUTURE!</span>",
                             "subtitle": "Join us for an International Training & Tournament Camp!",

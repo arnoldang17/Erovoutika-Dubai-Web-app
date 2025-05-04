@@ -8,16 +8,17 @@ const icon = "/src/assets/images/icons/Icon.png";
 
 <section
     id="packages"
-    class="align-center flex flex-col justify-center items-center w-full h-fit bg-[#F3F4F6]"
+    class="align-center flex flex-col justify-center items-center w-full h-fit p-10 bg-[#F3F4F6]"
 >
     <h1 class="text-5xl lg:text-[96px] p-5 text-center font-bebas">
         What’s Included
     </h1>
     <div
-        class="flex flex-col justify-center items-center p-5 gap-5 w-full max-w-fit bg-amber-200"
+        class="flex flex-col justify-center items-center p-5 gap-5 w-full max-w-fit rounded-lg border-1 bg-white"
     >
         <div
-            class="flex flex-wrap lg:flex-row justify-center p-2 lg:p-10 gap-y-5 lg:gap-20 h-fit w-full bg-purple-600"
+            style={`background-color: ${packageDetails[0].package.containerColor}`}
+            class="flex flex-wrap lg:flex-row justify-center p-2 lg:p-10 gap-y-5 lg:gap-20 h-fit w-full rounded-lg"
         >
             <!--item 1 -->
 
@@ -64,7 +65,8 @@ const icon = "/src/assets/images/icons/Icon.png";
                     class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
-                        class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
+                        style={`background-image: url('${packageDetails[0].package.image}')`}
+                        class="bg-blue-300 w-full max-w-[210px] bg-cover bg-center h-[264px] m-3 rounded-[45px]"
                     >
                     </div>
                 </div>
@@ -114,7 +116,8 @@ const icon = "/src/assets/images/icons/Icon.png";
                     class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
-                        class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
+                        style={`background-image: url('${packageDetails[1].package.image}')`}
+                        class="bg-blue-300 w-full max-w-[210px] bg-cover bg-center h-[264px] m-3 rounded-[45px]"
                     >
                     </div>
                 </div>
@@ -122,7 +125,8 @@ const icon = "/src/assets/images/icons/Icon.png";
         </div>
 
         <div
-            class="flex flex-wrap lg:flex-row justify-center p-2 lg:p-10 gap-y-5 lg:gap-20 h-fit w-full bg-emerald-300"
+            style={`background-color: ${packageDetails[2].package.containerColor}`}
+            class="flex flex-wrap lg:flex-row justify-center p-2 lg:p-10 gap-y-5 lg:gap-20 h-fit w-full rounded-[45px]"
         >
             <!--item 3 -->
             <div
@@ -168,7 +172,8 @@ const icon = "/src/assets/images/icons/Icon.png";
                     class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
-                        class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
+                        style={`background-image: url('${packageDetails[2].package.image}')`}
+                        class="bg-blue-300 w-full max-w-[210px] bg-cover bg-center h-[264px] m-3 rounded-[45px]"
                     >
                     </div>
                 </div>
@@ -218,7 +223,8 @@ const icon = "/src/assets/images/icons/Icon.png";
                     class="hidden lg:flex justify-center items-center w-[70%] lg:w-full h-full"
                 >
                     <div
-                        class="bg-blue-300 w-full max-w-[210px] h-[264px] m-3 rounded-[45px]"
+                        style={`background-image: url('${packageDetails[3].package.image}')`}
+                        class="bg-blue-300 w-full max-w-[210px] bg-cover bg-center h-[264px] m-3 rounded-[45px]"
                     >
                     </div>
                 </div>
@@ -227,7 +233,8 @@ const icon = "/src/assets/images/icons/Icon.png";
 
         <!--item 5 -->
         <div
-            class="relative flex flex-col justify-center items-center h-fit w-full p-5 sm:p-10 gap-5 bg-purple-400"
+            style={`background-color: ${packageDetails[4].package.containerColor}`}
+            class="relative flex flex-col justify-center items-center h-fit w-full p-5 sm:p-10 gap-5 rounded-[45px]"
         >
             <div
                 class="rounded-[20px] sm:rounded-[45px] w-full h-auto flex flex-col items-center justify-center p-5 sm:p-10 gap-5 bg-white overflow-hidden"

@@ -4,21 +4,42 @@ import logo from "../assets/images/Erovoutika Dubai logo.png";
 import show_password_icon from "../assets/images/utility-icons/show-password.png";
 import hide_password_icon from "../assets/images/utility-icons/hide-password.png";
 ---
-<Layout>
+
+<Layout title="Erovoutika Dubai - Login">
     <section class="hero-background">
         <div class="form-container">
-            <img class="erovoutika-logo" src={logo.src}/>
+            <img class="erovoutika-logo" src={logo.src} />
             <div class="form-content">
                 <h1 class="admin-login">Admin Login</h1>
                 <form class="admin-form">
                     <div class="username">
-                        <input type="text" name="username" placeholder="Username" required />
+                        <input
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                            required
+                        />
                     </div>
                     <div class="password">
-                        <input type="password" name="password" placeholder="Password" id="password" required  />
-                        <img src={show_password_icon.src} id="show-pass" alt="show eye icon"/>
-                        <img src={hide_password_icon.src} id="hide-pass" alt="hide eye icon" style="display: none;"/>
-                        
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            id="password"
+                            required
+                        />
+                        <img
+                            src={show_password_icon.src}
+                            id="show-pass"
+                            alt="show eye icon"
+                        />
+                        <img
+                            src={hide_password_icon.src}
+                            id="hide-pass"
+                            alt="hide eye icon"
+                            style="display: none;"
+                        />
+
                         <!--<div class="have_account">
                             <p>Didn't have an account? <a href ="/Admin_SignUp"><u>Sign Up</u></a></p>
                         </div>-->
@@ -29,7 +50,7 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
                 </button>
             </div>
         </div>
-    </section>    
+    </section>
 </Layout>
 
 <style>
@@ -53,12 +74,11 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         height: fit-content;
         gap: 40px;
     }
-    .erovoutika-logo{
+    .erovoutika-logo {
         width: 180px;
         height: 68px;
-        
     }
-    .form-content{
+    .form-content {
         display: flex;
         width: fit-content;
         height: fit-content;
@@ -68,10 +88,10 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         align-items: center;
         gap: 30px;
         border-radius: 20px;
-        background: #F3F3FB;
+        background: #f3f3fb;
     }
     .admin-login {
-        color: #181D27;
+        color: #181d27;
         text-align: center;
         font: normal 600 32px Inter;
         line-height: 44px;
@@ -83,7 +103,7 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         align-items: center;
         gap: 20px;
     }
-    .form-content input{
+    .form-content input {
         position: relative;
         width: 100%;
         padding: 10px 15px 10px 15px;
@@ -92,7 +112,7 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         font-size: 16px;
         font-family: Inter;
     }
-    .form-content img{
+    .form-content img {
         position: absolute;
         right: 15px;
         top: calc(30%);
@@ -106,7 +126,7 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         position: relative;
         width: 330px;
     }
-    
+
     .login-button {
         width: 50%;
         padding: 10px;
@@ -118,27 +138,26 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         cursor: pointer;
         font-family: Inter;
     }
-    
+
     .login-button:hover {
         background-color: #ccc;
         color: #233876;
-        transform: scale(1.05)
+        transform: scale(1.05);
     }
 
     @media (max-width: 768px) {
-        .hero-background{
+        .hero-background {
             background-size: cover;
             background-position: center;
         }
         .form-container {
             min-height: fit-content;
-            width:auto;
+            width: auto;
             margin: 10px;
         }
-
     }
     @media (max-width: 425px) {
-        .hero-background{
+        .hero-background {
             background-size: cover;
             background-position: center;
             width: max-content;
@@ -147,7 +166,7 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         .form-container {
             min-height: fit-content;
             justify-content: center;
-            width:auto;
+            width: auto;
             margin: 10px;
         }
         .username {
@@ -159,8 +178,8 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
             width: 300px;
         }
     }
-    @media (max-width: 375px){
-        .hero-background{
+    @media (max-width: 375px) {
+        .hero-background {
             background-size: cover;
             background-position: center;
             width: max-content;
@@ -181,7 +200,7 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
     }
 
     @media (max-width: 320px) {
-        .hero-background{
+        .hero-background {
             background-size: cover;
             background-position: center;
             width: max-content;
@@ -189,7 +208,7 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
         }
         .form-container {
             min-height: fit-content;
-            width:auto;
+            width: auto;
 
             margin: 10px;
         }
@@ -205,62 +224,76 @@ import hide_password_icon from "../assets/images/utility-icons/hide-password.png
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
+        // Validation if username and password are correct
 
-    // Validation if username and password are correct
-    
+        // Event Listener for the show/hide password icons
+        const showIcon = document.getElementById(
+            "show-pass"
+        ) as HTMLImageElement | null;
+        const hideIcon = document.getElementById(
+            "hide-pass"
+        ) as HTMLImageElement | null;
+        const passwordInput = document.getElementById(
+            "password"
+        ) as HTMLInputElement | null;
 
-    // Event Listener for the show/hide password icons
-    const showIcon = document.getElementById('show-pass') as HTMLImageElement | null;
-    const hideIcon = document.getElementById('hide-pass') as HTMLImageElement | null;
-    const passwordInput = document.getElementById('password') as HTMLInputElement | null;
+        if (showIcon && hideIcon && passwordInput) {
+            showIcon.addEventListener("click", () => {
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    showIcon.style.display = "none";
+                    hideIcon.style.display = "inline";
+                }
+            });
 
-    if (showIcon && hideIcon && passwordInput) {
-        showIcon.addEventListener('click', () => {
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                showIcon.style.display = "none";
-                hideIcon.style.display = "inline";
-            }
-        });
+            hideIcon.addEventListener("click", () => {
+                if (passwordInput.type === "text") {
+                    passwordInput.type = "password";
+                    hideIcon.style.display = "none";
+                    showIcon.style.display = "inline";
+                }
+            });
+        }
 
-        hideIcon.addEventListener('click', () => {
-            if (passwordInput.type === 'text') {
-                passwordInput.type = 'password';
-                hideIcon.style.display = "none";
-                showIcon.style.display = "inline";
-            }
-        });
-    }
+        // Tentative: Add a click event listener to the "Forgot Password?" link
+        // code here --
 
-    // Tentative: Add a click event listener to the "Forgot Password?" link
-    // code here --
+        // Event Liestener for the login button
+        const loginButton = document.getElementById(
+            "login_button"
+        ) as HTMLButtonElement | null;
 
-    // Event Liestener for the login button
-    const loginButton = document.getElementById('login_button') as HTMLButtonElement | null;
+        if (loginButton) {
+            loginButton.addEventListener("click", () => {
+                const username = (
+                    document.querySelector(
+                        ".username input"
+                    ) as HTMLInputElement
+                ).value;
+                const password = (
+                    document.querySelector(
+                        ".password input"
+                    ) as HTMLInputElement
+                ).value;
 
-    if (loginButton) {
-        loginButton.addEventListener('click', () => {
-            const username = (document.querySelector('.username input') as HTMLInputElement).value;
-            const password = (document.querySelector('.password input') as HTMLInputElement).value;
+                // Check if username and password are entered
+                if (!username || !password) {
+                    alert("Please fill in both fields.");
+                    return;
+                }
 
-            // Check if username and password are entered
-            if (!username || !password) {
-                alert('Please fill in both fields.');
-                return;
-            }
+                // Validate credentials on the client-side
+                const validUsername = "EroAdmin";
+                const validPassword = "Er0v12345";
 
-            // Validate credentials on the client-side
-            const validUsername = "EroAdmin";
-            const validPassword = "Er0v12345";
-
-            if (username === validUsername && password === validPassword) {
-                // Redirect to the dashboard or next page if valid
-                window.location.href = '/Trainings'; // Replace with the correct path
-            } else {
-                alert('Invalid credentials. Please try again.');
-            }
-        });
-    }
-});
+                if (username === validUsername && password === validPassword) {
+                    // Redirect to the dashboard or next page if valid
+                    window.location.href = "/admin"; // Replace with the correct path
+                } else {
+                    alert("Invalid credentials. Please try again.");
+                }
+            });
+        }
+    });
 </script>

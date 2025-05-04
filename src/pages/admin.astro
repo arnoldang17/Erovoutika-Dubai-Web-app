@@ -2,12 +2,14 @@
 import { Accordion } from "@/components/Accordion";
 import Layout from "../layouts/Layout.astro";
 import { getPageDetails } from "@/components/db";
+import Admin_Nominations from "@/components/Nominations/Admin_Nominations.astro";
 const pageDetails = await getPageDetails();
 ---
 
-<Layout>
-    <div class="flex justify-center items-center mx-auto w-50 h-full p-4">
-        <div class="text-center my-5 cen">
+<Layout title="Erovoutika Dubai - Admin">
+    <div class="bg-sky-200 w-full h-20"></div>
+    <div class="flex flex-col justify-center items-center mx-60 w-auto h-auto">
+        <div class="flex justify-end text-center my-5 w-full">
             <button
                 id="toggleBannerButton"
                 class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
@@ -15,7 +17,7 @@ const pageDetails = await getPageDetails();
                 Toggle Banner
             </button>
         </div>
+        <Accordion pageDetails={pageDetails} client:idle />
+        <Admin_Nominations />
     </div>
-
-    <Accordion pageDetails={pageDetails} client:idle />
 </Layout>

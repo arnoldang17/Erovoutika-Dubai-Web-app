@@ -6,7 +6,7 @@ import Hero from "@/components/Tournament/Hero.astro";
 const content = await fetchPageContent("Training");
 ---
 
-<Layout>
+<Layout title="Erovoutika Dubai - Training">
     <!-- <section
         class="hero"
         style={`background-image: url(${content.Hero.background});`}
@@ -83,7 +83,7 @@ const content = await fetchPageContent("Training");
             <p class="content-4-subtitle">{content.Content_4.subtitle}</p>
             <a
                 href={content.Content_4.buttonLink}
-                class="content-4-button"
+                class="inline-block content-4-button"
                 target="_blank"
             >
                 {content.Content_4.buttonText}
@@ -205,7 +205,7 @@ const content = await fetchPageContent("Training");
 
     .content-1-title {
         font-size: 2.2rem;
-        font-family: "Roboto", sans-serif;
+        font-family: 8Roboto, sans-serif;
         font-weight: bold;
         color: white;
         background: #2562ff;
@@ -329,7 +329,7 @@ const content = await fetchPageContent("Training");
 
     .content-2-title {
         font-size: 2.2rem;
-        font-family: "Roboto", sans-serif;
+        font-family: Roboto, sans-serif;
         font-weight: bold;
         color: #212529;
         background: #ffe492;
@@ -452,7 +452,7 @@ const content = await fetchPageContent("Training");
 
     .content-3-title {
         font-size: 2.2rem;
-        font-family: "Roboto", sans-serif;
+        font-family: Roboto, sans-serif;
         font-weight: bold;
         color: white;
         background: #2562ff;
@@ -567,7 +567,7 @@ const content = await fetchPageContent("Training");
 
     .content-4-title {
         font-family: Roboto, sans-serif;
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-weight: 700;
         color: #212529;
         margin-bottom: 16px;
@@ -584,8 +584,8 @@ const content = await fetchPageContent("Training");
         background-color: #2562ff;
         color: white;
         padding: 15px 30px;
-        font-size: 1rem;
-        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        font-family: Roboto, sans-serif;
         text-transform: uppercase;
         font-weight: 600;
         text-decoration: none;
@@ -596,9 +596,9 @@ const content = await fetchPageContent("Training");
             transform 0.2s;
     }
     .content-4-button:hover {
-        background-color: #f0f0f0;
-        color: black;
-        transform: scale(1.05);
+        /* background-color: #f0f0f0;
+        color: black; */
+        transform: scale(1.1);
     }
     @media (max-width: 786px) {
         .content-4 {

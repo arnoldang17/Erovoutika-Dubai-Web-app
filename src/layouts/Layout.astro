@@ -6,17 +6,18 @@ import Nav from "../components/navbar.astro";
 import Banner from "../components/Home/Banner.astro";
 import Footer1 from "../components/Home/Footer1.astro";
 import "./src/styles/global.css";
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<!DOCTYPE html>
 <html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro Basics</title>
+        <title>{title}</title>
         <link
             href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
             rel="stylesheet"
@@ -40,12 +41,17 @@ import "./src/styles/global.css";
             const toggleButton = document.getElementById("toggleBannerButton");
             const banner = document.getElementById("banner");
             const bannerState = localStorage.getItem("bannerVisibility");
+
             if (banner) {
                 // Apply the saved state from localStorage
                 if (bannerState === "hidden") {
                     banner.style.display = "none";
+                    if (toggleButton)
+                        toggleButton.style.backgroundColor = "red"; // Off state
                 } else {
                     banner.style.display = "block";
+                    if (toggleButton)
+                        toggleButton.style.backgroundColor = "green"; // On state
                 }
             }
 
@@ -53,9 +59,11 @@ import "./src/styles/global.css";
                 toggleButton.addEventListener("click", () => {
                     if (banner.style.display === "none") {
                         banner.style.display = "block";
+                        toggleButton.style.backgroundColor = "green"; // On state
                         localStorage.setItem("bannerVisibility", "visible"); // Save state
                     } else {
                         banner.style.display = "none";
+                        toggleButton.style.backgroundColor = "red"; // Off state
                         localStorage.setItem("bannerVisibility", "hidden"); // Save state
                     }
                 });

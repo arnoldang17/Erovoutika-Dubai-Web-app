@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 // );
 import { fetchPageContent } from "../db";
 const data = await fetchPageContent("Home");
-const partnersImages = data.Partners["src"];
+const partnersImages = data.Partners["src"].map((partner: { image: string }) => partner.image);
 
 export default function Partners() {
 

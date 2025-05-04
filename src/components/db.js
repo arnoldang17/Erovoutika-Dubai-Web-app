@@ -58,8 +58,6 @@ async function getDbData() {
     }
 };
 
-await getDbData(); // Call the function to fetch data from the database
-
 function mapDbRowsToObjects(rows) {
     return rows.map(({ Name, config }) => {
         return { [Name]: config };
@@ -182,23 +180,36 @@ function updateContent(location, description) {
     const pageName = properLocation[0];
     const sectionName = properLocation[1];
     const contentName = properLocation[2];
+    const contentName2 = properLocation[3];
+    const contentName3 = properLocation[4];
 
-    let target = Object.values(fileData.templates[selectedIndex])[0].Contents[
-        pageName
-    ][sectionName][contentName];
+    console.log("pageName", pageName);
+    console.log("sectionName", sectionName);
+    console.log("contentName", contentName);
+    console.log("contentName2", contentName2);
+    console.log("contentName3", contentName3);
 
+    // Directly modify the nested object in fileData
     if (contentName3) {
-        target[contentName2][contentName3] = description;
+        Object.values(fileData.templates[selectedIndex])[0].Contents[pageName][
+            sectionName
+        ][contentName][contentName2][contentName3] = description;
     } else if (contentName2) {
-        target[contentName2] = description;
+        Object.values(fileData.templates[selectedIndex])[0].Contents[pageName][
+            sectionName
+        ][contentName][contentName2] = description;
     } else {
-        target = description;
+        Object.values(fileData.templates[selectedIndex])[0].Contents[pageName][
+            sectionName
+        ][contentName] = description;
     }
+
     writeFile(path, fileData);
-    console.log("Submitted message:", description);
-    console.log("Location:", location);
     insertDbData(); // Insert the updated data into the database
 }
+
+await insertDbData(); // Call the function to insert data into the database
+await getDbData(); // Call the function to fetch data from the database
 
 export default getDbData;
 export { fetchPageContent, getPageDetails, readFile, updateContent };
