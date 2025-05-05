@@ -31,7 +31,7 @@
                     "Banner": {
                         "bannerContent": {
                             "backgroundColor": "#FFE492",
-                            "message": "Nominate the Bright Minds of Tomorrow",
+                            "message": "Nominate the Bright Minds of Tomorrow!",
                             "buttonText": "NOMINATE NOW",
                             "buttonHref": "/Nominations_Tab",
                             "buttonBackground": "#0075FF",
