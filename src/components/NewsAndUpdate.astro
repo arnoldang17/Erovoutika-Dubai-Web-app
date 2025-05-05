@@ -34,7 +34,7 @@ const newsContent = {
           "Erovoutika Honored as Outstanding Partner by St. Dominic College of Asia",
         date: "April 26, 2025",
         description:
-          "ERovoutika Electronics Robotics Automation has been awarded and recognized as an Outstanding Partner by St. Dominic College of Asia (SDCA)...",
+          "ERovoutika Electronics Robotics Automation has been awarded and recognized as an outstanding partner by St. Dominic College of Asia (SDCA) for its remarkable and invaluable contribution toward the institution’s mission of providing holistic education for all towards a better quality of life.",
         image: "/src/assets/images/NewsUpdateImages/Outstanding.jpg",
         alt: "Outstanding",
         link: "https://www.facebook.com/share/p/16MmGyfeGb/",
@@ -75,21 +75,21 @@ const newsContent = {
           const key = Object.keys(cardWrapper)[0];
           const card = cardWrapper[key];
           return (
-            <a href={card.link} target="_blank" class="w-[350px] h-full" key={key}>
-              <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow w-full hover:scale-[1.02] duration-200">
+            <a href={card.link} target="_blank" class="w-[90vw] sm:w-[300px] md:w-[350px]" key={key}>
+              <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:scale-[1.02] duration-200 flex flex-col h-full min-h-[400px] sm:min-h-[420px] md:min-h-[450px]">
                 <img
                   src={card.image}
                   alt={card.alt}
-                  class="w-full h-40 object-fill"
+                  class="w-full h-32 sm:h-36 md:h-40 object-cover"
                 />
-                <div class="p-6 flex flex-col justify-between min-h-[200px]">
-                  <p class="text-[clamp(0.75rem,1.2vw,0.875rem)] text-gray-500 mb-1">
+                <div class="p-4 sm:p-5 md:p-6 flex flex-col flex-1">
+                  <p class="text-xs sm:text-sm md:text-base text-gray-500 mb-1">
                     {card.date}
                   </p>
-                  <h3 class="font-semibold text-gray-900 mb-2 text-[clamp(1rem,2.5vw,1.125rem)]">
+                  <h3 class="font-semibold text-gray-900 mb-2 text-sm sm:text-base md:text-lg">
                     {card.title}
                   </h3>
-                  <p class="text-[clamp(0.875rem,1.5vw,1rem)] text-gray-700">
+                  <p class="text-sm sm:text-base md:text-[1rem] text-gray-700 flex-1">
                     {card.description}
                   </p>
                 </div>
@@ -100,4 +100,7 @@ const newsContent = {
       }
     </div>
   </div>
+  
+
 </section>
+
