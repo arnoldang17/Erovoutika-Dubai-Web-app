@@ -183,12 +183,6 @@ function updateContent(location, description) {
     const contentName2 = properLocation[3];
     const contentName3 = properLocation[4];
 
-    console.log("pageName", pageName);
-    console.log("sectionName", sectionName);
-    console.log("contentName", contentName);
-    console.log("contentName2", contentName2);
-    console.log("contentName3", contentName3);
-
     // Directly modify the nested object in fileData
     if (contentName3) {
         Object.values(fileData.templates[selectedIndex])[0].Contents[pageName][

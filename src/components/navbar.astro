@@ -2,7 +2,8 @@
 import { fetchPageContent } from "@/components/db";
 
 const data = await fetchPageContent("Navbar");
-const { links, image, buttonText, buttonLink } = data.Content;
+const { links, button } = data.Content;
+const { image, buttonText, buttonLink } = button;
 ---
 
 <nav class="absolute w-full bg-[#2F1573]/30 backdrop-blur-md z-50">

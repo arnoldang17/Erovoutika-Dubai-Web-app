@@ -23,9 +23,11 @@
                                     "path": "/Tournament"
                                 }
                             ],
-                            "image": "/src/assets/images/Erovoutika Dubai logo.png",
-                            "buttonText": "Register Now",
-                            "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                            "button": {
+                                "image": "/src/assets/images/Erovoutika Dubai logo.png",
+                                "buttonText": "Register Now",
+                                "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                            }
                         }
                     },
                     "Banner": {
@@ -54,14 +56,18 @@
                             "videoDirectory": "/src/assets/images/backgrounds/hero.mp4"
                         },
                         "Robolution": {
-                            "intro1": "What is ROBOLUTION DUBAI 2025?",
-                            "sub1": "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
-                            "image1": "./bot1.png",
-                            "containerColor1": "#FAF5FF",
-                            "intro2": "Join Our Community!",
-                            "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
-                            "image2": "./joinus.png",
-                            "containerColor2": "#A7F3D0"
+                            "title1": {
+                                "intro1": "What is ROBOLUTION DUBAI 2025?",
+                                "sub1": "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
+                                "image1": "./bot1.png",
+                                "containerColor1": "#FAF5FF"
+                            },
+                            "title2": {
+                                "intro2": "Join Our Community!",
+                                "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
+                                "image2": "./joinus.png",
+                                "containerColor2": "#A7F3D0"
+                            }
                         },
                         "package": [
                             {
@@ -139,27 +145,76 @@
                         ],
                         "Highlights": {
                             "Title": "KEY HIGHLIGHTS",
-                            "Icon1": "./highlights/trophy.png",
-                            "Highlight1": "International Awards",
-                            "description1": "Recognizing outstanding educators and Erovoutika partners in academia and industry.",
-                            "Icon2": "./highlights/tournament.png",
-                            "Highlight2": "Tournament",
-                            "description2": "After expert-led training on robotics, research and development, and cybersecurity.",
-                            "Icon3": "./highlights/workshop.png",
-                            "Highlight3": "Hands-on Workshops",
-                            "description3": "To enhance technical and research skills in  journal publication and patenting guidance.",
-                            "Icon4": "./highlights/showcase.png",
-                            "Highlight4": "Showcase",
-                            "description4": "the research and innovation projects.",
-                            "Icon5": "./highlights/network.png",
-                            "Highlight5": "Global Networking",
-                            "description5": "with professionals, educators, and industry leaders."
+                            "Highlight1": {
+                                "Icon1": "./highlights/trophy.png",
+                                "Highlight1": "International Awards",
+                                "description1": "Recognizing outstanding educators and Erovoutika partners in academia and industry."
+                            },
+                            "Highlight2": {
+                                "Icon2": "./highlights/tournament.png",
+                                "Highlight2": "Tournament",
+                                "description2": "After expert-led training on robotics, research and development, and cybersecurity."
+                            },
+                            "Highlight3": {
+                                "Icon3": "./highlights/workshop.png",
+                                "Highlight3": "Hands-on Workshops",
+                                "description3": "To enhance technical and research skills in journal publication and patenting guidance."
+                            },
+                            "Highlight4": {
+                                "Icon4": "./highlights/showcase.png",
+                                "Highlight4": "Showcase",
+                                "description4": "The research and innovation projects."
+                            },
+                            "Highlight5": {
+                                "Icon5": "./highlights/network.png",
+                                "Highlight5": "Global Networking",
+                                "description5": "With professionals, educators, and industry leaders."
+                            }
                         },
                         "joinContent": {
                             "title": "Join the ROBOLUTION!",
                             "body": "Be part of Robolution Dubai 2025, a global event uniting innovators from multiple countries in robotics, automation, and cybersecurity. Connect, compete, and collaborate with a diverse international community!",
                             "button": "Register Now",
                             "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
+                        },
+                        "newsContent": {
+                            "sectionTitle": "News and Updates",
+                            "moreNewsLink": {
+                                "text": "More News →",
+                                "href": "/News"
+                            },
+                            "NewsCard1": {
+                                "title": "ROBOLUTION DUBAI 2025",
+                                "date": "December 15-18, 2025",
+                                "description": "Join us for an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                                "image": "/src/assets/images/NewsUpdateImages/Poster.png",
+                                "alt": "ROBOlution Dubai",
+                                "link": "https://www.facebook.com/share/p/1FjVj8sWys/"
+                            },
+                            "NewsCard2": {
+                                "title": "Calling All Robotics Coaches Around the Globe!",
+                                "date": "April 28, 2025",
+                                "description": "Whether you’re coaching in a local school or guiding international champions — this is your MOMENT.",
+                                "image": "/src/assets/images/NewsUpdateImages/RobolutionDubai.jpg",
+                                "alt": "RobolutionDubai",
+                                "link": "https://www.facebook.com/share/p/16UfvX7ZW1/"
+                            },
+                            "NewsCard3": {
+                                "title": "Erovoutika Honored as Outstanding Partner by St. Dominic College of Asia",
+                                "date": "April 26, 2025",
+                                "description": "ERovoutika Electronics Robotics Automation has been awarded and recognized as an outstanding partner by St. Dominic College of Asia (SDCA) for its remarkable and invaluable contribution toward the institution’s mission of providing holistic education for all towards a better quality of life.",
+                                "image": "/src/assets/images/NewsUpdateImages/Outstanding.jpg",
+                                "alt": "Outstanding",
+                                "link": "https://www.facebook.com/share/p/16MmGyfeGb/"
+                            },
+                            "NewsCard4": {
+                                "title": "Murata Robolution: Erovouthon 2.0 Competition 2025",
+                                "date": "March 15, 2025",
+                                "description": "The Murata Robolution: Erovouthon 2.0 Competition 2025 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP).",
+                                "image": "/src/assets/images/NewsUpdateImages/Erovouthon.png",
+                                "alt": "Erovouthon",
+                                "link": "https://www.facebook.com/share/p/1YaF1RkjTF/"
+                            }
                         },
                         "Partners": {
                             "src": [

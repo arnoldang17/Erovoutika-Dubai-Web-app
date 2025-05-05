@@ -14,7 +14,7 @@ return (
         <Card className="w-full bg-white border-none shadow-none py-0">
             <CardContent className="flex flex-col items-center justify-center">
             <div className="flex flex-col items-center justify-center">
-                <h3 className="text-xs">We are proud to partners with:</h3>
+                <h3 className="text-[16px] m-5">We are proud to partners with:</h3>
             </div>
             <div className="flex items-center flex-wrap justify-center p-1 gap-6">
                 {partnersImages.map((image, index) => (

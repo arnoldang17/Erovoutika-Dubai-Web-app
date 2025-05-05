@@ -6,46 +6,46 @@ const content = await fetchPageContent("Home");
 <div class="flex justify-center bg-white my-[54px]">
     <div class="grid lg:grid-cols-1 gap-10 w-full min-w-fit max-w-[600px] p-5">
         <div
-            style={`background-color: ${content.Robolution.containerColor1}`}
+            style={`background-color: ${content.Robolution.title1.containerColor1}`}
             class="grid grid-cols-2 items-center justify-center rounded-lg border-1 mx-auto gap-5 lg:gap-30 w-auto p-12"
         >
             <div class="flex flex-wrap w-full max-w-[610px]">
                 <h3
                     class="font-semibold xl:text-7xl lg:text-5xl text-2xl text-black mb-4"
-                    set:html={content.Robolution.intro1}
+                    set:html={content.Robolution.title1.intro1}
                 />
                 <h4
                     class="text-xs lg:text-base text-zinc-800 mt-4"
-                    set:html={content.Robolution.sub1}
+                    set:html={content.Robolution.title1.sub1}
                 />
             </div>
 
             <div class="place-items-center">
                 <img
-                    src={content.Robolution.image1}
+                    src={content.Robolution.title1.image1}
                     class="h-auto lg:h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
                 />
             </div>
         </div>
 
         <div
-            style={`background-color: ${content.Robolution.containerColor2}`}
+            style={`background-color: ${content.Robolution.title2.containerColor2}`}
             class="grid grid-cols-2 items-center justify-center rounded-lg border-1 mx-auto gap-5 lg:gap-30 w-auto p-12"
         >
             <div class="place-items-center">
                 <img
-                    src={content.Robolution.image2}
+                    src={content.Robolution.title2.image2}
                     class="h-auto lg:h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
                 />
             </div>
             <div class="flex flex-wrap w-full max-w-[610px]">
                 <h3
                     class="font-semibold xl:text-7xl lg:text-5xl text-2xl text-black mb-4"
-                    set:html={content.Robolution.intro2}
+                    set:html={content.Robolution.title2.intro2}
                 />
                 <h4
                     class="text-xs lg:text-base text-zinc-800 mt-4"
-                    set:html={content.Robolution.sub2}
+                    set:html={content.Robolution.title2.sub2}
                 />
             </div>
         </div>
