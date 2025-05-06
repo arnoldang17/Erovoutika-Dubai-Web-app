@@ -2,8 +2,6 @@
 import { fetchPageContent } from "../db";
 const data = await fetchPageContent("Home");
 const newsContent = data.newsContent;
-console.log(newsContent.NewsCard1);
-
 const cards = [
     newsContent.NewsCard1,
     newsContent.NewsCard2,

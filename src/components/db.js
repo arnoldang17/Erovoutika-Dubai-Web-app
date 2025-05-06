@@ -3,29 +3,13 @@ import fs from "fs";
 import pg from "pg";
 import { createClient } from "@supabase/supabase-js";
 import { log } from "console";
+import { supabase } from "@/lib/supabase-client";
 
-//TODO:
-// seperate functions to a new file
+const supabaseUrl = import.meta.env.SUPABASE_URL;
+const supabaseKey = import.meta.env.SUPABASE_ANON_KEY;
 
-//NOTE:
-// user: import.meta.env.DB_USER,
-// password: import.meta.env.DB_PASSWORD,
-// host: import.meta.env.DB_HOST,
-// port: import.meta.env.DB_PORT,
-// database: import.meta.env.DB_DATABASE,
-// user: "postgres",
-// password: "postgres ",
-// host: "localhost",
-// port: 5432,
-// database: "test",
-
-// const supabaseUrl = import.meta.env.SUPABASE_URL;
-// const supabaseKey = import.meta.env.SUPABASE_ANON_KEY;
-const supabaseUrl = " https://zrwokrbdolhwjwabonwk.supabase.co/";
-const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpyd29rcmJkb2xod2p3YWJvbndrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3MjgyMDAsImV4cCI6MjA1OTMwNDIwMH0.aTj5w3lP0p3PurDhR_sIYT1fszvoAV4PpAuOMEX18ZA";
 const connectionInfo = {
-    db: createClient(supabaseUrl, supabaseKey),
+    db: supabase,
     status: false,
 };
 
