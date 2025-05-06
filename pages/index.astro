@@ -1,0 +1,599 @@
+---
+
+
+import './src/styles/global.css';
+import './src/styles/content.json';
+
+
+let greetings = "News and Updates";
+const latestNews = "Latest News";
+const eventsTitle = "Events";
+const webinarTitle = "Webinar";
+const date1 = "December 15-18, 2025";
+const subtitle1 = "ROBOLUTION DUBAI 2025";
+const date2 = "March 15 2025";
+const title1 = "Murata Robolution: Erovouthon 2.0 Competition 2025";
+const title2 = "The 𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄𝐫𝐨𝐯𝐨𝐮𝐭𝐡𝐨𝐧 𝟐.𝟎 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP).";
+const date3 = "March 13 2025";
+const title3 = "Murata Robolution: E-Robot Mobile Controlled Competition 2025";
+const desc1 = "The 𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄𝐫𝐨𝐯𝐨𝐮𝐭𝐡𝐨𝐧 𝟐.𝟎 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP)."
+const desc3 = "Congratulations to all winners and participants for their outstanding performance in advancing robotics and innovation!";
+const date4 = "March 13 2025";
+const title4 = "Enroll in our Mathematics and Robotics Class! Prepare for International Competitions.";
+const desc4 = "This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.";
+const date5 = "March 17 2025";
+const title5 = "Beginner’s Guide to Logic Ciscuits: The Foundation of Computing";
+const desc5 = "Learn about logic gates, truth tables, and even build your own circuits in our live demo.";
+const date6 = "March 11 2025";
+const title6 = "Artificial Intelligence (AI) and the Internet of Things (IoT) converge";
+const desc6 = "Join us as we delve into the limitless possibilities of AIoT and stay ahead in understanding where this remarkable journey is taking us.";
+const desc7 = "Join us as we delvsddae into the limitless possibilities of AIoT and stay ahead in understanding where this remarkable journey is taking us.";
+const des1 = "Erovoutika is now officially in Dubai"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News and Updates</title>
+
+    
+  
+	  
+
+    <style>
+        @media (max-width: 768px) {
+          /* Headlines */
+          .text-\[50px\] {
+            font-size: 30px;
+            margin: 20px;
+          }
+      
+          .m-\[150px\] {
+            margin: 20px;
+          }
+      
+          .text-\[25px\] {
+            font-size: 18px;
+          }
+      
+          /* Grid responsiveness for News */
+          .grid-flow-col {
+            grid-auto-flow: row;
+          }
+      
+          .grid-rows-4 {
+            grid-template-rows: none;
+          }
+      
+          .h-\[600px\] {
+            height: auto;
+          }
+      
+          .row-span-4,
+          .row-span-2 {
+            grid-row: auto / span 1;
+          }
+      
+          .col-span-4,
+          .col-span-2 {
+            grid-column: auto / span 1;
+          }
+      
+          .text-7xl {
+            font-size: 1.5rem;
+          }
+      
+          .text-xl {
+            font-size: 1rem;
+          }
+      
+          .absolute {
+            position: static;
+          }
+      
+          .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+          }
+      
+          .bg-white\/70 {
+            background-color: rgba(255, 255, 255, 1);
+          }
+      
+          /* Events section */
+          .grid-cols-3 {
+            grid-template-columns: 1fr;
+          }
+      
+          .text-2xl {
+            font-size: 1.25rem;
+          }
+      
+          /* Webinar section */
+          .grid-cols-2 {
+            grid-template-columns: 1fr;
+          }
+      
+          .md\:flex-row {
+            flex-direction: column;
+          }
+      
+          .md\:max-w-xl {
+            max-width: 100%;
+          }
+      
+          .md\:w-48 {
+            width: 100%;
+          }
+      
+          .md\:h-auto {
+            height: auto;
+          }
+      
+          .md\:rounded-none {
+            border-radius: 0.5rem;
+          }
+      
+          .md\:rounded-s-lg {
+            border-radius: 0.5rem;
+          }
+      
+          /* Fix spacing */
+          .pl-100px {
+            padding-left: 0 !important;
+          }
+      
+          .rounded-t-lg {
+            border-radius: 0.5rem;
+          }
+      
+          .h-110 {
+            height: auto;
+          }
+      
+          /* Button section */
+          .flex {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+      
+          .rounded-s-lg,
+          .rounded-e-lg {
+            border-radius: 0.5rem !important;
+          }
+      
+          /* Background image column fix */
+          .bg-\[url\(.*\)\] {
+            background-size: cover;
+            height: 300px;
+          }
+        }
+      </style>
+
+	
+
+
+
+      
+</head>
+
+
+
+<body>
+  <p id="greetings" class="text-center text-[50px] m-[50px]">{greetings}</p>
+
+  <div class="m-[150px]">   
+    <p id="latestNews" class="text-[25px]" style="margin-bottom: 10px;">{latestNews}</p>
+    <div class="grid grid-flow-col grid-rows-4 gap-4 h-[600px]">
+      <div class="relative row-span-4 col-span-4 bg-blue-200"> 
+        <img src="./image 143.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="absolute bottom-4 left-6 text-white">
+          <p id="date1" class="text-xl font-bold">{date1}</p>
+        </div>
+        <div class="absolute top-4 left-6 text-blue-900">
+          <p id="subtitle1" class="text-7xl font-bold">{subtitle1}</p>
+        </div>
+      </div>
+
+      <div class="relative row-span-2 col-span-2 group">
+        <img src="./image 99.png" alt="" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 left-0 w-full bg-white/70 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p id="date2" class="text-sm text-gray-262626">{date2}</p>
+          <p id="title1" class="text-lg text-black font-semibold">{des1}</p>
+        </div>
+      </div>
+
+      <div class="relative group row-span-2 col-span-2 object-fill w-full">
+        <img src="./image 144.png" alt="" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 left-0 w-full bg-white/70 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p id="date3" class="text-sm text-gray-262626">{date3}</p>
+          <p id="title2" class="text-lg text-black font-semibold">{subtitle1}</p>
+        </div>
+      </div>
+    </div>
+
+    <p id="eventsTitle" class="text-[25px] mt-[30px]">{eventsTitle}</p>
+
+    <div class="grid grid-cols-3 gap-4">
+      <div class="max-w-sm bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
+        <a href="#"><img class="rounded-t-lg" src="./image (2).png" alt="" /></a>
+        <div class="p-5">
+          <p id="date4" class="mb-3 font-normal text-gray-700">{date4}</p>
+          <a href="#"><h5 id="title3" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title3}</h5></a>
+          <p id="desc1" class="mb-3 font-normal text-gray-700">{desc1}</p>
+        </div>
+      </div>
+
+      <div class="max-w-sm bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
+        <a href="#"><img class="rounded-t-lg" src="./image (3).png" alt="" /></a>
+        <div class="p-5">
+          <p id="date5" class="mb-3 font-normal text-gray-700">{date5}</p>
+          <a href="#"><h5 id="title4" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title4}</h5></a>
+          <p id="desc2" class="mb-3 font-normal text-gray-700">{desc3}</p>
+        </div>
+      </div>
+
+      <div class="max-w-sm bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
+        <a href="#"><img class="rounded-t-lg" src="./image (4).png" alt="" /></a>
+        <div class="p-5">
+          <p id="date6" class="mb-3 font-normal text-gray-700">{date6}</p>
+          <a href="#"><h5 id="title5" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{title5}</h5></a>
+          <p id="desc3" class="mb-3 font-normal text-gray-700">{desc4}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="flex justify-center my-4">
+	<button
+	  id="addCardBtn"
+	  class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+	>
+	  Add Card
+	</button>
+  </div>
+  
+
+  <div id="cardForm" class="bg-blue-200 p-4 rounded shadow-md max-w-md mt-4 hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+	<input id="inputTitle" type="text" placeholder="Title" class="w-full mb-2 p-2 border rounded" />
+	<input id="inputDate" type="date" class="w-full mb-2 p-2 border rounded" />
+	<textarea id="inputMessage" placeholder="Message" class="w-full mb-2 p-2 border rounded"></textarea>
+	<input id="inputImage" type="file" accept="image/*" class="w-full mb-2 p-2 border rounded" />
+	<div class="flex justify-end gap-2">
+	  <button id="cancelBtn" class="bg-gray-300 px-4 py-1 rounded">Cancel</button>
+	  <button id="submitCard" class="bg-green-500 text-white px-4 py-1 rounded">Add</button>
+	</div>
+  </div>
+  
+  <!-- Back Button -->
+  <div class="flex justify-center my-4 hidden" id="backBtnContainer">
+	<button
+	  id="backBtn"
+	  class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+	>
+	  Back
+	</button>
+  </div>
+  
+  <!-- Card Container -->
+  <div id="cardsContainer" class="grid gap-4 mt-6 justify-center items-center"></div>
+  
+  <!-- Script -->
+  <script>
+	const addCardBtn = document.getElementById('addCardBtn')!;
+	const cardForm = document.getElementById('cardForm')!;
+	const cancelBtn = document.getElementById('cancelBtn')!;
+	const submitCard = document.getElementById('submitCard')!;
+	const cardsContainer = document.getElementById('cardsContainer')!;
+	const backBtn = document.getElementById('backBtn')!;
+	const backBtnContainer = document.getElementById('backBtnContainer')!;
+  
+	const inputTitle = document.getElementById('inputTitle') as HTMLInputElement;
+	const inputDate = document.getElementById('inputDate') as HTMLInputElement;
+	const inputMessage = document.getElementById('inputMessage') as HTMLTextAreaElement;
+	const inputImage = document.getElementById('inputImage') as HTMLInputElement;
+  
+	addCardBtn.addEventListener('click', () => {
+	  cardForm.classList.remove('hidden');
+	});
+  
+	cancelBtn.addEventListener('click', () => {
+	  cardForm.classList.add('hidden');
+	  clearForm();
+	});
+  
+	submitCard.addEventListener('click', () => {
+	  const title = inputTitle.value.trim();
+	  const date = inputDate.value;
+	  const message = inputMessage.value.trim();
+	  const imageFile = inputImage.files?.[0];
+  
+	  if (!title || !date || !message) {
+		alert("All fields are required!");
+		return;
+	  }
+  
+	  const card = document.createElement('div');
+	  card.className = "bg-white p-4 rounded shadow max-w-md";
+  
+	  if (imageFile) {
+		const reader = new FileReader();
+		reader.onload = function (e) {
+		  const imageUrl = e.target?.result;
+		  card.innerHTML = `
+			<img src="${imageUrl}" alt="Uploaded Image" class="mb-2 w-full h-auto rounded" />
+			<p class="text-sm text-gray-500">${date}</p>
+			<h3 class="text-lg font-bold">${title}</h3>
+			<p>${message}</p>
+		  `;
+		  cardsContainer.innerHTML = '';
+		  cardsContainer.appendChild(card);
+		  backBtnContainer.classList.remove('hidden');
+		};
+		reader.readAsDataURL(imageFile);
+	  } else {
+		card.innerHTML = `
+		  <p class="text-sm text-gray-500">${date}</p>
+		  <h3 class="text-lg font-bold">${title}</h3>
+		  <p>${message}</p>
+		`;
+		cardsContainer.innerHTML = '';
+		cardsContainer.appendChild(card);
+		backBtnContainer.classList.remove('hidden');
+	  }
+  
+	  cardForm.classList.add('hidden');
+	  clearForm();
+	});
+  
+	backBtn.addEventListener('click', () => {
+	  location.reload();
+	});
+  
+	function clearForm() {
+	  inputTitle.value = "";
+	  inputDate.value = "";
+	  inputMessage.value = "";
+	  inputImage.value = "";
+	}
+  </script>
+  
+  
+  
+  
+
+      
+
+
+
+         </div>
+
+         <div class="mt-10">
+          <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+            </svg>
+            
+          </button>
+          <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+            </svg>
+            
+          </button>
+          
+         </div>
+
+         <p class="text-[25px] mt-[30px]">Webinar</p>
+
+         <div class="grid grid-cols-2">
+        
+          <div class="grid grid-flow-col grid-rows-3 gap-4 bg-gray-200" >
+            
+
+           
+            <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ">
+              <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src="./image (5).png" alt="">
+              <div class="flex flex-col justify-between p-4 leading-normal">
+                <p class="mb-3 font-normal text-gray-700 dark:text-black-400">March 17 2025</p>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Beginner’s Guide to Logic Ciscuits: The Foundation of Computing </h5>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-black-400">Learn about logic gates, truth tables, and even build your own circuits in our live demo.</p>
+              </div> 
+            </a>
+
+
+
+            <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ">
+              <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src="./image (6).png" alt="">
+              <div class="flex flex-col justify-between p-4 leading-normal">
+                <p class="mb-3 font-normal text-gray-700 dark:text-black-400">March 11 2025</p>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Artificial Intelligence (AI) and the Internet of Things (IoT) converge </h5>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-black-400">Join us as we delve into the limitless possibilities of AIoT and stay ahead in understanding where this remarkable journey is taking us.</p>
+              </div> 
+            </a>
+
+            <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ">
+              <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src="./image (7).png" alt="">
+              <div class="flex flex-col justify-between p-4 leading-normal">
+                <p class="mb-3 font-normal text-gray-700 dark:text-black-400">March 11 2025</p>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Artificial Intelligence (AI) and the Internet of Things (IoT) converge </h5>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-black-400">Join us as we delvsddae into the limitless possibilities of AIoT and stay ahead in understanding where this remarkable journey is taking us.</p>
+              </div> 
+            </a>
+
+
+          </div>
+		  <div class="relative group">
+			<!-- Image -->
+			<img class="h-full w-full object-fill" src="./image 146.png" alt="Overlay Image">
+
+			<!-- Overlay -->
+			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6 bg-gradient-to-t from-black/70 to-transparent">
+			  <p class="text-white text-sm mb-1">Mar 24 2025</p>
+			  <h2 class="text-white font-bold text-2xl leading-snug">
+				Feeding The Mind Of AI:<br>
+				Understanding Neural Networks<br>
+				And CNNs
+			  </h2>
+			</div>
+		  </div>
+		
+
+		  
+          
+          
+          
+        </div>
+        <div class="bg-[url('./image.png')] bg-cover bg-center py-25 px-5">
+            <div class="grid grid-cols-3 gap-3 items-start text-white">
+              
+            
+              <div class="flex flex-col items-center md:items-start gap-4">
+                <h2 class="text-2xl md:text-3xl font-bold">Contact Information</h2>
+          
+                
+                <div class="flex flex-col md:flex-row items-center gap-4">
+                 
+                  <div class="w-[150px] h-[150px]">
+                    <img src="./image 102.png" alt="QR Code" class="w-full h-full object-cover" />
+                  </div>
+          
+                 
+                  <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="flex items-center gap-2 mb-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 text-white" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4z" />
+                        <path d="M0 4.697v7.104l5.803-3.482L0 4.697zM6.761 8.83l-6.761 4.062A2 2 0 0 0 2 14h12a2 2 0 0 0 1.999-1.108l-6.76-4.062-.739.443-.739-.443zM10.197 8.32 16 11.801V4.697l-5.803 3.623z" />
+                      </svg>
+                      <p class="text-sm md:text-base">erovoutika@gmail.com</p>
+                    </div>
+                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact Us!</button>
+                  </div>
+                </div>
+              </div>
+          
+  
+              <div class="flex flex-col justify-center items-center text-center gap-2 font-medium text-sm md:text-base">
+                <div class="flex gap-6">
+                  <span>
+                    <a href="#" class="font-medium text-white-600 dark:text-white-500 hover:underline">Home</a>
+                  </span>
+                  <span>
+                    <a href="#" class="font-medium text-white-600 dark:text-white-500 hover:underline">News</a>
+                  </span>
+                  <span>
+                    <a href="#" class="font-medium text-white-600 dark:text-white-500 hover:underline">About</a>
+                  </span>
+                </div>
+                <div class="flex gap-6">
+                  <span>
+                    <a href="#" class="font-medium text-white-600 dark:text-white-500 hover:underline">Awards</a>
+                  </span>
+                  <span>
+                    <a href="#" class="font-medium text-white-600 dark:text-white-500 hover:underline">Trainings</a>
+                  </span>
+                  <span>
+                    <a href="#" class="font-medium text-white-600 dark:text-white-500 hover:underline">Tournaments</a>
+                  </span>
+                </div>
+              </div>
+          
+            
+              <div class="flex flex-col items-center gap-3">
+                <h1 class="text-2xl font-bold">Follow Us!</h1>
+                <div class="flex gap-4">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
+                    <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
+                  </svg>
+                  
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                  </svg>
+                  
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                  </svg>
+                  
+                  
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
+		  <section class="py-12 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			  <div class="mb-8 text-center relative">
+				<h2 class="text-3xl font-extrabold text-gray-900">News and Updates</h2>
+				<a href="#" class="absolute right-0 top-0 text-orange-500 font-semibold flex items-center hover:underline">
+				  More News <span class="ml-1">→</span>
+				</a>
+			  </div>
+		  
+			  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+				<!-- Card Item -->
+				<div class="bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden dark:hover:bg-gray-200">
+				  <img src="Picture.png" alt="Logic Circuits" class="w-full h-48 object-cover">
+				  <div class="p-4">
+					<h3 class="font-bold text-lg mb-2">
+					  Beginner’s Guide to Logic Ciscuits: The Foundation of Computing
+					</h3>
+					<p class="text-gray-600 text-sm">
+					  Learn about logic gates, truth tables, and even build your own circuits in our live demo.
+					</p>
+				  </div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden dark:hover:bg-gray-200">
+					<img src="Picture.png" alt="Logic Circuits" class="w-full h-48 object-cover">
+					<div class="p-4">
+					  <h3 class="font-bold text-lg mb-2">
+						Beginner’s Guide to Logic Ciscuits: The Foundation of Computing
+					  </h3>
+					  <p class="text-gray-600 text-sm">
+						Learn about logic gates, truth tables, and even build your own circuits in our live demo.
+					  </p>
+					</div>
+				  </div>
+
+				  <div class="bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden dark:hover:bg-gray-200">
+					<img src="Picture.png" alt="Logic Circuits" class="w-full h-48 object-cover">
+					<div class="p-4">
+					  <h3 class="font-bold text-lg mb-2">
+						Beginner’s Guide to Logic Ciscuits: The Foundation of Computing
+					  </h3>
+					  <p class="text-gray-600 text-sm">
+						Learn about logic gates, truth tables, and even build your own circuits in our live demo.
+					  </p>
+					</div>
+				  </div>
+
+				  <div class="bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden dark:hover:bg-gray-200 ">
+					<img src="Picture.png" alt="Logic Circuits" class="w-full h-48 object-cover">
+					<div class="p-4">
+					  <h3 class="font-bold text-lg mb-2">
+						Beginner’s Guide to Logic Ciscuits: The Foundation of Computing
+					  </h3>
+					  <p class="text-gray-600 text-sm">
+						Learn about logic gates, truth tables, and even build your own circuits in our live demo.
+					  </p>
+					</div>
+				  </div>
+		  
+			  </div>
+			</div>
+		  </section>
+		  
+
+         
+  
+
+    
+    
+
+</body>
+
+
+</html>
