@@ -262,44 +262,36 @@
                                     "href": "/News"
                                 },
                                 {
-                                    "name": "Tournaments",
-                                    "href": "/Tournament"
-                                },
-                                {
                                     "name": "Trainings",
                                     "href": "/Trainings"
+                                },
+                                {
+                                    "name": "Tournaments",
+                                    "href": "/Tournament"
                                 }
                             ],
                             "contact": {
                                 "email": "erovoutika@gmail.com",
                                 "qrCode": "/src/assets/images/footer-images/telephone-qr-code.png"
                             },
-                            "socials": [
-                                {
-                                    "social1": {
-                                        "name": "LinkedIn",
-                                        "href": "https://ph.linkedin.com/company/erovoutika",
-                                        "icon": "/src/assets/images/footer-images/Linkedin.png",
-                                        "size": "w-5 h-5"
-                                    }
-                                },
-                                {
-                                    "social2": {
-                                        "name": "Facebook",
-                                        "href": "https://www.facebook.com/erovoutika",
-                                        "icon": "/src/assets/images/footer-images/Facebook.png",
-                                        "size": "w-6 h-6"
-                                    }
-                                },
-                                {
-                                    "social3": {
-                                        "name": "Instagram",
-                                        "href": "https://www.instagram.com/erovoutikainternational/",
-                                        "icon": "/src/assets/images/footer-images/Instagram.png",
-                                        "size": "w-6 h-6"
-                                    }
-                                }
-                            ]
+                            "social1": {
+                                "name": "LinkedIn",
+                                "href": "https://ph.linkedin.com/company/erovoutika",
+                                "icon": "/src/assets/images/footer-images/Linkedin.png",
+                                "size": "w-5 h-5"
+                            },
+                            "social2": {
+                                "name": "Facebook",
+                                "href": "https://www.facebook.com/erovoutika",
+                                "icon": "/src/assets/images/footer-images/Facebook.png",
+                                "size": "w-6 h-6"
+                            },
+                            "social3": {
+                                "name": "Instagram",
+                                "href": "https://www.instagram.com/erovoutikainternational/",
+                                "icon": "/src/assets/images/footer-images/Instagram.png",
+                                "size": "w-6 h-6"
+                            }
                         }
                     },
                     "News": {

@@ -3,6 +3,11 @@ import { fetchPageContent } from "@/components/db";
 
 const content = await fetchPageContent("Home");
 const footerContent = content.footerContent;
+const socials = [
+    footerContent.social1,
+    footerContent.social2,
+    footerContent.social3,
+];
 ---
 
 <footer
@@ -78,18 +83,17 @@ const footerContent = content.footerContent;
                 <h2 class="text-xl font-bold pb-4 text-[30px]">Follow Us!</h2>
                 <div class="flex justify-center items-center gap-4">
                     {
-                        footerContent.socials.map((socialObj) => {
-                            const key = Object.keys(socialObj)[0];
+                        socials.map((socialObj) => {
                             return (
                                 <a
-                                    href={socialObj[key]["href"]}
+                                    href={socialObj["href"]}
                                     class="hover:opacity-80 transition"
-                                    key={socialObj[key]["name"]}
+                                    key={socialObj["name"]}
                                 >
                                     <img
-                                        src={socialObj[key]["icon"]}
-                                        alt={socialObj[key]["name"]}
-                                        class={`w-${socialObj[key]["size"]} h-${socialObj[key]["size"]} md:w-8 md:h-8`}
+                                        src={socialObj["icon"]}
+                                        alt={socialObj["name"]}
+                                        class={`w-${socialObj["size"]} h-${socialObj["size"]} md:w-8 md:h-8`}
                                     />
                                 </a>
                             );
