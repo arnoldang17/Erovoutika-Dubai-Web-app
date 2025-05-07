@@ -3,7 +3,7 @@ const table_body = document.getElementById("nomination-table-body");
 const table_container = document.querySelector(".table-container");
 
 let page = 0;
-const pageSize = 20;
+const pageSize = 10;
 let totalCount = 0;
 
 async function fetchTotalCount() {
