@@ -2,7 +2,7 @@
 import background from '/backgrounds/Trainings.png';
 import { useEffect } from 'react';
 ---
-<body class="hero" style={`background-image: url(${"/backgrounds/Trainings.png"});`}>
+<div class="hero">
     <div class="table-container">
         <h1 class="title">Nominations</h1>
         <div class="table-wrapper">
@@ -21,7 +21,7 @@ import { useEffect } from 'react';
             </table>
         </div>
     </div>
-</body>
+</div>
 
 <style>
     .hero {
@@ -30,7 +30,9 @@ import { useEffect } from 'react';
         background-position: top;
         background-repeat: no-repeat;
         margin: 20px 20px 20px 20px;
-        height: 100vh;
+        width: fit-content;
+        min-width: 100%;
+        height: 100%;
     }
     .table-container {
         display: flex;
@@ -46,7 +48,7 @@ import { useEffect } from 'react';
         font-size: 42px;
         margin: 5px 0px 5px 0px;
         font-family: Inter;
-        color: #F3F3FB;
+        color: black;
     }
     .table-wrapper {
         border-radius: 
@@ -93,6 +95,5 @@ import { useEffect } from 'react';
 
 <script type="module" is:inline>
     import { initNominations } from '/src/components/Nominations/view_nomination_data.js';
-
     initNominations();
 </script>
