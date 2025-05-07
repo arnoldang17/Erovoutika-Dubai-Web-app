@@ -33,7 +33,7 @@
                     "Banner": {
                         "bannerContent": {
                             "backgroundColor": "#FFE492",
-                            "message": "Nominate the Bright Minds of Tomorrow!!!!!",
+                            "message": "Nominate the Bright Minds of Tomorrow!",
                             "buttonText": "NOMINATE NOW",
                             "buttonHref": "/Nominations_Tab",
                             "buttonBackground": "#0075FF",
@@ -74,7 +74,7 @@
                                 "package": {
                                     "name": "Competition",
                                     "titleColor": "#6AAAFF",
-                                    "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
+                                    "description": "Full Training Camp & Tournament Package – Includes hotel accommodation for five (5) nights, daily breakfast, coffee breaks, lunch, and an exclusive Dubai tour",
                                     "buttonText": "learn more",
                                     "buttonLink": "/Tournament",
                                     "color": "#F3F3F3",
