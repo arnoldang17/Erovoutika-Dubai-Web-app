@@ -42,15 +42,15 @@ export function Accordion({ pageDetails }: Props) {
         return (
           <AccordionItem value={`item-${i.toFixed()}`} key={i}>
             <AccordionTrigger className="text-2xl text-white px-20 bg-[#233876] my-2">{item.pageName}</AccordionTrigger>
-            <AccordionContent className="flex flex-col items-center justify-center w-full gap-1.5 rounded-xl p-4 bg-amber-50">
+            <AccordionContent className="flex flex-col justify-center w-full gap-1.5 rounded-xl p-4 bg-amber-50">
               {item.sections.map((section, index1) => (
                 <AccordionItem value={`section-${i}-${index1}`} key={`section-${i}-${index1}`}>
-                  <AccordionTrigger className="w-250 bg-violet-300 px-20 p-5 rounded-none rounded-t-xl">{section}</AccordionTrigger>
+                  <AccordionTrigger className=" w-full bg-violet-300 px-20 p-5 rounded-none rounded-t-xl">{section}</AccordionTrigger>
                   <AccordionContent className="flex flex-col justify-items-start w-full gap-1.5 bg-white border-1 rounded-b-xl">
                     {item.contentKeys[index1].map((item2, index2) => (
                       <BaseAccordion type="single" collapsible className="w-full px-20" key={`accordion-${index2}`}>
                         <AccordionItem value={`item-${index1}-${index2}`} key={`item1-${index1}-${index2}`}>
-                          <AccordionTrigger className="p-5">{(typeof item2 === "number") ? `package-${item2 + 1}` : item2}</AccordionTrigger>
+                          <AccordionTrigger className="w-full p-5">{(typeof item2 === "number") ? `package-${item2 + 1}` : item2}</AccordionTrigger>
 
                           <AccordionContent className="flex flex-col justify-items-start w-full gap-1.5 bg-white border-1 rounded-xl">
                             {typeof item.contentValues[index1][index2] === "object" ? (
