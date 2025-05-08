@@ -10,7 +10,7 @@ export default function Partners() {
 
 return (
     <div className="flex flex-col items-center justify-center bg-white">
-      <h2 className="text-5xl font-bold pt-6">Our Partners</h2>
+      <h2 className="text-5xl lg:text-[96px] font-bebas tracking-wider text-[#212529] font-bold pt-6">Our Partners</h2>
         <Card className="w-full bg-white border-none shadow-none py-0">
             <CardContent className="flex flex-col items-center justify-center">
             <div className="flex flex-col items-center justify-center">

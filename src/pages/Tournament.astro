@@ -14,7 +14,10 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
     <div class="overview" id="OverView">
         <div>
             <h1 class="subhead" set:html={copyTheme.Overview.subheadings} />
-            <h1 class="head" set:html={copyTheme.Overview.Headings} />
+            <h1
+                class="head tracking-wider"
+                set:html={copyTheme.Overview.Headings}
+            />
             <p class="info md:w-190" set:html={copyTheme.Overview.info} />
         </div>
         <!-- PICTURE SECTION -->
@@ -37,7 +40,7 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
     <div>
         <div class="h-fit p-4 bg-[#0B0221] justify-items-center">
             <h1
-                class="roboto-bold text-center md:text-6xl text-4xl text-white"
+                class="font-bold text-center text-5xl lg:text-[96px] font-bebas tracking-wider text-white"
                 set:html={copyTheme.Teachers.title}
             />
         </div>
@@ -96,7 +99,7 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
 
     <div class="place-items-center p-20 bg-white grid grid-cols-1">
         <p
-            class="my-4 md:text-6xl text-5xl text-center roboto-extra-bold text-black"
+            class="my-4 text-5xl lg:text-[96px] text-center font-bebas font-bold text-black tracking-wider"
             set:html={copyTheme.Compete.header}
         />
 
@@ -196,21 +199,19 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
         color: #6941c6;
     }
     .head {
-        font-family: "Inter";
-        font-weight: 600;
-        font-size: 4rem;
+        font-family: "bebas neue";
+        font-size: 5rem;
         line-height: 1.2;
         margin-bottom: 1.2rem;
         font-weight: bold;
         color: black;
     }
     .info {
-        font-family: "Inter";
-        font-weight: 300;
+        font-family: Roboto, sans-serif;
         font-size: 1.2rem;
-        line-height: 1.2;
+        line-height: 1.6;
         margin-bottom: 1.2rem;
-        color: gray;
+        color: black;
     }
 
     .Teachers {

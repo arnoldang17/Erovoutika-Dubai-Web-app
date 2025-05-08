@@ -7,29 +7,36 @@ const pageSize = 10;
 let totalCount = 0;
 
 async function fetchTotalCount() {
-    const { count, error } = await supabase
-        .from("Person")
-        .select("*", { count: "exact", head: true });
+    // const { count, error } = await supabase
+    //     .from("Person")
+    //     .select("*", { count: "exact", head: true });
 
-    if (error) {
-        console.error("Error fetching total count:", error.message);
-        return 0;
-    }
+    // if (error) {
+    //     console.error("Error fetching total count:", error.message);
+    //     return 0;
+    // }
+    const { count, error } = await supabase
+        .from("persons_data")
+        .select("*", { count: "exact", head: true });
 
     return count;
 }
 
 async function fetchNominations() {
+    // const { data, error } = await supabase
+    //     .from("Person")
+    //     .select(
+    //         `
+    //         firstname,
+    //         surname,
+    //         contact_number,
+    //         Designation:designationID ( role_name )
+    //     `
+    //     )
+    //     .range(page * pageSize, (page + 1) * pageSize - 1);
     const { data, error } = await supabase
-        .from("Person")
-        .select(
-            `
-            firstname,
-            surname,
-            contact_number,
-            Designation:designationID ( role_name )
-        `
-        )
+        .from("persons_data")
+        .select("*")
         .range(page * pageSize, (page + 1) * pageSize - 1);
 
     if (error) {
@@ -46,14 +53,44 @@ async function renderTable() {
     table_body.innerHTML = "";
 
     nominations.forEach((entry, index) => {
-        const { firstname, surname, contact_number, Designation } = entry;
+        // const { firstname, surname, contact_number, Designation } = entry;
+        const {
+            ["Full Name"]: fullName,
+            ["Contact Number"]: contactNumber,
+            ["is Shortlisted"]: isShortlisted,
+            social,
+            email,
+            Role: role,
+            Category: category,
+            qna_1,
+            qna_2,
+            qna_3,
+            address,
+            School: school,
+            ["School Link"]: schoolLink,
+        } = entry;
+
+        // <td>${firstname || ""}</td>
+        // <td>${surname || ""}</td>
+        // <td>${Designation?.role_name || ""}</td>
+        // <td>${contact_number || ""}</td>
+        
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${page * pageSize + index + 1}</td>
-            <td>${firstname || ""}</td>
-            <td>${surname || ""}</td>
-            <td>${Designation?.role_name || ""}</td>
-            <td>${contact_number || ""}</td>
+            <td>${fullName || ""}</td>
+            <td>${contactNumber || ""}</td>
+            <td>${isShortlisted || ""}</td>
+            <td>${social || ""}</td>
+            <td>${email || ""}</td>
+            <td>${role || ""}</td>
+            <td>${category || ""}</td>
+            <td>${qna_1 || ""}</td>
+            <td>${qna_2 || ""}</td>
+            <td>${qna_3 || ""}</td>
+            <td>${address || ""}</td>
+            <td>${school || ""}</td>
+            <td>${schoolLink || ""}</td>
         `;
         table_body.appendChild(row);
     });

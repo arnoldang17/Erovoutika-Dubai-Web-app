@@ -51,25 +51,30 @@
                     "Home": {
                         "hero": {
                             "mainText": "Welcome to Erovoutika Dubai",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                            "subText": "JOIN US FOR AN INTERNATIONAL TRAINING & TOURNAMENT CAMP IN ROBOTICS & AUTOMATION AND CYBERSECURITY WITH CERTIFICATION!",
                             "buttonText": "Learn More",
                             "videoDirectory": "/src/assets/images/backgrounds/hero.mp4"
                         },
                         "Robolution": {
                             "title1": {
+                                "textColor1": "#212529",
                                 "intro1": "What is ROBOLUTION DUBAI 2025?",
+                                "textColor2": "black",
                                 "sub1": "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
                                 "image1": "./bot1.png",
                                 "containerColor1": "#FAF5FF"
                             },
                             "title2": {
+                                "textColor1": "white",
                                 "intro2": "Join Our Community!",
+                                "textColor2": "white",
                                 "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
                                 "image2": "./joinus.png",
-                                "containerColor2": "#A7F3D0"
+                                "containerColor2": "#f69127"
                             }
                         },
                         "package": [
+                            { "title": "What’s Included?" },
                             {
                                 "package": {
                                     "name": "Competition",
@@ -78,7 +83,7 @@
                                     "buttonText": "learn more",
                                     "buttonLink": "/Tournament",
                                     "color": "#F3F3F3",
-                                    "containerColor": "#7C3AED",
+                                    "containerColor": "#406cc8",
                                     "image": "/src/assets/images/package/Competition.jpg",
                                     "display": ""
                                 }
@@ -103,7 +108,7 @@
                                     "buttonText": "learn more",
                                     "buttonLink": "#",
                                     "color": "#6AAAFF",
-                                    "containerColor": "#6EE7B7",
+                                    "containerColor": "#f69127",
                                     "image": "/src/assets/images/package/Conference.jpg",
                                     "display": ""
                                 }
@@ -111,7 +116,7 @@
                             {
                                 "package": {
                                     "name": "Awards",
-                                    "titleColor": "#FDE68A",
+                                    "titleColor": "#212529",
                                     "description": "Erovoutika will recognize excellence with Robotics Coach of the Year, Robotics Club of the Year, Global Young Innovator Award, and Special Awards for outstanding achievements.",
                                     "buttonText": "learn more",
                                     "buttonLink": "#",
@@ -138,7 +143,7 @@
                                     "image14": "https://plus.unsplash.com/premium_photo-1697730197947-f19e92f0035b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                                     "image15": "https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                                     "image16": "https://images.unsplash.com/photo-1722502831765-e11188565aad?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                                    "containerColor": "#9F7AEA",
+                                    "containerColor": "#0444a6",
                                     "display": ""
                                 }
                             }

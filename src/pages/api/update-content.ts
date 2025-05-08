@@ -6,8 +6,16 @@ export const POST: APIRoute = async ({ request }) => {
   const body = await request.json();
   const { location, description } = body;
   
+  console.log("Received data:", body); // Log the received data for debugging
+  
+  if (!location || !description) {
+      return new Response(
+        JSON.stringify({ error: "Location and description are required." }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
   try {
-    updateContent(location, description);
+    await updateContent(location, description);
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { "Content-Type": "application/json" },

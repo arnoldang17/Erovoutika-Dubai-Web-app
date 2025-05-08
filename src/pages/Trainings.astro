@@ -23,7 +23,10 @@ const content = await fetchPageContent("Training");
     <Hero />
     <section class="introduction" id="introduction">
         <div class="introduction-content">
-            <h1 class="intro-title" set:html={content.Introduction.title} />
+            <h1
+                class="tracking-wider intro-title"
+                set:html={content.Introduction.title}
+            />
             <p class="intro-subtitle">{content.Introduction.subtitle}</p>
         </div>
     </section>
@@ -79,7 +82,10 @@ const content = await fetchPageContent("Training");
                 class="content-4-minititle"
                 set:html={content.Content_1.minititle}
             />
-            <h1 class="content-4-title" set:html={content.Content_4.title} />
+            <h1
+                class="content-4-title tracking-wider"
+                set:html={content.Content_4.title}
+            />
             <p class="content-4-subtitle">{content.Content_4.subtitle}</p>
             <a
                 href={content.Content_4.buttonLink}
@@ -161,9 +167,9 @@ const content = await fetchPageContent("Training");
         max-width: 750px;
     }
     .intro-title {
-        font-family: Roboto, sans-serif;
-        font-size: 2.5rem;
-        font-weight: 700;
+        font-family: "bebas neue",  sans-serif;
+        font-size: 5rem;
+        font-weight: bold;
         color: #212529;
         margin-bottom: 16px;
     }
@@ -566,9 +572,9 @@ const content = await fetchPageContent("Training");
     }
 
     .content-4-title {
-        font-family: Roboto, sans-serif;
-        font-size: 4rem;
-        font-weight: 700;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 5rem;
+        font-weight: bold;
         color: #212529;
         margin-bottom: 16px;
     }

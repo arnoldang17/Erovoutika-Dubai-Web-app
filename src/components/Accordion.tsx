@@ -65,15 +65,20 @@ export function Accordion({ pageDetails }: Props) {
                                       <AccordionContent className="flex flex-col justify-items-start w-full gap-1.5 rounded-lg border-1">
                                         <form
                                           className="flex flex-col items-center justify-center p-5 w-full gap-1.5"
-                                          onSubmit={(e) => {
-                                            e.preventDefault();
-                                            handleSubmit(e);
-                                          }}
+                                          onSubmit={
+                                            (e) => {
+                                              e.preventDefault();
+                                              handleSubmit(e);
+                                            }
+                                          }
                                         >
                                           <Textarea className="w-100"
                                             id="message-1"
                                             defaultValue={item.contentValues[index1][index2][item4]}
-                                            onChange={(e) => setDescription(e.target.value)}
+                                            onChange={(e) => {
+                                              setDescription(e.target.value)
+                                              setLocation(`${item.pageName}-${section}-${item2}-${item4}`)
+                                            }}
                                             onClick={() =>
                                               setLocation(`${item.pageName}-${section}-${item2}-${item4}`)
                                             }
@@ -103,16 +108,21 @@ export function Accordion({ pageDetails }: Props) {
                                         <AccordionContent>
                                           <form
                                             className="flex flex-col items-center p-5 justify-center w-full gap-1.5"
-                                            onSubmit={(e) => {
-                                              e.preventDefault();
-                                              handleSubmit(e);
-                                            }}
+                                            onSubmit={
+                                              (e) => {
+                                                e.preventDefault();
+                                                handleSubmit(e);
+                                              }
+                                            }
                                           >
                                             <Textarea
                                               className="w-100"
                                               id="message-2"
                                               defaultValue={item.contentValues[index1][index2][item4][item5]}
-                                              onChange={(e) => setDescription(e.target.value)}
+                                              onChange={(e) => {
+                                                setDescription(e.target.value)
+                                                setLocation(`${item.pageName}-${section}-${item2}-${item4}-${item5}`)
+                                              }}
                                               onClick={() =>
                                                 setLocation(`${item.pageName}-${section}-${item2}-${item4}-${item5}`)
                                               }
@@ -144,7 +154,10 @@ export function Accordion({ pageDetails }: Props) {
                                 <Textarea
                                   className="w-100" id="message-3"
                                   defaultValue={item.contentValues[index1][index2]}
-                                  onChange={(e) => setDescription(e.target.value)}
+                                  onChange={(e) => {
+                                    setDescription(e.target.value)
+                                    setLocation(`${item.pageName}-${section}-${item2}`)
+                                  }}
                                   onClick={() => setLocation(`${item.pageName}-${section}-${item2}`)} />
                                 <Button type="submit"
                                   className="w-20"
