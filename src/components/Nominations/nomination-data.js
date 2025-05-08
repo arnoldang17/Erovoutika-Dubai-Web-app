@@ -76,6 +76,26 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             console.log("Starting nomination transaction...");
 
+            //check if the person name already exists
+            const { data: personData, error: checkPersonError } = await supabase
+                .from("Person")
+                .select("*")
+                .eq("firstname", personalInfo.firstName)
+                .eq("surname", personalInfo.lastName)
+                .single();
+            if (checkPersonError && checkPersonError.code !== "PGRST116") {
+                throw new Error(
+                    `Error checking existing person: ${checkPersonError.message}`
+                );
+            }
+            if (personData) {
+                alert(
+                    "This person has already been nominated. Please check the details."
+                );
+                return;
+            }
+            console.log("No existing person found, proceeding with insert.");
+
             // Insert Address
             const { error: addressError } = await supabase
                 .from("Address")
