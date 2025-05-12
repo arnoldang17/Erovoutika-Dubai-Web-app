@@ -41,7 +41,7 @@ const { image, buttonText, buttonLink } = button;
                     <a
                         href={buttonLink}
                         target="_blank"
-                        class="bg-white text-blue-900 text-center text-xs lg:text-lg font-medium rounded-full px-4 py-2 hover:bg-indigo-400  hover:text-white shadow-2xl transition"
+                        class="bg-white text-blue-900 text-center text-xs lg:text-lg font-medium rounded-full px-4 py-2 hover:bg-indigo-400 hover:text-white shadow-2xl transition"
                     >
                         {buttonText}
                     </a>
@@ -106,3 +106,30 @@ const { image, buttonText, buttonLink } = button;
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+                // Log the width of the mobile menu when toggled
+                if (!mobileMenu.classList.contains("hidden")) {
+                    console.log("Mobile menu width:", mobileMenu.offsetWidth + "px");
+                }
+            });
+
+            // Optional: Hide menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (
+                    !menuToggle.contains(e.target) &&
+                    !mobileMenu.contains(e.target)
+                ) {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+        }
+    });
+</script>

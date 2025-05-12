@@ -3,6 +3,16 @@
         {
             "Default": {
                 "Contents": {
+                    "Banner": {
+                        "bannerContent": {
+                            "backgroundColor": "#FFE492",
+                            "message": "Nominate the Bright Minds of Tomorrow!",
+                            "buttonText": "NOMINATE NOW",
+                            "buttonHref": "/Nominations_Tab",
+                            "buttonBackground": "#0075FF",
+                            "buttonHover": "#0060CC"
+                        }
+                    },
                     "Navbar": {
                         "Content": {
                             "links": [
@@ -21,6 +31,10 @@
                                 {
                                     "name": "Tournaments",
                                     "path": "/Tournament"
+                                },
+                                {
+                                    "name": "Awards",
+                                    "path": "/Awards"
                                 }
                             ],
                             "button": {
@@ -28,16 +42,6 @@
                                 "buttonText": "Register Now",
                                 "buttonLink": "https://docs.google.com/forms/d/e/1FAIpQLSeA3hMoa5hTtlIxKPBtUNVeHtplqIaXtiNPcvIkIAlTgnFmEQ/viewform?usp=preview"
                             }
-                        }
-                    },
-                    "Banner": {
-                        "bannerContent": {
-                            "backgroundColor": "#FFE492",
-                            "message": "Nominate the Bright Minds of Tomorrow!",
-                            "buttonText": "NOMINATE NOW",
-                            "buttonHref": "/Nominations_Tab",
-                            "buttonBackground": "#0075FF",
-                            "buttonHover": "#0060CC"
                         }
                     },
                     "Nomination": {
@@ -61,7 +65,7 @@
                                 "intro1": "What is ROBOLUTION DUBAI 2025?",
                                 "textColor2": "black",
                                 "sub1": "Robolution, Erovoutika’s premier robotics competition, fosters global innovation in robotics, cybersecurity, and automation. Established in 2019, it now spans regional to international levels. Robolution Dubai 2025 features competitions, training, awards, and networking.",
-                                "image1": "./bot1.png",
+                                "image1": "./bot1.jpg",
                                 "containerColor1": "#FAF5FF"
                             },
                             "title2": {
@@ -69,12 +73,14 @@
                                 "intro2": "Join Our Community!",
                                 "textColor2": "white",
                                 "sub2": "Robolution Dubai 2025 is open to teachers, faculty, robotics coaches, government employees, students, industry partners, and awardees from around the world.",
-                                "image2": "./joinus.png",
+                                "image2": "./joinus.jpg",
                                 "containerColor2": "#f69127"
                             }
                         },
                         "package": [
-                            { "title": "What’s Included?" },
+                            {
+                                "title": "What’s Included?"
+                            },
                             {
                                 "package": {
                                     "name": "Competition",
@@ -84,7 +90,7 @@
                                     "buttonLink": "/Tournament",
                                     "color": "#F3F3F3",
                                     "containerColor": "#406cc8",
-                                    "image": "/src/assets/images/package/Competition.jpg",
+                                    "image": "/src/assets/images/package/Competition.png",
                                     "display": ""
                                 }
                             },
@@ -95,8 +101,8 @@
                                     "description": "Erovoutika provides hands-on training, certifications, and competitions, equipping students, educators, and professionals with cutting-edge skills in robotics and automation systems.",
                                     "buttonText": "learn more",
                                     "buttonLink": "/Trainings",
-                                    "color": "#FDE68A",
-                                    "image": "/src/assets/images/package/Training.webp",
+                                    "color": "#FFB366",
+                                    "image": "/src/assets/images/package/Training.jpg",
                                     "display": ""
                                 }
                             },
@@ -116,12 +122,12 @@
                             {
                                 "package": {
                                     "name": "Awards",
-                                    "titleColor": "#212529",
+                                    "titleColor": "#FFB366",
                                     "description": "Erovoutika will recognize excellence with Robotics Coach of the Year, Robotics Club of the Year, Global Young Innovator Award, and Special Awards for outstanding achievements.",
                                     "buttonText": "learn more",
-                                    "buttonLink": "#",
+                                    "buttonLink": "/Awards",
                                     "color": "#F3F3F3",
-                                    "image": "/src/assets/images/package/Awards.avif",
+                                    "image": "/src/assets/images/package/Awards.jpg",
                                     "display": ""
                                 }
                             },
@@ -187,47 +193,12 @@
                             "moreNewsLink": {
                                 "text": "More News →",
                                 "href": "/News"
-                            },
-                            "NewsCard1": {
-                                "title": "ROBOLUTION DUBAI 2025",
-                                "date": "December 15-18, 2025",
-                                "description": "Join us for an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                                "image": "/src/assets/images/NewsUpdateImages/Poster.png",
-                                "alt": "ROBOlution Dubai",
-                                "link": "https://www.facebook.com/share/p/1FjVj8sWys/"
-                            },
-                            "NewsCard2": {
-                                "title": "Calling All Robotics Coaches Around the Globe!",
-                                "date": "April 28, 2025",
-                                "description": "Whether you’re coaching in a local school or guiding international champions — this is your MOMENT.",
-                                "image": "/src/assets/images/NewsUpdateImages/RobolutionDubai.jpg",
-                                "alt": "RobolutionDubai",
-                                "link": "https://www.facebook.com/share/p/16UfvX7ZW1/"
-                            },
-                            "NewsCard3": {
-                                "title": "Erovoutika Honored as Outstanding Partner by St. Dominic College of Asia",
-                                "date": "April 26, 2025",
-                                "description": "ERovoutika Electronics Robotics Automation has been awarded and recognized as an outstanding partner by St. Dominic College of Asia (SDCA) for its remarkable and invaluable contribution toward the institution’s mission of providing holistic education for all towards a better quality of life.",
-                                "image": "/src/assets/images/NewsUpdateImages/Outstanding.jpg",
-                                "alt": "Outstanding",
-                                "link": "https://www.facebook.com/share/p/16MmGyfeGb/"
-                            },
-                            "NewsCard4": {
-                                "title": "Murata Robolution: Erovouthon 2.0 Competition 2025",
-                                "date": "March 15, 2025",
-                                "description": "The Murata Robolution: Erovouthon 2.0 Competition 2025 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP).",
-                                "image": "/src/assets/images/NewsUpdateImages/Erovouthon.png",
-                                "alt": "Erovouthon",
-                                "link": "https://www.facebook.com/share/p/1YaF1RkjTF/"
                             }
                         },
                         "Partners": {
                             "src": [
                                 {
                                     "image": "/src/assets/images/partners/1.png"
-                                },
-                                {
-                                    "image": "/src/assets/images/partners/2.png"
                                 },
                                 {
                                     "image": "/src/assets/images/partners/3.png"
@@ -304,7 +275,49 @@
                             "mainText": "Welcome to Erovoutika Dubai2222",
                             "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
                             "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
-                        }
+                        },
+                        "newsContent": [
+                            {
+                                "NewsCard": {
+                                    "title": "ROBOLUTION DUBAI 2025",
+                                    "date": "December 15-18, 2025",
+                                    "description": "Join us for an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                                    "image": "/src/assets/images/NewsUpdateImages/Poster.png",
+                                    "alt": "ROBOlution Dubai",
+                                    "link": "https://www.facebook.com/share/p/1FjVj8sWys/"
+                                }
+                            },
+                            {
+                                "NewsCard": {
+                                    "title": "Calling All Robotics Coaches Around the Globe!",
+                                    "date": "April 28, 2025",
+                                    "description": "Whether you’re coaching in a local school or guiding international champions — this is your MOMENT.",
+                                    "image": "/src/assets/images/NewsUpdateImages/RobolutionDubai.jpg",
+                                    "alt": "RobolutionDubai",
+                                    "link": "https://www.facebook.com/share/p/16UfvX7ZW1/"
+                                }
+                            },
+                            {
+                                "NewsCard": {
+                                    "title": "Erovoutika Honored as Outstanding Partner by St. Dominic College of Asia",
+                                    "date": "April 26, 2025",
+                                    "description": "ERovoutika Electronics Robotics Automation has been awarded and recognized as an outstanding partner by St. Dominic College of Asia (SDCA) for its remarkable and invaluable contribution toward the institution’s mission of providing holistic education for all towards a better quality of life.",
+                                    "image": "/src/assets/images/NewsUpdateImages/Outstanding.jpg",
+                                    "alt": "Outstanding",
+                                    "link": "https://www.facebook.com/share/p/16MmGyfeGb/"
+                                }
+                            },
+                            {
+                                "NewsCard": {
+                                    "title": "Murata Robolution: Erovouthon 2.0 Competition 2025",
+                                    "date": "March 15, 2025",
+                                    "description": "The Murata Robolution: Erovouthon 2.0 Competition 2025 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP).",
+                                    "image": "/src/assets/images/NewsUpdateImages/Erovouthon.png",
+                                    "alt": "Erovouthon",
+                                    "link": "https://www.facebook.com/share/p/1YaF1RkjTF/"
+                                }
+                            }
+                        ]
                     },
                     "Training": {
                         "Hero": {

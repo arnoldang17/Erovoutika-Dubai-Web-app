@@ -1,8 +1,5 @@
 const path = "./default.json";
 import fs from "fs";
-import pg from "pg";
-import { createClient } from "@supabase/supabase-js";
-import { log } from "console";
 import { supabase } from "@/lib/supabase-client";
 
 const supabaseUrl = import.meta.env.SUPABASE_URL;
@@ -26,8 +23,6 @@ async function getDbData() {
             console.error("Error fetching data:", error);
             return [];
         }
-
-        console.log("Fetched data:", data);
 
         // Map the rows to objects if needed
         const mappedData = mapDbRowsToObjects(data);
@@ -186,8 +181,31 @@ function updateContent(location, description) {
     insertDbData(); // Insert the updated data into the database
 }
 
+function addNewsCard(newsCardObj) {
+    const fileData = readFile();
+    const selectedIndex = fileData.selectedIndex;
+
+    const newsContent = Object.values(fileData.templates[selectedIndex])[0].Contents.News.newsContent;
+    
+    // Add new NewsCard to the front
+    newsContent.unshift(newsCardObj);
+
+    // If more than 4, remove the last
+    if (newsContent.length > 4) {
+        newsContent.pop();
+    }
+
+    writeFile(path, fileData);
+    insertDbData();
+}
+
 await insertDbData(); // Call the function to insert data into the database
 await getDbData(); // Call the function to fetch data from the database
 
+// const newsData = await fetchPageContent("News");
+// const a = newsData.newsContent;
+// a.map((item) => {
+//     console.log(item);
+// });
 export default getDbData;
-export { fetchPageContent, getPageDetails, readFile, updateContent };
+export { fetchPageContent, getPageDetails, readFile, updateContent, addNewsCard };

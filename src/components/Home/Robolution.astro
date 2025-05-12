@@ -7,7 +7,7 @@ const content = await fetchPageContent("Home");
     <div class="grid lg:grid-cols-1 gap-10 w-full min-w-fit max-w-[600px] p-5">
         <div
             style={`background-color: ${content.Robolution.title1.containerColor1}`}
-            class="grid grid-cols-2 items-center justify-center rounded-lg border-1 mx-auto gap-5 lg:gap-30 w-auto p-12"
+            class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center rounded-lg border-1 mx-auto gap-5 lg:gap-30 w-auto p-12"
         >
             <div class="flex flex-wrap w-full max-w-[610px]">
                 <h3
@@ -25,14 +25,14 @@ const content = await fetchPageContent("Home");
             <div class="place-items-center">
                 <img
                     src={content.Robolution.title1.image1}
-                    class="h-auto lg:h-[300px] w-auto rounded-md opacity-80 shadow-md shadow-gray-200"
+                    class="h-auto lg:h-[300px] w-full max-w-[540px] rounded-md opacity-80 shadow-md shadow-gray-200 object-cover"
                 />
             </div>
         </div>
 
         <div
             style={`background-color: ${content.Robolution.title2.containerColor2}`}
-            class="grid grid-cols-2 items-center justify-center rounded-lg border-1 mx-auto gap-5 lg:gap-30 w-auto p-12"
+            class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center rounded-lg border-1 mx-auto gap-5 lg:gap-30 w-auto p-12"
         >
             <div class="place-items-center">
                 <img

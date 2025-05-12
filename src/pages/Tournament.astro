@@ -24,13 +24,180 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
         <div
             class="grid grid-cols-1 sm:grid-cols-1 place-items-center md:grid-cols-2 bg-transparent"
         >
-            <div class="transition hover:scale-120"><img src={erobot} /></div>
-            <div class="transition hover:scale-120">
-                <img src={freestyle} />
+            <a id="erobot-link" class="transition hover:scale-120" href="#"
+                ><img src={erobot} /></a
+            >
+            <div
+                id="erobot-modal"
+                class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 hidden"
+            >
+                <div
+                    class="bg-white p-8 rounded shadow-lg relative w-auto lg:w-200 h-auto"
+                >
+                    <button
+                        id="close-erobot-modal"
+                        class="absolute top-2 right-2 text-2xl">&times;</button
+                    >
+                    <img src={erobot} class="max-w-xs mx-auto" />
+                    <ul class="list-disc">
+                        <li class="m-4 text-justify">
+                            Teachers from elementary to college across all
+                            disciplines or industry practitioners can form teams to
+                            represent their school or company. Each team must
+                            consist of a minimum of two (2) and a maximum of five
+                            (5) members. Participants will utilize EROVOUTIKA
+                            (Robotics & Automation) kits to compete in the Robotics
+                            & Automation for Research and Innovation, EROVOUTHON
+                            Category. The tournament serves as the culminating
+                            activity, showcasing the skills and knowledge gained
+                            during the training camp.
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="transition hover:scale-120"><img src={eromath} /></div>
-            <div class="transition hover:scale-120">
+            <a id="freestyle-link" class="transition hover:scale-120" href="#">
+                <img src={freestyle} />
+            </a>
+            <div
+                id="freestyle-modal"
+                class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 hidden"
+            >
+                <div
+                    class="bg-white p-8 rounded shadow-lg relative w-auto lg:w-200 h-auto"
+                >
+                    <button
+                        id="close-freestyle-modal"
+                        class="absolute top-2 right-2 text-2xl">&times;</button
+                    >
+                    <img src={freestyle} class="max-w-xs mx-auto" />
+                    <ul class="list-disc">
+                        <li class="m-4 text-justify">
+                            A team can consist of high school or college
+                            students, with a minimum of two (2) and a maximum of
+                            five (5) members. Each team will showcase their
+                            projects and deliver a five-minute presentation to
+                            the panel of judges. Their presentation must feature
+                            an innovative, functional prototype demonstrating
+                            its purpose, design, and application effectively.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            Additionally, teams are required to prepare a
+                            roll-up poster size to visually present their
+                            project. The poster should include the project
+                            title, objectives, methodology, key features, and
+                            real-world applications, ensuring clarity and
+                            professionalism in their presentation.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <a id="eromath-link" class="transition hover:scale-120" href="#">
+                <img src={eromath} />
+            </a>
+            <div
+                id="eromath-modal"
+                class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 hidden"
+            >
+                <div
+                    class="bg-white p-8 rounded shadow-lg relative w-auto lg:w-200 h-auto"
+                >
+                    <button
+                        id="close-eromath-modal"
+                        class="absolute top-2 right-2 text-2xl">&times;</button
+                    >
+                    <img src={eromath} class="max-w-xs mx-auto" />
+                    <ul class="list-disc">
+                        <li class="m-4 text-justify">
+                            A team can consist of high school or college
+                            students, with a minimum of two (2) and a maximum of
+                            five (5) members.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            Additionally, teams are required to prepare a
+                            roll-up poster size to visually present their
+                            project. The poster should include the project
+                            title, objectives, methodology, key features, and
+                            real-world applications, ensuring clarity and
+                            professionalism in their presentation.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            The robotics kit to be used is the ERovoutika robot,
+                            except for the Erobot v3 (open category), which you
+                            can build on your own. This is upon the approval of
+                            Erovoutika team.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            The robot's ranking is based on the time it takes to
+                            complete one lap.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            To complete one lap, the robot must traverse the
+                            entire track from start to finish.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            3 attempts to record their time are provided for
+                            each team. The best time in the 3 attempts is taken
+                            as the final time.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <a
+                id="cybersecurity-link"
+                class="transition hover:scale-120"
+                href="#"
+            >
                 <img src={cybersecurity} />
+            </a>
+            <div
+                id="cybersecurity-modal"
+                class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 hidden"
+            >
+                <div
+                    class="bg-white p-8 rounded shadow-lg relative w-auto lg:w-200 h-auto"
+                >
+                    <button
+                        id="close-cybersecurity-modal"
+                        class="absolute top-2 right-2 text-2xl">&times;</button
+                    >
+                    <img src={cybersecurity} class="max-w-xs mx-auto" />
+                    <ul class="list-disc">
+                        <li class="m-4 text-justify">
+                            A team can consist of high school or college
+                            students, with a minimum of two (2) and a maximum of
+                            five (5) members.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            The team can build their own robot for EMega Sumo
+                            but this is subject to prior approval from the
+                            Erovoutika team to ensure that it meets the
+                            competition standards and specifications.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            Maximum dimensions: the robot must fit in a square
+                            10cm x 10cm.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            The maximum mass of the robot must not exceed 500g.
+                        </li>
+                        <hr class="solid" />
+                        <li class="m-4 text-justify">
+                            The robot should have a start-and-stop module for
+                            the referee's control.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -116,6 +283,55 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
             {copyTheme.Compete.buttonText}
         </a>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Modal logic for all images
+            const modals = [
+                {
+                    link: "erobot-link",
+                    modal: "erobot-modal",
+                    close: "close-erobot-modal",
+                },
+                {
+                    link: "freestyle-link",
+                    modal: "freestyle-modal",
+                    close: "close-freestyle-modal",
+                },
+                {
+                    link: "eromath-link",
+                    modal: "eromath-modal",
+                    close: "close-eromath-modal",
+                },
+                {
+                    link: "cybersecurity-link",
+                    modal: "cybersecurity-modal",
+                    close: "close-cybersecurity-modal",
+                },
+            ];
+
+            modals.forEach(({ link, modal, close }) => {
+                const linkEl = document.getElementById(link);
+                const modalEl = document.getElementById(modal);
+                const closeEl = document.getElementById(close);
+
+                if (linkEl && modalEl && closeEl) {
+                    linkEl.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        modalEl.classList.remove("hidden");
+                    });
+                    closeEl.addEventListener("click", () => {
+                        modalEl.classList.add("hidden");
+                    });
+                    modalEl.addEventListener("click", (e) => {
+                        if (e.target === modalEl) {
+                            modalEl.classList.add("hidden");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </Layout>
 <style>
     .page {
@@ -165,7 +381,6 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
         padding: 15px 30px;
         font-size: 1rem;
         font-family: "Poppins", sans-serif;
-        text-transform: uppercase;
         font-weight: 600;
         text-decoration: none;
         border-radius: 50px;
@@ -176,7 +391,7 @@ const { erobot, eromath, freestyle, cybersecurity } = copyTheme.Pictures;
     }
     .hero-button:hover {
         background-color: #f0f0f0;
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 
     .overview {

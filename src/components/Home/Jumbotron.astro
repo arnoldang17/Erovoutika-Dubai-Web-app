@@ -7,7 +7,7 @@ const data = await fetchPageContent("Home");
 
 <section
     style={`background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 139, 0.7) 90%); background-size: cover; background-repeat: no-repeat; background-position: center;`}
-    class={`flex justify-start w-full bg-cover h-full bg-no-repeat bg-center p-[40px]`}
+    class={`flex justify-start items-center w-full bg-cover h-full bg-no-repeat bg-center p-[40px]`}
 >
     <div class="absolute top-0 left-0 w-full h-full -z-10">
         <video
@@ -23,7 +23,7 @@ const data = await fetchPageContent("Home");
     </div>
 
     <div
-        class="flex flex-col lg:h-screen w-[400px] lg:w-full max-w-[784px] py-35 lg:py-56"
+        class="m-15 lg:m-40 flex flex-col lg:h-screen w-[400px] lg:w-full max-w-[784px] py-35 lg:py-56"
     >
         <div class="w-full h-auto">
             <h1
@@ -41,8 +41,7 @@ const data = await fetchPageContent("Home");
         <div class="flex items-center justify-start mt-8">
             <a
                 href="#packages"
-                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-[#212529] rounded-full bg-white hover:bg-amber-50 focus:ring-4 focus:ring-blue-300 transition-all duration-300 ease-in-out"
-                
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-[#212529] rounded-full bg-white hover:scale-105 focus:ring-4 focus:ring-blue-300 transition-all duration-300 ease-in-out"
             >
                 {data.hero.buttonText}
                 <svg

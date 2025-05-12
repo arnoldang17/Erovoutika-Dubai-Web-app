@@ -8,6 +8,14 @@ import Highlights from "@/components/Home/Highlights.astro";
 import FrequentlyAsk from "@/components/Home/FrequentlyAsk.astro";
 import Partners from "@/components/Home/Partners";
 import NewsAndUpdate from "@/components/Home/NewsAndUpdate.astro";
+import { fetchPageContent } from "@/components/db";
+
+const data = await fetchPageContent("Home");
+const packageDetails = data.package;
+console.log(packageDetails[1].package.image);
+console.log(packageDetails[2].package.image);
+console.log(packageDetails[3].package.image);
+console.log(packageDetails[4].package.image);
 ---
 
 <Layout title="Erovoutika Dubai - Home">

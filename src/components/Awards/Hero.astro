@@ -1,0 +1,379 @@
+---
+const image = "/src/assets/images/backgrounds/Main.jpg";
+import { fetchPageContent } from "../db";
+
+const data = await fetchPageContent("Home");
+---
+
+<section
+    class="relative bg-[url(https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center bg-no-repeat"
+>
+    <div class="absolute inset-0 bg-DarkBlue/50"></div>
+    <div
+        class="relative flex flex-col items-center justify-center lg:h-screen w-auto lg:w-full py-35 lg:py-56"
+    >
+        <h1
+            id="mainText"
+            class="mb-4 text-6xl leading-none text-white drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] lg:text-[120px] font-bebas text-center p-16"
+        >
+            CALLING ALL ROBOTICS COACHES AND CLUBS AROUND THE WORLD!
+        </h1>
+    </div>
+</section>
+<div class="flex flex-col justify-center items-center w-full h-fit">
+    <div
+        class="flex flex-col justify-center items-center w-auto max-w-[1500px] h-fit p-15 gap-7"
+    >
+        <h1
+            class="text-5xl font-bold lg:text-[96px] tracking-wider text-center font-bebas bg-gradient-to-r from-black via-black to-blue-900 bg-clip-text text-transparent drop-shadow-lg"
+        >
+            Open for Nominations!
+        </h1>
+        <p class="text-xs lg:text-base text-center max-w-[1000px]">
+            The International Outstanding Robotics Club of the Year Award honors
+            the robotics club that has demonstrated exceptional performance,
+            innovation, and dedication in the field of robotics. This
+            prestigious accolade is awarded to a club that has not only excelled
+            in competitions but has also made significant contributions to the
+            robotics community through outreach, education, and teamwork.
+        </p>
+        <p class="text-xs lg:text-base text-center max-w-[1000px]">
+            This global recognition celebrates clubs that go above and beyond in
+            innovation, education, community service, and collaborative spirit
+            in the world of robotics.
+        </p>
+
+        <button
+            id="open-award-modal"
+            class="mt-4 px-6 py-2 text-2xl rounded-full bg-blue-600 text-white font-bold shadow hover:bg-blue-700 transition"
+        >
+            Learn More
+        </button>
+    </div>
+    <section class="w-full py-16 h-fit bg-[#FAF5FF]">
+        <h2
+            class="text-5xl font-bold lg:text-[96px] tracking-wider font-bebas text-center text-black mb-10 drop-shadow"
+        >
+            Awards
+        </h2>
+        <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+            <!-- Award Card 1 -->
+            <div
+                class="bg-white rounded-xl shadow-lg p-8 w-80 flex flex-col items-center hover:scale-105 transition"
+            >
+                <!-- Heroicon: Academic Cap -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-12 w-12 text-blue-800 mb-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0 0c-4.418 0-8-1.79-8-4V10m8 10c4.418 0 8-1.79 8-4V10"
+                    ></path>
+                </svg>
+                <h3 class="text-2xl font-bold text-black mb-2 text-center">
+                    International Robotics Coach of the Year
+                </h3>
+            </div>
+            <!-- Award Card 2 -->
+            <div
+                class="bg-white rounded-xl shadow-lg p-8 w-80 flex flex-col items-center hover:scale-105 transition"
+            >
+                <!-- Heroicon: Users -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-12 w-12 text-blue-700 mb-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m9-7a4 4 0 11-8 0 4 4 0 018 0zm6 8a4 4 0 00-3-3.87M6 10a4 4 0 100-8 4 4 0 000 8z"
+                    ></path>
+                </svg>
+                <h3 class="text-2xl font-bold text-black mb-2 text-center">
+                    International Robotics Club of the Year
+                </h3>
+            </div>
+            <!-- Award Card 3 -->
+            <div
+                class="bg-white rounded-xl shadow-lg p-8 w-80 flex flex-col items-center hover:scale-105 transition"
+            >
+                <!-- Heroicon: Chip -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-12 w-12 text-blue-600 mb-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <rect
+                        width="14"
+                        height="14"
+                        x="5"
+                        y="5"
+                        rx="2"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"></rect>
+                    <path stroke="currentColor" stroke-width="2" d="M9 9h6v6H9z"
+                    ></path>
+                </svg>
+                <h3 class="text-2xl font-bold text-black mb-2 text-center">
+                    Global Excellence in Robotics & Automation Education Award
+                </h3>
+            </div>
+            <!-- Award Card 4 -->
+            <div
+                class="bg-white rounded-xl shadow-lg p-8 w-80 flex flex-col items-center hover:scale-105 transition"
+            >
+                <!-- Heroicon: Light Bulb -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-12 w-12 text-yellow-500 mb-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 3a7 7 0 00-7 7c0 3.53 2.61 6.43 6 6.93V21h2v-4.07c3.39-.5 6-3.4 6-6.93a7 7 0 00-7-7z"
+                    ></path>
+                </svg>
+                <h3 class="text-2xl font-bold text-black mb-2 text-center">
+                    Global Young Innovator Award
+                </h3>
+            </div>
+        </div>
+        <div class="mt-16">
+            <h4 class="text-3xl font-bebas text-center text-blue-700 mb-6">
+                Special Awards
+            </h4>
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Special Award 1 -->
+                <div
+                    class="bg-white rounded-lg shadow p-6 w-72 text-center text-blue-900 font-semibold flex flex-col items-center"
+                >
+                    <!-- Heroicon: Star -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-10 w-10 text-yellow-400 mb-2"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.538 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.049 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"
+                        ></path>
+                    </svg>
+                    Best Community Impact
+                </div>
+                <!-- Special Award 2 -->
+                <div
+                    class="bg-white rounded-lg shadow p-6 w-72 text-center text-blue-900 font-semibold flex flex-col items-center"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-10 w-10 text-yellow-400 mb-2"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.538 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.049 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"
+                        ></path>
+                    </svg>
+                    Most Innovative Project
+                </div>
+                <!-- Special Award 3 -->
+                <div
+                    class="bg-white rounded-lg shadow p-6 w-72 text-center text-blue-900 font-semibold flex flex-col items-center"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-10 w-10 text-yellow-400 mb-2"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.538 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.049 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"
+                        ></path>
+                    </svg>
+                    Outstanding Teamwork
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        class="flex flex-col items-center justify-center w-full py-16 bg-gradient-to-r from-black via-black to-blue-900"
+    >
+        <h2
+            class="text-5xl font-bold lg:text-[96px] tracking-wider font-bebas text-white mb-6 drop-shadow"
+        >
+            PROCESS FOR APPLICATION
+        </h2>
+        <ol
+            class="text-lg lg:text-2xl text-white mb-6 text-center max-w-2xl list-decimal list-inside"
+        >
+            <p>Fill out the Google form using the button below.</p>
+        </ol>
+        <p class="text-xl text-yellow-300 font-semibold mb-8 text-center">
+            The deadline for submission is on or before November 25, 2025.
+        </p>
+        <a
+            href="https://forms.gle/dWP4pnd3N2MaPyMi9"
+            target="_blank"
+            rel="noopener"
+            class="px-10 py-4 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-2xl font-bold shadow-lg transition hover:scale-105"
+        >
+            Nominate Now
+        </a>
+    </section>
+    <div
+        id="award-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 hidden"
+    >
+        <div
+            class="bg-white p-8 rounded shadow-lg relative w-full max-w-4xl max-h-[90vh] overflow-y-auto"
+        >
+            <button
+                id="close-award-modal"
+                class="absolute top-2 right-2 text-2xl text-gray-700 hover:text-red-500"
+                >&times;</button
+            >
+            <h2 class="text-2xl font-bold mb-4 text-center text-blue-900">
+                Minimum Qualifications & Criteria
+            </h2>
+            <div class="space-y-4">
+                <h3
+                    class="text-lg font-semibold text-center text-blue-800 mb-2"
+                >
+                    Required Documents
+                </h3>
+                <ol class="list-decimal pl-6 space-y-2 text-gray-800">
+                    <li>Endorsement Letter from the Principal/Dean</li>
+                    <li>
+                        Accomplishment Report of programs and projects conducted
+                        with documentation and other attachments as proof.<br />
+                        <span class="pl-2 block"
+                            >Include all approval letters/activity permits.</span
+                        >
+                    </li>
+                    <li>
+                        Supporting Documents
+                        <ol class="list-[lower-alpha] pl-6 space-y-1">
+                            <li>
+                                Accomplished Application Form for Outstanding
+                                Robotics Club of the Year
+                            </li>
+                            <li>
+                                Awards of Appreciation or Plaques identified and
+                                labeled and other proof of awards
+                            </li>
+                            <li>Certificate of attendance/participation</li>
+                            <li>
+                                Certificate of Accreditation issued by the
+                                school where the club is affiliated
+                            </li>
+                            <li>
+                                Certificate of Membership and community
+                                organization (e.g., International Robotics Club)<br
+                                />
+                                <span class="text-xs text-blue-700">
+                                    If none, any representative of the group may
+                                    join the International Robotics Club for
+                                    students:<br />
+                                    <a
+                                        href="https://bit.ly/IRCregistration"
+                                        target="_blank"
+                                        class="underline text-blue-600"
+                                        >Registration link:
+                                        https://bit.ly/IRCregistration</a
+                                    >
+                                </span>
+                            </li>
+                            <li>
+                                Office Order for Regional to International
+                                Events (if a partnership, Memorandum of
+                                Agreement)
+                            </li>
+                            <li>Other documents to support the claims.</li>
+                        </ol>
+                    </li>
+                </ol>
+                <hr class="solid" />
+                <h3
+                    class="text-lg text-center font-semibold text-blue-800 mt-6 mb-2"
+                >
+                    Criteria
+                </h3>
+                <table class="w-full text-left border border-gray-200 mb-2">
+                    <thead>
+                        <tr class="bg-blue-50">
+                            <th class="py-1 px-2 font-semibold">Criteria</th>
+                            <th class="py-1 px-2 font-semibold text-right"
+                                >Percentage</th
+                            >
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-1 px-2"
+                                >Relevant / Accomplished Activities</td
+                            >
+                            <td class="py-1 px-2 text-right">40%</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 px-2"
+                                >Awards / Commendation / Additional Activities</td
+                            >
+                            <td class="py-1 px-2 text-right">30%</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 px-2">Certificate of Membership</td>
+                            <td class="py-1 px-2 text-right">10%</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 px-2">Robolution Participation</td>
+                            <td class="py-1 px-2 text-right">20%</td>
+                        </tr>
+                        <tr class="font-bold border-t">
+                            <td class="py-1 px-2">TOTAL</td>
+                            <td class="py-1 px-2 text-right">100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const openBtn = document.getElementById("open-award-modal");
+            const modal = document.getElementById("award-modal");
+            const closeBtn = document.getElementById("close-award-modal");
+
+            if (openBtn && modal && closeBtn) {
+                openBtn.addEventListener("click", () => {
+                    modal.classList.remove("hidden");
+                });
+                closeBtn.addEventListener("click", () => {
+                    modal.classList.add("hidden");
+                });
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.classList.add("hidden");
+                    }
+                });
+            }
+        });
+    </script>
+</div>

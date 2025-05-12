@@ -1,10 +1,12 @@
 ---
-import { Accordion } from "@/components/Accordion";
+import { Accordion } from "@/components/admin/Accordion";
 import Layout from "../layouts/Layout.astro";
-import { getPageDetails } from "@/components/db";
+import { getPageDetails, fetchPageContent } from "@/components/db";
 import Admin_Nominations from "@/components/Nominations/Admin_Nominations.astro";
+import { DialogDemo } from "@/components/admin/newsForm";
 const pageDetails = await getPageDetails();
-
+const data = await fetchPageContent("News");
+const content = data.newsContent;
 import { supabase } from "@/lib/supabase-client";
 
 const accessToken = Astro.cookies.get("sb-access-token");
@@ -55,6 +57,7 @@ const email = session.data.user?.email;
             >
                 Toggle Banner
             </button>
+            <DialogDemo client:idle />
             <form action="/api/auth/signout">
                 <button
                     type="submit"

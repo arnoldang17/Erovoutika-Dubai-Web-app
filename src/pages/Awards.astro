@@ -1,0 +1,61 @@
+---
+// filepath: d:\Data\Astro\Erovoutika-Dubai-Web-app\src\pages\awards.astro
+import Hero from "@/components/Awards/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "International Outstanding Robotics Coach of the Year Award";
+const heading = "𝐂𝐀𝐋𝐋𝐈𝐍𝐆 𝐀𝐋𝐋 𝐑𝐎𝐁𝐎𝐓𝐈𝐂𝐒 𝐂𝐎𝐀𝐂𝐇𝐄𝐒 𝐀𝐑𝐎𝐔𝐍𝐃 𝐓𝐇𝐄 𝐆𝐋𝐎𝐁𝐄!";
+const intro = `Are you the driving force behind a team’s success in innovation, mentorship, and excellence in robotics?
+Have you inspired young minds, led your club to victory, and championed robotics education in your community?
+Whether you’re coaching in a local school or guiding international champions — **this is YOUR MOMENT.**`;
+
+const openNominations = `We’re officially <span class="text-yellow-700">OPEN FOR NOMINATIONS</span> for the prestigious:`;
+const awardTitle =
+    "🏆 𝐈𝐧𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐎𝐮𝐭𝐬𝐭𝐚𝐧𝐝𝐢𝐧𝐠 𝐑𝐨𝐛𝐨𝐭𝐢𝐜𝐬 𝐂𝐨𝐚𝐜𝐡 𝐨𝐟 𝐭𝐡𝐞 𝐘𝐞𝐚𝐫 𝐀𝐰𝐚𝐫𝐝 🏆";
+const awardEvent = `to be awarded during the grand stage of <b>Robolution Dubai 2025</b>, happening <b>December 15–18, 2025</b> in <b>DUBAI</b>.`;
+
+const awardDescription = `This award honors visionary mentors and educators who have gone above and beyond in shaping future innovators — through outstanding leadership, commitment to learning, and impactful coaching in the field of robotics.`;
+
+const aboutAward = `The <b>International Outstanding Coach of the Year Award</b> recognizes a remarkable coach who has excelled in guiding and mentoring a robotics team. This individual has demonstrated outstanding leadership, technical expertise, and innovative thinking, driving their team to achieve exceptional results in competitions.`;
+
+const qualifications = [
+    "Must possess excellent moral character, with no record of criminal conviction or major disciplinary action in any institution.",
+    "Must have <b>SERVED AS A COACH AT A CLUB</b> prior to the time of application.",
+    "Must have a team coached in the <b>ROBOLUTION 2025</b> event.",
+];
+
+const documentaryRequirements = [
+    "Endorsement Letter from the school.",
+    "Peer Evaluators: Two evaluations from team members the coach has mentored/ Two (2) co-faculty/members.",
+    "Accomplishment Report: A report detailing competitions the coach participated in and/or projects conducted during their tenure at the institution, including documentation related to robotics and any relevant attachments as proof.",
+    `Supporting Documents:
+    <ul class="list-disc list-inside ml-6">
+      <li>
+        Completed Application Form for Outstanding Coach of the Year.<br />
+        If none, you may join the International Robotics Club for professionals: the Memorandum of Agreement for partnerships).
+      </li>
+      <li>
+        Certificate of Attendance/Participation in trainings or seminars attended.
+      </li>
+      <li>
+        Appointment/Certification as the official coach of the club.
+      </li>
+      <li>
+        Appointment/Certification from organizers and/or Certificate of Appreciation as a facilitator, organizer, speaker, etc.
+      </li>
+      <li>
+        Invitation letters for In Campus to International events (if applicable, include the Memorandum of Agreement for partnerships).
+      </li>
+      <li>
+        Certificate of Membership in community organizations related to robotics.<br />
+        If none, you may join the International Robotics Club for professionals:<br />
+        Registration link: <a href="https://bit.ly/IRCregistration" class="text-blue-700 underline" target="_blank">https://bit.ly/IRCregistration</a>
+      </li>
+      <li>Other documents to support the claims.</li>
+    </ul>`,
+];
+---
+
+<Layout title="Erovoutika Dubai - Awards">
+    <Hero />
+</Layout>
