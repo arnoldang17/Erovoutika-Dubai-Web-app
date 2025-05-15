@@ -1,2 +1,427 @@
-<a href="/">home</a>
-<h1>News</h1>
+---
+
+
+import './src/styles/global.css';
+
+
+const latestnews = [
+  {
+    news: {
+      update: "News and Updates",
+      title: "Latest News",
+      date: "December 15- 18, 2025",
+      subtitle: "ROBOLUTION DUBAI 2025",
+      img: "public/image 143.png"
+    }
+  },
+  {
+    news: {
+      date: "Erovoutika - 16 FEB 2025",
+      subtitle: "Erovoutika is now officially in Dubai!",
+      image: "public/image 99.png"
+    }
+  },
+  {
+    news: {
+      date: "Dec. 15–18, 2025",
+      subtitle: "ROBOLUTION: Robotics & Automation Competition 2025 – DUBAI",
+      img: "public/image 144.png"
+      
+    }
+  }
+];
+const events = [
+  {
+    event: {
+      events: "Events",
+      date: "March 13, 2025",
+      title: "Murata Robolution: E-Robot Mobile Controlled Competition 2025",
+      subtitle: "The 𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄𝐫𝐨𝐯𝐨𝐮𝐭𝐡𝐨𝐧 𝟐.𝟎 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP). ",
+      img: "public/image (2).png"
+    }
+  },
+  {
+    event: {
+      date: "March 17, 2025",
+      subtitle: "Congratulations to all winners and participants for their outstanding performance in advancing robotics and innovation!",
+      title:  "Murata Robolution: E-Robot Mobile Controlled Competition 2025",
+      img: "public/image (3).png"
+    }
+  },
+  {
+    event: {
+      date: "Jan 10, 2025",
+      title: "Enroll in our Mathematics and Robotics Class! Prepare for International Competitions.",
+      subtitle: "This article was e written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.",
+      img: "public/image (4).png"
+    }
+  }
+];
+
+const web = [
+  {
+    web: {
+      name:"Webinar",
+      date: "Mar 17 2025",
+      title: "Beginner’s Guide to Logic Ciscuits: The Foundation of Computing ",
+      subtitle: "Learn about logic gates, truth tables, and even build your own circuits in our live demo. ",
+      img: "public/image (5).png"
+    }
+  },
+  {
+    web: {
+      date: "Mar 11 2025",
+      subtitle: "Join us as we delve into the limitless possibilities of AIoT and stay ahead in understanding where this remarkable journey is taking us.",
+      title:  "Artificial Intelligence (AI) and the Internet of Things (IoT) converge",
+      img: "public/image (6).png"
+    }
+  },
+  {
+    web: {
+      date: "Feb 24 2025",
+      title: "A Live Demonstration of Robotics Simulation Using GearsBot ",
+      subtitle: "Join us for a thrilling live demonstration of GearsBot—where code turns into motion!",
+      img: "public/image (7).png"
+    }
+  }
+];
+
+const poster = [
+  {
+    post: {
+      img: "public/image 146.png ",
+      date: "Mar 24, 2025",
+      title: "Feeding The Mind Of AI:Understanding Neural Networks And CNNs"
+    }
+  }
+]
+
+
+
+
+
+
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News and Update</title>
+
+    
+  
+	  
+
+    <style>
+        @media (max-width: 768px) {
+          /* Headlines */
+          .text-\[50px\] {
+            font-size: 30px;
+            margin: 20px;
+          }
+      
+          .m-\[150px\] {
+            margin: 20px;
+          }
+      
+          .text-\[25px\] {
+            font-size: 18px;
+          }
+      
+          /* Grid responsiveness for News */
+          .grid-flow-col {
+            grid-auto-flow: row;
+          }
+      
+          .grid-rows-4 {
+            grid-template-rows: none;
+          }
+      
+          .h-\[600px\] {
+            height: auto;
+          }
+      
+          .row-span-4,
+          .row-span-2 {
+            grid-row: auto / span 1;
+          }
+      
+          .col-span-4,
+          .col-span-2 {
+            grid-column: auto / span 1;
+          }
+      
+          .text-7xl {
+            font-size: 1.5rem;
+          }
+      
+          .text-xl {
+            font-size: 1rem;
+          }
+      
+          .absolute {
+            position: static;
+          }
+      
+          .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+          }
+      
+          .bg-white\/70 {
+            background-color: rgba(255, 255, 255, 1);
+          }
+      
+          /* Events section */
+          .grid-cols-3 {
+            grid-template-columns: 1fr;
+          }
+      
+          .text-2xl {
+            font-size: 1.25rem;
+          }
+      
+          /* Webinar section */
+          .grid-cols-2 {
+            grid-template-columns: 1fr;
+          }
+      
+          .md\:flex-row {
+            flex-direction: column;
+          }
+      
+          .md\:max-w-xl {
+            max-width: 100%;
+          }
+      
+          .md\:w-48 {
+            width: 100%;
+          }
+      
+          .md\:h-auto {
+            height: auto;
+          }
+      
+          .md\:rounded-none {
+            border-radius: 0.5rem;
+          }
+      
+          .md\:rounded-s-lg {
+            border-radius: 0.5rem;
+          }
+      
+          /* Fix spacing */
+          .pl-100px {
+            padding-left: 0 !important;
+          }
+      
+          .rounded-t-lg {
+            border-radius: 0.5rem;
+          }
+      
+          .h-110 {
+            height: auto;
+          }
+      
+          /* Button section */
+          .flex {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+      
+          .rounded-s-lg,
+          .rounded-e-lg {
+            border-radius: 0.5rem !important;
+          }
+      
+          /* Background image column fix */
+          .bg-\[url\(.*\)\] {
+            background-size: cover;
+            height: 300px;
+          }
+        }
+      </style>
+
+	
+
+
+
+      
+</head>
+
+
+
+<body>
+  <p>Ayoko naaa </p>
+	
+  <p id="greetings" class="text-center text-[50px] mt-[80px] ">{latestnews[0].news.update}</p>
+
+  <div class="m-[150px]">   
+    <p id="latestNews" class="text-[25px]" style="margin-bottom: 10px;">{latestnews[0].news.title}</p>
+    <div class="grid grid-flow-col grid-rows-4 gap-4 h-[600px]">
+      <div class="relative row-span-4 col-span-4 bg-blue-200"> 
+        <img src={latestnews[0].news.img} alt="" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="absolute bottom-4 left-6 text-white">
+          <p id="date1" class="text-xl font-bold">{latestnews[0].news.date}</p>
+        </div>
+        <div class="absolute top-4 left-6 text-blue-900">
+          <p id="subtitle1" class="text-7xl font-bold">{latestnews[0].news.subtitle}</p>
+        </div>
+      </div>
+
+      <div class="relative row-span-2 col-span-2 group">
+        <img src={latestnews[1].news.image} alt="" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 left-0 w-full bg-white/70 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p id="date2" class="text-sm text-gray-262626">{latestnews[1].news.date}</p>
+          <p id="title1" class="text-lg text-black font-semibold">{latestnews[1].news.subtitle}</p>
+        </div>
+      </div>
+
+      <div class="relative group row-span-2 col-span-2 object-fill w-full">
+        <img src= {latestnews[2].news.img} alt="" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 left-0 w-full bg-white/70 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p id="date3" class="text-sm text-gray-262626">{latestnews[2].news.date}</p>
+          <p id="title2" class="text-lg text-black font-semibold">{latestnews[2].news.subtitle}</p>
+        </div>
+      </div>
+    </div>
+
+    <p id="eventsTitle" class="text-[25px] mt-[30px]">{events[0].event.events}</p>
+
+<!-- Responsive wrapper -->
+<div class="w-full px-4">
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+	  
+	  <!-- Card 1 -->
+	  <div class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
+		<a href="#"><img class="rounded-t-lg w-full" src={events[0].event.img} alt="" /></a>
+		<div class="p-5">
+		  <p id="date4" class="mb-3 font-normal text-gray-700">{events[0].event.date}</p>
+		  <a href="#"><h5 id="title3" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{events[0].event.title}</h5></a>
+		  <p id="desc1" class="mb-3 font-normal text-gray-700">{events[0].event.subtitle}</p>
+		</div>
+	  </div>
+  
+	  <!-- Card 2 -->
+	  <div class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
+		<a href="#"><img class="rounded-t-lg w-full" src={events[1].event.img} alt="" /></a>
+		<div class="p-5">
+		  <p id="date5" class="mb-3 font-normal text-gray-700">{events[1].event.date}</p>
+		  <a href="#"><h5 id="title4" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{events[1].event.title}</h5></a>
+		  <p id="desc2" class="mb-3 font-normal text-gray-700">{events[1].event.subtitle}</p>
+		</div>
+	  </div>
+  
+	  <!-- Card 3 -->
+	  <div class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
+		<a href="#"><img class="rounded-t-lg w-full" src={events[2].event.img} alt="" /></a>
+		<div class="p-5">
+		  <p id="date6" class="mb-3 font-normal text-gray-700">{events[2].event.date}</p>
+		  <a href="#"><h5 id="title5" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{events[2].event.title}</h5></a>
+		  <p id="desc3" class="mb-3 font-normal text-gray-700">{events[2].event.subtitle}</p>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+  
+  </div>
+  
+  </div>
+
+
+
+         </div>
+
+         <div class="mt-10">
+          <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+            </svg>
+            
+          </button>
+          <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+            </svg>
+            
+          </button>
+          
+         </div>
+		 <p class="text-[25px] mt-[30px]">{web[0].web.name}</p>
+
+		 <div class="grid grid-cols-2">
+		   <div class="grid grid-flow-col grid-rows-3 gap-4 bg-gray-200 ">
+		 
+			 <!-- Webinar A -->
+			 <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
+			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src={web[0].web.img} alt="">
+			   <div class="flex flex-col justify-between p-4 leading-normal">
+				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[0].web.date}</p>
+				 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{web[0].web.title}</h5>
+				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[0].web.subtitle}</p>
+			   </div> 
+			 </a>
+		 
+			 <!-- Webinar B -->
+			 <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
+			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src= {web[1].web.img} alt="">
+			   <div class="flex flex-col justify-between p-4 leading-normal">
+				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[1].web.date}</p>
+				 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{web[1].web.title}</h5>
+				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[1].web.subtitle}</p>
+			   </div> 
+			 </a>
+		 
+			 <!-- Webinar C -->
+			 <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
+			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src= {web[2].web.img} alt="">
+			   <div class="flex flex-col justify-between p-4 leading-normal">
+				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[2].web.date}</p>
+				 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{web[2].web.title}</h5>
+				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[2].web.subtitle}</p>
+			   </div> 
+			 </a>
+		 
+		   </div>
+		 
+		 
+		  <div class="relative group">
+			<!-- Image -->
+			<img class="h-full w-full object-fill" src={poster[0].post.img} alt="Overlay Image">
+
+			<!-- Overlay -->
+			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6 bg-gradient-to-t from-black/70 to-transparent">
+			  <p class="text-white text-sm mb-1">{poster[0].post.date}</p>
+			  <h2 class="text-white font-bold text-2xl leading-snug">
+				{
+          poster[0].post.title
+        }
+			  </h2>
+			</div>
+		  </div>
+		</div>
+
+		  
+          
+          
+          
+        
+         
+			 
+		  
+
+         
+  
+
+    
+    
+
+</body>
+
+
+</html>
+
