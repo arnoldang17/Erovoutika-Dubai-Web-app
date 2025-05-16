@@ -244,6 +244,10 @@
                                 {
                                     "name": "Tournaments",
                                     "href": "/Tournament"
+                                },
+                                {
+                                    "name": "Awards",
+                                    "href": "/Awards"
                                 }
                             ],
                             "contact": {
@@ -271,12 +275,7 @@
                         }
                     },
                     "News": {
-                        "hero": {
-                            "mainText": "Welcome to Erovoutika Dubai2222",
-                            "subText": "Join us For an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
-                            "imageDirectory": "/src/assets/images/backgrounds/Main.jpg"
-                        },
-                        "newsContent": [
+                        "latest-news": [
                             {
                                 "NewsCard": {
                                     "title": "ROBOLUTION DUBAI 2025",
@@ -306,15 +305,69 @@
                                     "alt": "Outstanding",
                                     "link": "https://www.facebook.com/share/p/16MmGyfeGb/"
                                 }
+                            }
+                        ],
+                        "latest-events": [
+                            {
+                                "NewsCard": {
+                                    "title": "ROBOLUTION DUBAI 2025",
+                                    "date": "December 15-18, 2025",
+                                    "description": "Join us for an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                                    "image": "/src/assets/images/NewsUpdateImages/Poster.png",
+                                    "alt": "ROBOlution Dubai",
+                                    "link": "https://www.facebook.com/share/p/1FjVj8sWys/"
+                                }
                             },
                             {
                                 "NewsCard": {
-                                    "title": "Murata Robolution: Erovouthon 2.0 Competition 2025",
-                                    "date": "March 15, 2025",
-                                    "description": "The Murata Robolution: Erovouthon 2.0 Competition 2025 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP).",
-                                    "image": "/src/assets/images/NewsUpdateImages/Erovouthon.png",
-                                    "alt": "Erovouthon",
-                                    "link": "https://www.facebook.com/share/p/1YaF1RkjTF/"
+                                    "title": "Calling All Robotics Coaches Around the Globe!",
+                                    "date": "April 28, 2025",
+                                    "description": "Whether you’re coaching in a local school or guiding international champions — this is your MOMENT.",
+                                    "image": "/src/assets/images/NewsUpdateImages/RobolutionDubai.jpg",
+                                    "alt": "RobolutionDubai",
+                                    "link": "https://www.facebook.com/share/p/16UfvX7ZW1/"
+                                }
+                            },
+                            {
+                                "NewsCard": {
+                                    "title": "Erovoutika Honored as Outstanding Partner by St. Dominic College of Asia",
+                                    "date": "April 26, 2025",
+                                    "description": "ERovoutika Electronics Robotics Automation has been awarded and recognized as an outstanding partner by St. Dominic College of Asia (SDCA) for its remarkable and invaluable contribution toward the institution’s mission of providing holistic education for all towards a better quality of life.",
+                                    "image": "/src/assets/images/NewsUpdateImages/Outstanding.jpg",
+                                    "alt": "Outstanding",
+                                    "link": "https://www.facebook.com/share/p/16MmGyfeGb/"
+                                }
+                            }
+                        ],
+                        "latest-webinar": [
+                            {
+                                "NewsCard": {
+                                    "title": "ROBOLUTION DUBAI 2025",
+                                    "date": "December 15-18, 2025",
+                                    "description": "Join us for an International Training & Tournament Camp in Robotics & Automation and Cybersecurity with Certification!",
+                                    "image": "/src/assets/images/NewsUpdateImages/Poster.png",
+                                    "alt": "ROBOlution Dubai",
+                                    "link": "https://www.facebook.com/share/p/1FjVj8sWys/"
+                                }
+                            },
+                            {
+                                "NewsCard": {
+                                    "title": "Calling All Robotics Coaches Around the Globe!",
+                                    "date": "April 28, 2025",
+                                    "description": "Whether you’re coaching in a local school or guiding international champions — this is your MOMENT.",
+                                    "image": "/src/assets/images/NewsUpdateImages/RobolutionDubai.jpg",
+                                    "alt": "RobolutionDubai",
+                                    "link": "https://www.facebook.com/share/p/16UfvX7ZW1/"
+                                }
+                            },
+                            {
+                                "NewsCard": {
+                                    "title": "Erovoutika Honored as Outstanding Partner by St. Dominic College of Asia",
+                                    "date": "April 26, 2025",
+                                    "description": "ERovoutika Electronics Robotics Automation has been awarded and recognized as an outstanding partner by St. Dominic College of Asia (SDCA) for its remarkable and invaluable contribution toward the institution’s mission of providing holistic education for all towards a better quality of life.",
+                                    "image": "/src/assets/images/NewsUpdateImages/Outstanding.jpg",
+                                    "alt": "Outstanding",
+                                    "link": "https://www.facebook.com/share/p/16MmGyfeGb/"
                                 }
                             }
                         ]

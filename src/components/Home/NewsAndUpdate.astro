@@ -3,7 +3,7 @@ import { fetchPageContent } from "../db";
 const data = await fetchPageContent("Home");
 const newsContent = data.newsContent;
 const newsData = await fetchPageContent("News");
-const cards = newsData.newsContent;
+const cards = newsData["latest-news"];
 ---
 
 <section class="bg-white p-5 md:px-16 lg:px-24">

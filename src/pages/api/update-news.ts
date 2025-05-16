@@ -15,7 +15,7 @@ export const POST: APIRoute = async ({ request }) => {
       }
   }
   try {
-    await addNewsCard(data);
+    await addNewsCard(body.category, data);
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { "Content-Type": "application/json" },

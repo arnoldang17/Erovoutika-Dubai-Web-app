@@ -2,8 +2,8 @@ const path = "./default.json";
 import fs from "fs";
 import { supabase } from "@/lib/supabase-client";
 
-const supabaseUrl = import.meta.env.SUPABASE_URL;
-const supabaseKey = import.meta.env.SUPABASE_ANON_KEY;
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
 const connectionInfo = {
     db: supabase,
@@ -35,7 +35,7 @@ async function getDbData() {
         console.error("Unexpected error:", err);
         return [];
     }
-};
+}
 
 function mapDbRowsToObjects(rows) {
     return rows.map(({ Name, config }) => {
@@ -181,17 +181,18 @@ function updateContent(location, description) {
     insertDbData(); // Insert the updated data into the database
 }
 
-function addNewsCard(newsCardObj) {
+function addNewsCard(category, newsCardObj) {
     const fileData = readFile();
     const selectedIndex = fileData.selectedIndex;
 
-    const newsContent = Object.values(fileData.templates[selectedIndex])[0].Contents.News.newsContent;
-    
+    const newsContent = Object.values(fileData.templates[selectedIndex])[0]
+        .Contents.News[category];
+
     // Add new NewsCard to the front
     newsContent.unshift(newsCardObj);
 
     // If more than 4, remove the last
-    if (newsContent.length > 4) {
+    if (newsContent.length > 3) {
         newsContent.pop();
     }
 
@@ -203,9 +204,14 @@ await insertDbData(); // Call the function to insert data into the database
 await getDbData(); // Call the function to fetch data from the database
 
 // const newsData = await fetchPageContent("News");
-// const a = newsData.newsContent;
-// a.map((item) => {
+// Object.keys(newsData).map((item) => {
 //     console.log(item);
 // });
 export default getDbData;
-export { fetchPageContent, getPageDetails, readFile, updateContent, addNewsCard };
+export {
+    fetchPageContent,
+    getPageDetails,
+    readFile,
+    updateContent,
+    addNewsCard,
+};
