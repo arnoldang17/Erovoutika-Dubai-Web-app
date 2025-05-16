@@ -75,7 +75,7 @@ const web = [
       date: "Mar 11 2025",
       subtitle: "Join us as we delve into the limitless possibilities of AIoT and stay ahead in understanding where this remarkable journey is taking us.",
       title:  "Artificial Intelligence (AI) and the Internet of Things (IoT) converge",
-      img: "public/image (6).png"
+      img: "src/assets/images/services icons/image 146.png"
     }
   },
   {
@@ -85,18 +85,17 @@ const web = [
       subtitle: "Join us for a thrilling live demonstration of GearsBot—where code turns into motion!",
       img: "public/image (7).png"
     }
-  }
-];
-
-const poster = [
+  },
   {
-    post: {
+    web: {
       img: "public/image 146.png ",
       date: "Mar 24, 2025",
       title: "Feeding The Mind Of AI:Understanding Neural Networks And CNNs"
     }
   }
-]
+
+];
+
 
 
 
@@ -513,14 +512,14 @@ const poster = [
 		 
 		  <div class="relative group">
 			<!-- Image -->
-			<img class="h-full w-full object-fill" src={poster[0].post.img} alt="Overlay Image">
+			<img class="h-full w-full object-fill" src={web[3].web.img} alt="Overlay Image">
 
 			<!-- Overlay -->
 			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6 bg-gradient-to-t from-black/70 to-transparent">
-			  <p class="text-white text-sm mb-1">{poster[0].post.date}</p>
+			  <p class="text-white text-sm mb-1">{web[3].web.date}</p>
 			  <h2 class="text-white font-bold text-2xl leading-snug">
 				{
-          poster[0].post.title
+          web[3].web.title
         }
 			  </h2>
 			</div>
