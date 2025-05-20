@@ -11,21 +11,27 @@ const latestnews = [
       title: "Latest News",
       date: "December 15- 18, 2025",
       subtitle: "ROBOLUTION DUBAI 2025",
-      img: "public/image 143.png"
+      img: "public/image 143.png",
+      link: "https://web.facebook.com/share/p/18k7L7gcKt/",
+      alt: "Robolution"
     }
   },
   {
     news: {
       date: "Erovoutika - 16 FEB 2025",
       subtitle: "Erovoutika is now officially in Dubai!",
-      image: "public/image 99.png"
+      image: "public/image 99.png",
+      link: "https://web.facebook.com/share/p/18k7L7gcKt/",
+      alt: "Robolution"
     }
   },
   {
     news: {
       date: "Dec. 15–18, 2025",
       subtitle: "ROBOLUTION: Robotics & Automation Competition 2025 – DUBAI",
-      img: "public/image 144.png"
+      img: "public/image 144.png",
+      link: "https://web.facebook.com/share/p/1AEJKkTnU9/",
+      alt: "Robolution Competition"
       
     }
   }
@@ -35,9 +41,12 @@ const events = [
     event: {
       events: "Events",
       date: "March 13, 2025",
-      title: "Murata Robolution: E-Robot Mobile Controlled Competition 2025",
+      title: "Murata Robolution: Erovouthon 2.0 Competition 2025 ",
       subtitle: "The 𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄𝐫𝐨𝐯𝐨𝐮𝐭𝐡𝐨𝐧 𝟐.𝟎 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓 successfully concluded on March 14, 2025, at the Philippine Manufacturing Co. of Murata, Inc., First Philippine Industrial Park (FPIP). ",
-      img: "public/image (2).png"
+      img: "public/image (2).png",
+      link: "https://web.facebook.com/share/p/193EG7LNdH/",
+      alt: "Erovouthon"
+
     }
   },
   {
@@ -45,7 +54,9 @@ const events = [
       date: "March 17, 2025",
       subtitle: "Congratulations to all winners and participants for their outstanding performance in advancing robotics and innovation!",
       title:  "Murata Robolution: E-Robot Mobile Controlled Competition 2025",
-      img: "public/image (3).png"
+      img: "public/image (3).png",
+      link: "https://web.facebook.com/share/p/18pB4HdkYZ/",
+      alt: "Erovouthon"
     }
   },
   {
@@ -53,7 +64,9 @@ const events = [
       date: "Jan 10, 2025",
       title: "Enroll in our Mathematics and Robotics Class! Prepare for International Competitions.",
       subtitle: "This article was e written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.",
-      img: "public/image (4).png"
+      img: "public/image (4).png",
+      link: "https://web.facebook.com/share/p/1RqQ7QDppZ/",
+      alt: "Math"
     }
   }
 ];
@@ -65,7 +78,9 @@ const web = [
       date: "Mar 17 2025",
       title: "Beginner’s Guide to Logic Ciscuits: The Foundation of Computing ",
       subtitle: "Learn about logic gates, truth tables, and even build your own circuits in our live demo. ",
-      img: "public/image (5).png"
+      img: "public/image (5).png",
+      link: "https://web.facebook.com/share/p/15YJaFG4UV/",
+      alt: "Logic Circuit"
     }
   },
   {
@@ -73,7 +88,9 @@ const web = [
       date: "Mar 11 2025",
       subtitle: "Join us as we delve into the limitless possibilities of AIoT and stay ahead in understanding where this remarkable journey is taking us.",
       title:  "Artificial Intelligence (AI) and the Internet of Things (IoT) converge",
-      img: "public/image (6).png"
+      img: "public/image (6).png",
+      link: "https://web.facebook.com/share/p/16cZpmiNzc/",
+      alt: "IOT"
     }
   },
   {
@@ -81,7 +98,9 @@ const web = [
       date: "Feb 24 2025",
       title: "A Live Demonstration of Robotics Simulation Using GearsBot ",
       subtitle: "Join us for a thrilling live demonstration of GearsBot—where code turns into motion!",
-      img: "public/image (7).png"
+      img: "public/image (7).png",
+      link: "https://web.facebook.com/share/p/1HZERfBUyu/",
+      alt: "Gearbots"
     }
   }
 ];
@@ -91,7 +110,9 @@ const poster = [
     post: {
       img: "public/image 146.png ",
       date: "Mar 24, 2025",
-      title: "Feeding The Mind Of AI:Understanding Neural Networks And CNNs"
+      title: "Feeding The Mind Of AI:Understanding Neural Networks And CNNs",
+      link: "https://web.facebook.com/share/p/1AeJfiB5Cd/",
+      alt: "AI"
     }
   }
 ]
@@ -263,7 +284,9 @@ const poster = [
     <p id="latestNews" class="text-[25px]" style="margin-bottom: 10px;">{latestnews[0].news.title}</p>
     <div class="grid grid-flow-col grid-rows-4 gap-4 h-[600px]">
       <div class="relative row-span-4 col-span-4 bg-blue-200"> 
-        <img src={latestnews[0].news.img} alt="" style="width: 100%; height: 100%; object-fit: cover;">
+        <a href={latestnews[0].news.link}>
+        <img src={latestnews[0].news.img} alt={latestnews[0].news.alt} style="width: 100%; height: 100%; object-fit: cover;">
+        </a>
         <div class="absolute bottom-4 left-6 text-white">
           <p id="date1" class="text-xl font-bold">{latestnews[0].news.date}</p>
         </div>
@@ -273,7 +296,10 @@ const poster = [
       </div>
 
       <div class="relative row-span-2 col-span-2 group">
-        <img src={latestnews[1].news.image} alt="" class="w-full h-full object-cover" />
+        <a href={latestnews[1].news.link}>
+          <img src={latestnews[1].news.image} alt={latestnews[1].news.alt} class="w-full h-full object-cover" />
+        </a>
+        
         <div class="absolute bottom-0 left-0 w-full bg-white/70 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p id="date2" class="text-sm text-gray-262626">{latestnews[1].news.date}</p>
           <p id="title1" class="text-lg text-black font-semibold">{latestnews[1].news.subtitle}</p>
@@ -281,7 +307,9 @@ const poster = [
       </div>
 
       <div class="relative group row-span-2 col-span-2 object-fill w-full">
-        <img src= {latestnews[2].news.img} alt="" class="w-full h-full object-cover" />
+        <a href={latestnews[2].news.link}>
+        <img src= {latestnews[2].news.img} alt={latestnews[2].news.alt} class="w-full h-full object-cover" />
+        </a>
         <div class="absolute bottom-0 left-0 w-full bg-white/70 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p id="date3" class="text-sm text-gray-262626">{latestnews[2].news.date}</p>
           <p id="title2" class="text-lg text-black font-semibold">{latestnews[2].news.subtitle}</p>
@@ -297,7 +325,7 @@ const poster = [
 	  
 	  <!-- Card 1 -->
 	  <div class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
-		<a href="#"><img class="rounded-t-lg w-full" src={events[0].event.img} alt="" /></a>
+		<a href={events[0].event.link}><img class="rounded-t-lg w-full" src={events[0].event.img} alt={events[0].event.alt}/></a>
 		<div class="p-5">
 		  <p id="date4" class="mb-3 font-normal text-gray-700">{events[0].event.date}</p>
 		  <a href="#"><h5 id="title3" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{events[0].event.title}</h5></a>
@@ -307,7 +335,7 @@ const poster = [
   
 	  <!-- Card 2 -->
 	  <div class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
-		<a href="#"><img class="rounded-t-lg w-full" src={events[1].event.img} alt="" /></a>
+		<a href={events[1].event.link}><img class="rounded-t-lg w-full" src={events[1].event.img} alt={events[1].event.alt} /></a>
 		<div class="p-5">
 		  <p id="date5" class="mb-3 font-normal text-gray-700">{events[1].event.date}</p>
 		  <a href="#"><h5 id="title4" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{events[1].event.title}</h5></a>
@@ -317,7 +345,7 @@ const poster = [
   
 	  <!-- Card 3 -->
 	  <div class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:hover:bg-gray-200">
-		<a href="#"><img class="rounded-t-lg w-full" src={events[2].event.img} alt="" /></a>
+		<a href={events[2].event.link}><img class="rounded-t-lg w-full" src={events[2].event.img} alt={events[2].event.alt} /></a>
 		<div class="p-5">
 		  <p id="date6" class="mb-3 font-normal text-gray-700">{events[2].event.date}</p>
 		  <a href="#"><h5 id="title5" class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{events[2].event.title}</h5></a>
@@ -357,8 +385,8 @@ const poster = [
 		   <div class="grid grid-flow-col grid-rows-3 gap-4 bg-gray-200 ">
 		 
 			 <!-- Webinar A -->
-			 <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
-			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src={web[0].web.img} alt="">
+			 <a href={web[0].web.link} class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
+			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src={web[0].web.img} alt={web[0].web.alt}>
 			   <div class="flex flex-col justify-between p-4 leading-normal">
 				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[0].web.date}</p>
 				 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{web[0].web.title}</h5>
@@ -367,8 +395,8 @@ const poster = [
 			 </a>
 		 
 			 <!-- Webinar B -->
-			 <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
-			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src= {web[1].web.img} alt="">
+			 <a href={web[1].web.link}class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
+			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src= {web[1].web.img} alt={web[1].web.alt}>
 			   <div class="flex flex-col justify-between p-4 leading-normal">
 				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[1].web.date}</p>
 				 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{web[1].web.title}</h5>
@@ -377,8 +405,8 @@ const poster = [
 			 </a>
 		 
 			 <!-- Webinar C -->
-			 <a href="#" class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
-			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src= {web[2].web.img} alt="">
+			 <a href={web[2].web.link} class="flex flex-col items-center rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-400 pl-100px ml-[30px]">
+			   <img class="object-cover w-full rounded-t-lg h-110 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-100px" src= {web[2].web.img} alt={web[2].web.alt}>
 			   <div class="flex flex-col justify-between p-4 leading-normal">
 				 <p class="mb-3 font-normal text-gray-700 dark:text-black-400">{web[2].web.date}</p>
 				 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{web[2].web.title}</h5>
@@ -391,8 +419,9 @@ const poster = [
 		 
 		  <div class="relative group">
 			<!-- Image -->
+       <a href={poster[0].post.link}>
 			<img class="h-full w-full object-fill" src={poster[0].post.img} alt="Overlay Image">
-
+      
 			<!-- Overlay -->
 			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6 bg-gradient-to-t from-black/70 to-transparent">
 			  <p class="text-white text-sm mb-1">{poster[0].post.date}</p>
@@ -403,6 +432,7 @@ const poster = [
 			  </h2>
 			</div>
 		  </div>
+      </a>
 		</div>
 
 		  
