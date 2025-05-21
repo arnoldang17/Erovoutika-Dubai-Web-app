@@ -2,7 +2,7 @@
 
 
 import './src/styles/global.css';
-
+import CardNav from './Cardnav.astro'
 
 const latestnews = [
   {
@@ -435,7 +435,12 @@ const poster = [
       </a>
 		</div>
 
-		  
+		  <h1 class="text-2xl font-bold mb-4 text-center mt-[20px]">Updated News</h1>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <CardNav label="Card 1" href="src/components/card1.astro" />
+      <CardNav label="Card 2" href="src/components/card2.astro" />
+      <CardNav label="Card 3" href="src/components/card3.astro" />
+      </div>
           
           
           

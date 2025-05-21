@@ -1,0 +1,7 @@
+---
+const { label, href } = Astro.props;
+---
+
+<a href={href} class="block p-4 border rounded shadow hover:bg-gray-100 transition">
+  <div class="text-lg font-semibold">{label}</div>
+</a>
