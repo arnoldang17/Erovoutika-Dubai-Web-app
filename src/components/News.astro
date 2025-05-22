@@ -4,6 +4,19 @@
 import './src/styles/global.css';
 import CardNav from './Cardnav.astro'
 
+
+
+
+
+const {label, href } = Astro.props;
+const {
+  img = 'public/image 143.png',
+  title = 'Default Title',
+  to
+} = Astro.props;
+
+const {titles} = Astro.props;
+ 
 const latestnews = [
   {
     news: {
@@ -116,6 +129,40 @@ const poster = [
     }
   }
 ]
+
+const news = [
+  {
+    news: {
+      name:"Updated News",
+      link: "src/components/card1.astro",
+      img: "public/image (4).png",
+      alt: 'Card 1 Image',
+      date: 'May 22, 2025',
+      title: 'Card 1 Title',
+      subtitle: 'This is a short description for Card 1.'
+    }
+  },
+  {
+    news: {
+      link: 'src/components/card2.astro',
+      img: "public/image (2).png",
+      alt: 'Card 2 Image',
+      date: 'May 23, 2025',
+      title: 'Card 2 Title',
+      subtitle: 'This is a short description for Card 2.'
+    }
+  },
+  {
+    news: {
+      link: 'src/components/card3.astro',
+      img: "public/image (3).png",
+      alt: 'Card 3 Image',
+      date: 'May 24, 2025',
+      title: 'Card 3 Title',
+      subtitle: 'This is a short description for Card 3.'
+    }
+  }
+];
 
 
 
@@ -435,15 +482,14 @@ const poster = [
       </a>
 		</div>
 
-		  <h1 class="text-2xl font-bold mb-4 text-center mt-[20px]">Updated News</h1>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <CardNav label="Card 1" href="src/components/card1.astro" />
-      <CardNav label="Card 2" href="src/components/card2.astro" />
-      <CardNav label="Card 3" href="src/components/card3.astro" />
-      </div>
-          
-          
-          
+      
+    <p id="eventsTitle" class=" text-center text-[25px] mt-[40px]">{news[0].news.name}</p>
+
+
+		
+
+
+
         
          
 			 
