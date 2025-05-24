@@ -9,81 +9,7 @@ import card1 from "../components/Cardnav.astro"
 import Cardnav from "../components/Cardnav.astro";
 
 
-const cards = [
-  {
-    img: 'public/image (2).png',
-    title: 'News 1',
-    subtitle: 'May 8, 2025',
-    description: 'The 𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄𝐫𝐨𝐯𝐨𝐮𝐭𝐡𝐨𝐧 𝟐.𝟎 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓',
-    pageHtml: `
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>About Us</title>
-          <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-        </head>
-        <body class="bg-blue-100 text-gray-800 flex items-center justify-center min-h-screen p-10">
-          <div class="max-w-lg text-center">
-            <h1 class="text-4xl font-bold text-blue-700 mb-6">News Card 1</h1>
-            <img src="public/image (2).png" alt="About Image" class="mx-auto rounded mb-6 w-full max-w-md" />
-            <p class="text-lg">We are a digital agency focused on creating amazing web experiences and empowering clients to grow their businesses.</p>
-          </div>
-        </body>
-      </html>
-    `
-  },
-  {
-    img: 'public/image (3).png',
-    title: 'News 2',
-    subtitle: 'What We Offer',
-    description: 'Murata Robolution: E-Robot Mobile Controlled Competition 2025',
-    pageHtml: `
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>Our Services</title>
-          <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-        </head>
-        <body class="bg-blue-100 text-gray-800 flex items-center justify-center min-h-screen p-10">
-          <div class="max-w-lg text-center">
-            <h1 class="text-4xl font-bold text-blue-700 mb-6">News Card 2</h1>
-            <img src="public/image (3).png" alt="Services Image" class="mx-auto rounded mb-6 w-full max-w-md" />
-            <p class="text-lg">We offer web development, mobile app solutions, branding, and digital marketing tailored to your goals.</p>
-          </div>
-        </body>
-      </html>
-    `
-  },
-  {
-    img: 'public/image (4).png',
-    title: 'News 3',
-    subtitle: 'Get In Touch',
-    description: 'Enroll in our Mathematics and Robotics Class! Prepare for International Competitions.',
-    pageHtml: `
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>Contact Us</title>
-          <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-        </head>
-        <body class="bg-blue-100 text-gray-800 flex items-center justify-center min-h-screen p-10">
-          <div class="max-w-lg text-center">
-            <h1 class="text-4xl font-bold text-blue-700 mb-6">News Card 3</h1>
-            <img src="public/image (4).png" alt="Contact Image" class="mx-auto rounded mb-6 w-full max-w-md" />
-            <p class="text-lg">Congratulations to all winners and participants for their outstanding performance in advancing robotics and innovation!</p>
-          </div>
-        </body>
-      </html>
-    `
-  }
 
-];
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -94,16 +20,7 @@ const cards = [
 </Layout>
 
 
-<html>
-  <head>
-    <title>Cards</title>
-  </head>
-  <body class="bg-gray-100 p-10 mt-[50px]">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {cards.map(card => <Cardnav {...card} />)}
-    </div>
-  </body>
-</html>
+
 
 <!-- <style>
   #background {

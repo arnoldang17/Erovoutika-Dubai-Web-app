@@ -1,25 +1,32 @@
 ---
-const { img, title, subtitle, description, pageHtml } = Astro.props;
+const { img, title, subtitle, description } = Astro.props;
 ---
 
 <div
   class="cursor-pointer hover:opacity-80 transition bg-white p-6 shadow-md rounded-lg"
-  data-html={pageHtml}
-  onclick="openPage(this)"
+  onclick="showCard(this)"
 >
   <img src={img} alt={title} class="w-full h-48 object-cover rounded-md mb-4" />
   <h2 class="text-2xl font-bold">{title}</h2>
   <h3 class="text-sm text-gray-500 mb-2">{subtitle}</h3>
   <p class="text-gray-700">{description}</p>
+
+  <template class="detail-template">
+    <div class="min-h-screen flex items-center justify-center p-8 bg-gray-100">
+      <article class="max-w-xl bg-white rounded-lg p-6 shadow-md text-center">
+        <img src={img} alt={title} class="w-full h-64 object-cover rounded-md mb-4" />
+        <h1 class="text-3xl font-bold mb-2">{title}</h1>
+        <h2 class="text-lg text-gray-600 mb-4">{subtitle}</h2>
+        <p class="text-gray-700 leading-relaxed">{description}</p>
+      </article>
+    </div>
+  </template>
 </div>
 
 <script is:inline>
-  function openPage(element) {
-    const html = element.getAttribute("data-html");
-    const newWindow = window.open();
-    if (newWindow) {
-      newWindow.document.write(html);
-      newWindow.document.close();
-    }
+  function showCard(card) {
+    const tpl = card.querySelector('.detail-template');
+    if (!tpl) return;
+    document.body.innerHTML = tpl.innerHTML;
   }
 </script>
