@@ -125,49 +125,44 @@ const web = [
 
 
 
-const news = [
-  {
-    news: {
-      name:"Updated News",
-      link: "src/components/card1.astro",
-      img: "public/image (4).png",
-      alt: 'Card 1 Image',
-      date: 'May 22, 2025',
-      title: 'Card 1 Title',
-      subtitle: 'This is a short description for Card 1.'
-    }
-  }
-];
+const news = { name:"Updated News" }
+
+
+   
+
 
 
 
 const cards = [
   {
-    img: "public/image (2).png",
-    title: "News 1",
-    date: "May 8, 2025",
+    
+    title: "News 1", 
     subtitle: "The 𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄𝐫𝐨𝐯𝐨𝐮𝐭𝐡𝐨𝐧 𝟐.𝟎 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓",
+    date: "May 8, 2025",
+    img: "public/image (2).png",
     link: "https://web.facebook.com/share/p/193EG7LNdH/",
     alt: "Erovouthon",
-    description: "Erovoutika News"
+    description: "Congratulations to all the winners and participants of 𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄-𝐑𝐨𝐛𝐨𝐭 𝐌𝐨𝐛𝐢𝐥𝐞 𝐂𝐨𝐧𝐭𝐫𝐨𝐥𝐥𝐞𝐝 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓!  "
   },
   {
-    img: "public/image (3).png",
-    title: "News 2",
-    date: "March 17, 2025",
+   
+    title: "News 2", 
     subtitle: "Murata Robolution: E-Robot Mobile Controlled Competition 2025",
+    date: "March 17, 2025",
+    img: "public/image (3).png",
     link: "https://web.facebook.com/share/p/18pB4HdkYZ/",
     alt: "Erovouthon",
-    description: "Erovoutika News"
+    description: "𝐌𝐮𝐫𝐚𝐭𝐚 𝐑𝐨𝐛𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝐄-𝐑𝐨𝐛𝐨𝐭 𝐌𝐨𝐛𝐢𝐥𝐞 𝐂𝐨𝐧𝐭𝐫𝐨𝐥𝐥𝐞𝐝 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓"
   },
   {
-    img: "public/image (4).png",
+    
     title: "News 3",
-    date: "Jan 10, 2025",
     subtitle: "Enroll in our Mathematics and Robotics Class! Prepare for International Competitions.",
+    date: "Jan 10, 2025",
+    img: "public/image (4).png",
     link: "https://web.facebook.com/share/p/1RqQ7QDppZ/",
     alt: "Math",
-    description: "Erovoutika News"
+    description: "Enroll in our Mathematics and Robotics Class! Prepare for International Competitions."
 
   }
 ];
@@ -468,7 +463,7 @@ const cards = [
 		</div>
 
       
-    <p id="eventsTitle" class=" text-center text-[25px] mt-[40px]">{news[0].news.name}</p>
+    <p id="eventsTitle" class=" text-center text-[25px] mt-[40px]">{news.name}</p>
 
 
 		
